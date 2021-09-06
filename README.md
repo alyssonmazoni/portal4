@@ -1,16 +1,24 @@
-# rizzi
+# Portal 4.0
 
 Portal de acesso e atualização de banco de dados Rizzi Consulting.
 
-## Getting Started
+Application to access and update Rizzi Consulting database.
 
-This project is a starting point for a Flutter application.
+## Início 
 
-A few resources to get you started if this is your first Flutter project:
+Este aplicativo é uma interface Web e Andrroid para uso dos consultores que trabalham com a Rizzi Consulting.
+O acesso permite inserir ordens de serviço e índice de peças bem como consultar o histório associado
+à conta do usuário para essas informações.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+O aplicativo mantém uma cópia local dos dados associados à conta de usuário e os atualiza quando se
+requisita atualização.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+##Getting started
+
+This application is an web and Android app interface to be used by the people at Rizzi Consulting.
+It allows to insert service orders and part index and query the history associated with the user
+ account as well.
+ 
+ The application keeps a local copy of data associated with the user account and updates to the server
+ database.
