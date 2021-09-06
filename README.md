@@ -13,7 +13,6 @@ O acesso permite inserir ordens de serviço e índice de peças bem como consult
 O aplicativo mantém uma cópia local dos dados associados à conta de usuário e os atualiza quando se
 requisita atualização.
 
-
 ##Getting started
 
 This application is an web and Android app interface to be used by the people at Rizzi Consulting.
