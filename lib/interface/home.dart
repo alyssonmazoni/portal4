@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+import 'inputTextTest.dart';
 
 
 /// Provides a UI to select a authentication type page
@@ -11,25 +11,30 @@ class SystemHome extends StatefulWidget {
 }
 
 class _SystemHome extends State<SystemHome> {
-  void pushPageFromHome() {
+  void pushPageFromHome(BuildContext context) {
 
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => InputTextTest()));
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Página Inicial',
-            theme: ThemeData.dark(),
-            home: Scaffold(
+    return Scaffold(
               appBar: AppBar(title: Text('Página Inicial')),
               body: Center(child:
                 Column(children: [
                   Padding(
                     padding: EdgeInsets.all(10),
-                    child: ElevatedButton(onPressed: pushPageFromHome, child: Text('Vendas')),
+                    child: ElevatedButton(
+                        onPressed: (){Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => InputTextTest()));},
+                        child: Text('Vendas')),
                   ),
                   Padding(
                     padding: EdgeInsets.all(10),
-                    child: ElevatedButton(onPressed: pushPageFromHome, child: Text('Pós-vendas'))
+                    child: ElevatedButton(
+                        onPressed: (){pushPageFromHome(context);},
+                        child: Text('Pós-vendas'))
                   )
 
                 ],
@@ -38,7 +43,7 @@ class _SystemHome extends State<SystemHome> {
 
               )
 
-            )
-          );
+            );
+
   }
 }
