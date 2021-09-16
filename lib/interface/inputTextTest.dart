@@ -11,6 +11,8 @@ class InputTextTest extends StatefulWidget {
 class _InputTextTest extends State<InputTextTest> {
 
   TextEditingController tc = TextEditingController();
+  TextEditingController tc1 = TextEditingController();
+  TextEditingController tc2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +22,27 @@ class _InputTextTest extends State<InputTextTest> {
             Column(children: [
               Padding(
                 padding: EdgeInsets.all(10),
-                child: Text('S/Orçamento'),
+                child: Text('OS/Orçamento'),
+              ),
+              Padding(
+                  padding: EdgeInsets.all(10),
+                  child: TextField(controller: tc2)
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Data'),
               ),
               Padding(
                   padding: EdgeInsets.all(10),
                   child: TextField(controller: tc)
+              ),
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: Text('Quantidade'),
+              ),
+              Padding(
+                  padding: EdgeInsets.all(10),
+                  child: TextField(controller: tc1)
               )
 
             ],
