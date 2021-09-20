@@ -41,7 +41,7 @@ class _InputTextTest extends State<InputTextTest> {
           ),
           Padding(
               padding: EdgeInsets.all(10),
-              child: TextField(controller: tc)
+              child: TextField(controller: tc3)
           ),
           Padding(
             padding: EdgeInsets.all(10),
