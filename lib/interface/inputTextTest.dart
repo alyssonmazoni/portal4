@@ -39,7 +39,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                     Expanded(
                         child: TextField(controller: tc1),
-                       flex : 6
+                       flex : 5,
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.start,
