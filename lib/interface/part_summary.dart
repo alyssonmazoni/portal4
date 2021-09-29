@@ -5,11 +5,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class InputTextTest extends StatefulWidget {
-  _InputTextTest createState() => _InputTextTest();
+class PartSummary extends StatefulWidget {
+  _PartSummary createState() => _PartSummary();
 }
 
-class _InputTextTest extends State<InputTextTest> {
+class _PartSummary extends State<PartSummary> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -37,40 +37,40 @@ class _InputTextTest extends State<InputTextTest> {
   List<Widget> _buildItems1() {
     return elements1
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems2() {
     return elements2
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems3() {
     return elements3
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems4() {
     return elements4
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems5() {
     return elements5
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
@@ -100,7 +100,7 @@ class _InputTextTest extends State<InputTextTest> {
                   alignment: Alignment.center,
                   height: 60,
                   width: 20,
-                  child: Text('Resumo de Pedidos'),
+                  child: Text('Resumo de peças'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -126,8 +126,10 @@ class _InputTextTest extends State<InputTextTest> {
                 children: [
                   Expanded(
                     child: Text('Data'),
+                    flex: 1,
                   ),
                   Expanded(
+                    flex: 4,
                     child: Container(
                         alignment: Alignment.centerLeft,
                         child: TextButton(
@@ -138,22 +140,24 @@ class _InputTextTest extends State<InputTextTest> {
                                   maxTime: DateTime(2030, 6, 7),
                                   currentTime: DateTime.now(),
                                   locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
-                                });
-                              });
+                                    setState(() {
+                                      dateForm = date;
+                                    });
+                                  });
                             },
                             child: Text(DateFormat('dd-MM-yyyy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Text('Pedido'),
+                    flex: 1
                   ),
                   Expanded(
+                    flex: 4,
                     child: Container(
                       alignment: Alignment.centerLeft,
                       child: TextField(controller: tc2),
@@ -186,7 +190,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -212,7 +216,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -238,7 +242,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -252,7 +256,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -266,7 +270,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -292,7 +296,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -318,7 +322,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [

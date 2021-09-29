@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/part_summary.dart';
 import 'inputTextTest.dart';
+import 'part_summary.dart';
 
 
 /// Provides a UI to select a authentication type page
@@ -14,7 +16,7 @@ class _SystemHome extends State<SystemHome> {
   void pushPageFromHome(BuildContext context) {
 
     Navigator.push(context,
-        MaterialPageRoute(builder: (context) => InputTextTest()));
+        MaterialPageRoute(builder: (context) => PartSummary()));
   }
 
   @override
