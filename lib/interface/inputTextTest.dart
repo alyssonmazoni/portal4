@@ -22,109 +22,202 @@ class _InputTextTest extends State<InputTextTest> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
-        body: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: ElevatedButton(
-                    onPressed: () {}, // falta direcionar para rela xpto
-                    child: Text('Inserir Informação')),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: Colors.black,
+          child: Column(children: [
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 60,
+                  width: 20,
+                  child: Text('Resumo de Pedidos'),
+                ),
               ),
-              Row(
-                  children: [
-                    Expanded(
-                          child: Text('Salva Info.'),
-                        flex : 1,
+            ], mainAxisAlignment: MainAxisAlignment.start),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text('Será uma Query do ID da conta '),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.green[500],
+                  height: 35,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Data'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc1),
                     ),
-                    Expanded(
-                        child: TextField(controller: tc1),
-                       flex : 5,
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Pedido'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc2),
                     ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center
-              ),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Concessionária_Id'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc1)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Concessionário'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc2)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Data'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc3)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('O.S'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc4)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Tipo'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc5)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Classe'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc6)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Solicitada'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc7)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Disponível'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc8)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Separação'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc9)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Tipo solicitação'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc10)),
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('Qtd.Registro'),
-              ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(controller: tc11)),
-            ],
-            mainAxisAlignment: MainAxisAlignment.center,
-          ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Classe'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc3),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('SB'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc4),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Tipo'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc5),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Solicitada'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc7),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Disponível'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc8),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('S/A'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc9),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('TP Solicitação'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {}, // falta direcionar para tela xpto
+                          child: Text('Home')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {}, // falta direcionar para tela xpto
+                          child: Text('ResumoPeças')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {}, // falta direcionar para tela xpto
+                          child: Text('Dashboard')),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }
 }
