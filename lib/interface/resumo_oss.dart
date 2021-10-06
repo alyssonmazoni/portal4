@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
+import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/resumo_pecas.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class InputTextTest extends StatefulWidget {
-  _InputTextTest createState() => _InputTextTest();
+class ResumoOss extends StatefulWidget {
+  _ResumoOss createState() => _ResumoOss();
 }
 
-class _InputTextTest extends State<InputTextTest> {
+class _ResumoOss extends State<ResumoOss> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -20,13 +24,13 @@ class _InputTextTest extends State<InputTextTest> {
     "Pneu",
   ];
 
-  final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
+  final elements2 = ["", "Orçamento", "Diagnóstico", "Ordem de reparação"];
 
-  final elements3 = ["C&O", "Vans"];
+  final elements3 = ["", "C&O", "Vans"];
 
-  final elements4 = ["Sim", "Não"];
+  final elements4 = ["", "Sim", "Não"];
 
-  final elements5 = ["Peça faltante", "Nova solicitação"];
+  final elements5 = ["", "Peça faltante", "Nova solicitação"];
 
   int selectedIndex1 = 0;
   int selectedIndex2 = 0;
@@ -77,22 +81,16 @@ class _InputTextTest extends State<InputTextTest> {
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
-  TextEditingController tc4 = TextEditingController();
-  TextEditingController tc5 = TextEditingController();
-  TextEditingController tc6 = TextEditingController();
-  TextEditingController tc7 = TextEditingController();
-  TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          width: double.infinity,
-          height: double.infinity,
+          margin: const EdgeInsets.all (10),
+          decoration: BoxDecoration(
+            border: Border.all (color: Colors.red)
+          ),
           child: Column(children: [
             Row(children: [
               Expanded(
@@ -100,7 +98,7 @@ class _InputTextTest extends State<InputTextTest> {
                   alignment: Alignment.center,
                   height: 60,
                   width: 20,
-                  child: Text('Resumo de Pedidos'),
+                  child: Text('Resumo OSs'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -121,21 +119,23 @@ class _InputTextTest extends State<InputTextTest> {
                   width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
             Row(
                 children: [
                   Expanded(
                     child: Text('Data'),
+                    flex: 1,
                   ),
                   Expanded(
+                    flex: 4,
                     child: Container(
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
                                   showTitleActions: true,
-                                  minTime: DateTime(2018, 3, 5),
-                                  maxTime: DateTime(2030, 6, 7),
+                                  minTime: DateTime(2020, 3, 5),
+                                  maxTime: DateTime(2025, 6, 7),
                                   currentTime: DateTime.now(),
                                   locale: LocaleType.pt, onConfirm: (date) {
                                 setState(() {
@@ -143,7 +143,8 @@ class _InputTextTest extends State<InputTextTest> {
                                 });
                               });
                             },
-                            child: Text(DateFormat('dd-MM-yyyy').format(dateForm)))),
+                            child: Text(
+                                DateFormat('dd-MM-yyyy').format(dateForm)))),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -156,7 +157,7 @@ class _InputTextTest extends State<InputTextTest> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc2),
+                      child: TextField(controller: tc1),
                     ),
                   ),
                 ],
@@ -186,7 +187,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -212,7 +213,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -238,7 +239,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -248,11 +249,11 @@ class _InputTextTest extends State<InputTextTest> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc7),
+                      child: TextField(controller: tc2),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -262,11 +263,11 @@ class _InputTextTest extends State<InputTextTest> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc8),
+                      child: TextField(controller: tc3),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -292,7 +293,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -318,7 +319,7 @@ class _InputTextTest extends State<InputTextTest> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -329,7 +330,20 @@ class _InputTextTest extends State<InputTextTest> {
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Home')),
+                          child: Text('Salvar')),
+                    ),
+                  ),
+
+
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: (){Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => ResumoPecas()));},
+                          child: Text('Resumo Peças')),
                     ),
                   ),
                   Expanded(
@@ -338,18 +352,9 @@ class _InputTextTest extends State<InputTextTest> {
                       height: 20,
                       width: 15,
                       child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('ResumoPeças')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Dashboard')),
+                          onPressed: (){Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => posvenda()));},
+                          child: Text('Voltar')),
                     ),
                   ),
                 ],

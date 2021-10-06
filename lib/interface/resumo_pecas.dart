@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
+import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/resumo_oss.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class PartSummary extends StatefulWidget {
-  _PartSummary createState() => _PartSummary();
+class ResumoPecas extends StatefulWidget {
+  _ResumoPecas createState() => _ResumoPecas();
 }
 
-class _PartSummary extends State<PartSummary> {
+class _ResumoPecas extends State<ResumoPecas> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
     "",
-    "Balcão",
-    "Oficina",
-    "Funilaria",
-    "Pneu",
+    "A",
+    "B",
+    "C",
+    "D",
   ];
 
   final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
@@ -37,40 +41,40 @@ class _PartSummary extends State<PartSummary> {
   List<Widget> _buildItems1() {
     return elements1
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
   List<Widget> _buildItems2() {
     return elements2
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
   List<Widget> _buildItems3() {
     return elements3
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
   List<Widget> _buildItems4() {
     return elements4
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
   List<Widget> _buildItems5() {
     return elements5
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
@@ -80,19 +84,12 @@ class _PartSummary extends State<PartSummary> {
   TextEditingController tc4 = TextEditingController();
   TextEditingController tc5 = TextEditingController();
   TextEditingController tc6 = TextEditingController();
-  TextEditingController tc7 = TextEditingController();
-  TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          width: double.infinity,
-          height: double.infinity,
           child: Column(children: [
             Row(children: [
               Expanded(
@@ -100,10 +97,10 @@ class _PartSummary extends State<PartSummary> {
                   alignment: Alignment.center,
                   height: 60,
                   width: 20,
-                  child: Text('Resumo de peças'),
+                  child: Text('Resumo Peças'),
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
@@ -126,26 +123,38 @@ class _PartSummary extends State<PartSummary> {
                 children: [
                   Expanded(
                     child: Text('Data'),
-                    flex: 1,
                   ),
                   Expanded(
-                    flex: 4,
                     child: Container(
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
                                   showTitleActions: true,
-                                  minTime: DateTime(2018, 3, 5),
-                                  maxTime: DateTime(2030, 6, 7),
+                                  minTime: DateTime(2020, 3, 5),
+                                  maxTime: DateTime(2025, 6, 7),
                                   currentTime: DateTime.now(),
                                   locale: LocaleType.pt, onConfirm: (date) {
-                                    setState(() {
-                                      dateForm = date;
-                                    });
-                                  });
+                                setState(() {
+                                  dateForm = date;
+                                });
+                              });
                             },
-                            child: Text(DateFormat('dd-MM-yyyy').format(dateForm)))),
+                            child: Text(
+                                DateFormat('dd-MM-yyyy').format(dateForm)))),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(child: Text('Pedido'), flex: 1),
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: TextField(controller: tc1),
+                    ),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -153,11 +162,9 @@ class _PartSummary extends State<PartSummary> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Pedido'),
-                    flex: 1
+                    child: Text('Cód.'),
                   ),
                   Expanded(
-                    flex: 4,
                     child: Container(
                       alignment: Alignment.centerLeft,
                       child: TextField(controller: tc2),
@@ -169,7 +176,35 @@ class _PartSummary extends State<PartSummary> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Classe'),
+                    child: Text('Peça'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc3),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Qtd.'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.centerLeft,
+                      child: TextField(controller: tc4),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('Curva'),
                   ),
                   Expanded(
                     child: Container(
@@ -190,150 +225,47 @@ class _PartSummary extends State<PartSummary> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('SB'),
+                    child: Text('Motivo Falta'),
                   ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: DirectSelect(
-                          itemExtent: 55.0,
-                          selectedIndex: selectedIndex2,
-                          child: MySelectionItem(
-                            isForList: false,
-                            title: elements2[selectedIndex2],
-                          ),
-                          onSelectedItemChanged: (index) {
-                            setState(() {
-                              selectedIndex2 = index!;
-                            });
-                          },
-                          items: _buildItems2()),
+                      child: TextField(controller: tc5),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Tipo'),
+                    child: Text('Ação Corretiva'),
                   ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.centerLeft,
-                      child: DirectSelect(
-                          itemExtent: 55.0,
-                          selectedIndex: selectedIndex3,
-                          child: MySelectionItem(
-                            isForList: false,
-                            title: elements3[selectedIndex3],
-                          ),
-                          onSelectedItemChanged: (index) {
-                            setState(() {
-                              selectedIndex3 = index!;
-                            });
-                          },
-                          items: _buildItems3()),
+                      child: TextField(controller: tc6),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Solicitada'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc7),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Disponível'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc8),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('S/A'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: DirectSelect(
-                          itemExtent: 55.0,
-                          selectedIndex: selectedIndex4,
-                          child: MySelectionItem(
-                            isForList: false,
-                            title: elements4[selectedIndex4],
-                          ),
-                          onSelectedItemChanged: (index) {
-                            setState(() {
-                              selectedIndex4 = index!;
-                            });
-                          },
-                          items: _buildItems4()),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('TP Solicitação'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: DirectSelect(
-                          itemExtent: 55.0,
-                          selectedIndex: selectedIndex5,
-                          child: MySelectionItem(
-                            isForList: false,
-                            title: elements5[selectedIndex5],
-                          ),
-                          onSelectedItemChanged: (index) {
-                            setState(() {
-                              selectedIndex5 = index!;
-                            });
-                          },
-                          items: _buildItems5()),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Container(
+
                       alignment: Alignment.center,
                       height: 20,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Home')),
+                          child: Text('Salvar')),
                     ),
                   ),
                   Expanded(
@@ -342,8 +274,9 @@ class _PartSummary extends State<PartSummary> {
                       height: 20,
                       width: 15,
                       child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('ResumoPeças')),
+                          onPressed: (){Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => ResumoOss()));},
+                          child: Text('Resumo OSs')),
                     ),
                   ),
                   Expanded(
@@ -352,10 +285,12 @@ class _PartSummary extends State<PartSummary> {
                       height: 20,
                       width: 15,
                       child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Dashboard')),
+                          onPressed: (){Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => posvenda()));},
+                          child: Text('Voltar')),
                     ),
                   ),
+
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center),
