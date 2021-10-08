@@ -85,20 +85,34 @@ class _ResumoOss extends State<ResumoOss> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          margin: const EdgeInsets.all (10),
-          decoration: BoxDecoration(
-            border: Border.all (color: Colors.red)
-          ),
-          child: Column(children: [
+          width: double.infinity,
+          height: double.infinity,
+          margin: const EdgeInsets.all(15),
+          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          child: SingleChildScrollView(
+              child: Column(children: [
             Row(children: [
               Expanded(
                 child: Container(
+                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  height: 60,
-                  width: 20,
+                  height: 20,
+                  width: 5,
                   child: Text('Resumo OSs'),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 5,
+                  child: Text('Serviços e Peças Limitadas Brasil S/A.'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -106,16 +120,8 @@ class _ResumoOss extends State<ResumoOss> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text('Será uma Query do ID da conta '),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.green[500],
-                  height: 35,
+                  color: Colors.blue,
+                  height: 20,
                   width: 5,
                 ),
               ),
@@ -123,13 +129,16 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Data'),
-                    flex: 1,
+                    child: Text('Data:'),
                   ),
                   Expanded(
-                    flex: 4,
                     child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white)),
+                        height: 30,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -152,25 +161,33 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Pedido'),
+                    child: Text('Pedido:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc1),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc1,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Classe'),
+                    child: Text('Classe:'),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
+                      height: 30,
+                      width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
                           selectedIndex: selectedIndex1,
@@ -192,11 +209,14 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('SB'),
+                    child: Text('SB:'),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
+                      height: 30,
+                      width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
                           selectedIndex: selectedIndex2,
@@ -218,11 +238,14 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Tipo'),
+                    child: Text('Tipo:'),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
+                      height: 30,
+                      width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
                           selectedIndex: selectedIndex3,
@@ -244,12 +267,17 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Solicitada'),
+                    child: Text('Solicitada:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc2),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc2,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
@@ -258,12 +286,17 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Disponível'),
+                    child: Text('Disponível:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc3),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc3,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
@@ -272,11 +305,14 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('S/A'),
+                    child: Text('S/A:'),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
+                      height: 30,
+                      width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
                           selectedIndex: selectedIndex4,
@@ -298,11 +334,14 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('TP Solicitação'),
+                    child: Text('TP Solicitação:'),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
+                      height: 30,
+                      width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
                           selectedIndex: selectedIndex5,
@@ -325,42 +364,51 @@ class _ResumoOss extends State<ResumoOss> {
                 children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 15,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {}, // falta direcionar para tela xpto
                           child: Text('Salvar')),
                     ),
                   ),
-
-
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 15,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed: (){Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => ResumoPecas()));},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ResumoPecas()));
+                          },
                           child: Text('Resumo Peças')),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 15,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: (){Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => posvenda()));},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => posvenda()));
+                          },
                           child: Text('Voltar')),
                     ),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }
 }

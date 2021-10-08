@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/tela_menu.dart';
+import 'package:rizzi/interface/cadastro_simplesoap.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class ResumoPecas extends StatefulWidget {
-  _ResumoPecas createState() => _ResumoPecas();
+class npscsi extends StatefulWidget {
+  _npscsi createState() => _npscsi();
 }
 
-class _ResumoPecas extends State<ResumoPecas> {
+class _npscsi extends State<npscsi> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
     "",
-    "A",
-    "B",
-    "C",
-    "D",
+    "Cidade01",
+    "Cidade02",
+    "Cidade03",
+    "Cidade04",
   ];
 
-  final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
+  final elements2 = [
+    "",
+    "Microwork",
+    "T-Systems",
+    "NBS",
+    "Shapeness",
+    "Linx - Sisdia",
+    "Linx DMS",
+    "Mapper",
+    "Próprio"
+  ];
 
-  final elements3 = ["C&O", "Vans"];
+  final elements3 = ["", "Estado01", "Estado02"];
 
-  final elements4 = ["Sim", "Não"];
+  final elements4 = ["", "P", "M", "G"];
 
   final elements5 = ["Peça faltante", "Nova solicitação"];
 
@@ -82,38 +90,23 @@ class _ResumoPecas extends State<ResumoPecas> {
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
-  TextEditingController tc5 = TextEditingController();
-  TextEditingController tc6 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          margin: const EdgeInsets.all(15),
-          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
           child: SingleChildScrollView(
             child: Column(children: [
               Row(children: [
                 Expanded(
                   child: Container(
-                    margin: const EdgeInsets.all(8),
                     alignment: Alignment.center,
-                    height: 20,
-                    width: 5,
-                    child: Text('Resumo Peças'),
-                  ),
-                ),
-              ], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child: Text('Será uma Query do ID da conta '),
+                    height: 60,
+                    width: 20,
+                    child: Text('NPS / CSI'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -121,8 +114,16 @@ class _ResumoPecas extends State<ResumoPecas> {
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    color: Colors.blue,
-                    height: 20,
+                    child: Text('Mantenha sempre atualizado'),
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.redAccent,
+                    height: 35,
                     width: 5,
                   ),
                 ),
@@ -130,16 +131,11 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('Data:'),
+                      child: Text('Data'),
                     ),
                     Expanded(
                       child: Container(
-                          margin: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white)),
                           alignment: Alignment.center,
-                          height: 30,
-                          width: 5,
                           child: TextButton(
                               onPressed: () {
                                 DatePicker.showDatePicker(context,
@@ -157,17 +153,16 @@ class _ResumoPecas extends State<ResumoPecas> {
                                   DateFormat('dd-MM-yyyy').format(dateForm)))),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Pedido:'),
+                      child: Text('2 - Disponibilidade de Peças '),
                     ),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
                         height: 30,
                         width: 5,
                         child: TextField(
@@ -182,12 +177,11 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('Cód:'),
+                      child: Text('3 - FFVC'),
                     ),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
                         height: 30,
                         width: 5,
                         child: TextField(
@@ -197,17 +191,16 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Peça:'),
+                      child: Text('4 - Prazo de entrega '),
                     ),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
                         height: 30,
                         width: 5,
                         child: TextField(
@@ -217,96 +210,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('Qtd:'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
-                        height: 30,
-                        width: 5,
-                        child: TextField(
-                            controller: tc4,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('Curva:'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
-                        height: 30,
-                        width: 5,
-                        child: DirectSelect(
-                            itemExtent: 80.0,
-                            selectedIndex: selectedIndex1,
-                            child: MySelectionItem(
-                              isForList: false,
-                              title: elements1[selectedIndex1],
-                            ),
-                            onSelectedItemChanged: (index) {
-                              setState(() {
-                                selectedIndex1 = index!;
-                              });
-                            },
-                            items: _buildItems1()),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('Motivo Falta:'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
-                        height: 30,
-                        width: 50,
-                        child: TextField(
-                            controller: tc5,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('Ação Corretiva:'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
-                        height: 30,
-                        width: 50,
-                        child: TextField(
-                            controller: tc6,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
@@ -315,6 +219,33 @@ class _ResumoPecas extends State<ResumoPecas> {
                         alignment: Alignment.center,
                         height: 15,
                         width: 5,
+                        child: ElevatedButton(
+                            onPressed: () {}, // falta direcionar para tela xpto
+                            child: Text('Próximo')),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 5,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          cadastrosinmplesoap()));
+                            },
+                            child: Text('Voltar')),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 15,
+                        width: 5,
+                        alignment: Alignment.center,
                         child: ElevatedButton(
                             onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Salvar')),
@@ -330,24 +261,9 @@ class _ResumoPecas extends State<ResumoPecas> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ResumoOss()));
+                                      builder: (context) => moduloOap()));
                             },
-                            child: Text('Resumo OSs')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 15,
-                        width: 5,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => posvenda()));
-                            },
-                            child: Text('Voltar')),
+                            child: Text('M.OAP')),
                       ),
                     ),
                   ],

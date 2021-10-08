@@ -90,176 +90,215 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          child: Column(children: [
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 60,
-                  width: 20,
-                  child: Text('Separação Antecipada'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  child: Text('Será uma Query do ID da conta '),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.green[500],
-                  height: 35,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Data'),
+          width: double.infinity,
+          height: double.infinity,
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 60,
+                    width: 20,
+                    child: Text('Separação Antecipada'),
                   ),
-                  Expanded(
-                    child: Container(
-                        alignment: Alignment.center,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: Text('Será uma Query do ID da conta '),
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.green[500],
+                    height: 35,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('Data'),
+                    ),
+                    Expanded(
+                      child: Container(
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white)),
+                          child: TextButton(
+                              onPressed: () {
+                                DatePicker.showDatePicker(context,
+                                    showTitleActions: true,
+                                    minTime: DateTime(2020, 3, 5),
+                                    maxTime: DateTime(2025, 6, 7),
+                                    currentTime: DateTime.now(),
+                                    locale: LocaleType.pt, onConfirm: (date) {
+                                  setState(() {
+                                    dateForm = date;
+                                  });
                                 });
-                              });
+                              },
+                              child: Text(
+                                  DateFormat('dd-MM-yyyy').format(dateForm)))),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('Solicitante:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc1,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('O Veículo esta na Concessão?.'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc2,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('Placa:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc3,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('Pedido:.'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc4,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('OBS:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc5,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('Baixa de Pendência:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc6,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {}, // falta direcionar para tela xpto
+                            child: Text('Salvar')),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => posvenda()));
                             },
-                            child: Text(
-                                DateFormat('dd-MM-yyyy').format(dateForm)))),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(child: Text('Solicitante:'), flex: 1),
-                  Expanded(
-                    flex: 4,
-                    child: Container(
-                      alignment: Alignment.center,
-                      child: TextField(controller: tc1),
+                            child: Text('Voltar')),
+                      ),
                     ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('O Veículo esta na Concessão?.'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc2),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Placa:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc3),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Pedido:.'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc4),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('OBS:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc4),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Baixa de Pendência:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc4),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Salvar')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => posvenda()));
-                          },
-                          child: Text('Voltar')),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ),
         ));
   }
 }

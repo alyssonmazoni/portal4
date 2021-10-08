@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/eficiencia.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
-import 'package:rizzi/interface/oficina_oap.dart';
+import 'package:rizzi/interface/modulo_pecasoap.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
-class posvenda extends StatefulWidget {
-  _posvenda createState() => _posvenda();
+class pecasOap extends StatefulWidget {
+  _pecasOap createState() => _pecasOap();
 }
 
-class _posvenda extends State<posvenda> {
+class _pecasOap extends State<pecasOap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -35,9 +35,41 @@ class _posvenda extends State<posvenda> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
+                                    builder: (context) => Iapo()));
+                          },
+                          child: Text('IAPO')),
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        SeparacaoAntecipada()));
+                          },
+                          child: Text('Separação Antecipada')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
                                     builder: (context) => moduloOap()));
                           },
-                          child: Text('Modulo OAP')),
+                          child: Text('M.OAP')),
                     ),
                   ),
                 ],

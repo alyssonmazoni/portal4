@@ -84,13 +84,20 @@ class _eficiencia extends State<eficiencia> {
   TextEditingController tc4 = TextEditingController();
   TextEditingController tc5 = TextEditingController();
   TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
+  TextEditingController tc8 = TextEditingController();
+  TextEditingController tc9 = TextEditingController();
+  TextEditingController tc10 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
-          child: Column(children: [
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          child: SingleChildScrollView(
+              child: Column(children: [
             Row(children: [
               Expanded(
                 child: Container(
@@ -114,11 +121,11 @@ class _eficiencia extends State<eficiencia> {
                 child: Container(
                   alignment: Alignment.center,
                   color: Colors.green[500],
-                  height: 35,
+                  height: 15,
                   width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
@@ -127,6 +134,8 @@ class _eficiencia extends State<eficiencia> {
                   Expanded(
                     child: Container(
                         alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white)),
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -144,16 +153,22 @@ class _eficiencia extends State<eficiencia> {
                                 DateFormat('dd-MM-yyyy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
-                  Expanded(child: Text('Pedido'), flex: 1),
                   Expanded(
-                    flex: 4,
+                    child: Text('Pedido:'),
+                  ),
+                  Expanded(
                     child: Container(
-                      alignment: Alignment.center,
-                      child: TextField(controller: tc1),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc1,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
@@ -162,136 +177,181 @@ class _eficiencia extends State<eficiencia> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Placa.'),
+                    child: Text('Placa:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc2),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc2,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('CIT'),
+                    child: Text('CIT:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc3),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc3,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Produtivo.'),
+                    child: Text('Produtivo:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc4),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc4,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('M/O'),
+                    child: Text('M/O:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc4),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc5,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Hora Vendida'),
+                    child: Text('Hora Vendida:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc5),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc6,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Hora Aplicada'),
+                    child: Text('Hora Aplicada:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc6),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc7,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Eficiência'),
+                    child: Text('Eficiência:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc6),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc8,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Motivo Variação'),
+                    child: Text('Motivo Variação:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc6),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc9,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Ação Corretiva'),
+                    child: Text('Ação Corretiva:'),
                   ),
                   Expanded(
                     child: Container(
-                      alignment: Alignment.centerLeft,
-                      child: TextField(controller: tc6),
+                      margin: const EdgeInsets.all(8),
+                      height: 30,
+                      width: 5,
+                      child: TextField(
+                          controller: tc10,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 15,
+                      width: 5,
                       child: ElevatedButton(
                           onPressed: () {}, // falta direcionar para tela xpto
                           child: Text('Salvar')),
@@ -300,8 +360,8 @@ class _eficiencia extends State<eficiencia> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 15,
+                      width: 5,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -315,7 +375,7 @@ class _eficiencia extends State<eficiencia> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }
 }

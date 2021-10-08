@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/eficiencia.dart';
+import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
-class Telamenu extends StatefulWidget {
-  _Telamenu createState() => _Telamenu();
+class oficinaOap extends StatefulWidget {
+  _oficinaOap createState() => _oficinaOap();
 }
 
-class _Telamenu extends State<Telamenu> {
+class _oficinaOap extends State<oficinaOap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -17,7 +20,7 @@ class _Telamenu extends State<Telamenu> {
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.yellow)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
           child: Column(children: [
             Row(
                 children: [
@@ -31,19 +34,9 @@ class _Telamenu extends State<Telamenu> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) => moduloOficinaoap()));
                           },
-                          child: Text('Pós Vendas')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Vendas')),
+                          child: Text('Oficina')),
                     ),
                   ),
                 ],

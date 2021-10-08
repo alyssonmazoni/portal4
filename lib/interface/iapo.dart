@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
 import 'package:rizzi/interface/resumo_pecas.dart';
 
@@ -18,28 +17,15 @@ class _Iapo extends State<Iapo> {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(
                 children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ResumoPecas()));
-                          },
-                          child: Text('Resumo Pecas')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
+                      height: 15,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {
@@ -48,18 +34,33 @@ class _Iapo extends State<Iapo> {
                                 MaterialPageRoute(
                                     builder: (context) => ResumoOss()));
                           },
-                          child: Text('Resumo Mês Semana')),
+                          child: Text('Resumo OS(s)')),
                     ),
                   ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 20,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ResumoPecas()));
+                          },
+                          child: Text('Resumo Peças')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {}, //Falta criar o Dashbord
 
-                          child: Text('Resumo Oss')),
+                          child: Text('Dashbord')),
                     ),
                   ),
                 ],

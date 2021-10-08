@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/recepcao_oap.dart';
+import 'package:rizzi/interface/resumo_oss.dart';
+import 'package:rizzi/interface/resumo_pecas.dart';
+import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/sistema_medidasoap.dart';
 
 /// Provides a UI to select a authentication type page
-class Telamenu extends StatefulWidget {
-  _Telamenu createState() => _Telamenu();
+class modulo_sistemamedidas extends StatefulWidget {
+  _modulo_sistemamedidas createState() => _modulo_sistemamedidas();
 }
 
-class _Telamenu extends State<Telamenu> {
+class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -17,7 +22,7 @@ class _Telamenu extends State<Telamenu> {
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.yellow)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(
                 children: [
@@ -25,25 +30,15 @@ class _Telamenu extends State<Telamenu> {
                     child: Container(
                       alignment: Alignment.center,
                       height: 15,
-                      width: 5,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) => sistemamedidasoap()));
                           },
-                          child: Text('Pós Vendas')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Vendas')),
+                          child: Text('Sistema de Medidas')),
                     ),
                   ),
                 ],
