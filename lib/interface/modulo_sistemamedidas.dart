@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/cad_cit.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/recepcao_oap.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
@@ -39,6 +40,66 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                                     builder: (context) => sistemamedidasoap()));
                           },
                           child: Text('Sistema de Medidas')),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sistemamedidasoap()));
+                          },
+                          child: Text('CL-1')),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sistemamedidasoap()));
+                          },
+                          child: Text('Plano de Ação')),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => cadcit()));
+                          },
+                          child: Text('Cadastro CIT')),
                     ),
                   ),
                 ],

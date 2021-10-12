@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
@@ -10,11 +9,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class entregaveic extends StatefulWidget {
+  _entregaveic createState() => _entregaveic();
 }
 
-class _npscsi extends State<npscsi> {
+class _entregaveic extends State<entregaveic> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -109,7 +108,7 @@ class _npscsi extends State<npscsi> {
                     alignment: Alignment.center,
                     height: 60,
                     width: 20,
-                    child: Text('NPS / CSI'),
+                    child: Text('ENTREGA DO VEÍCULO'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -161,7 +160,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS  '),
+                      child: Text('11 - Veículos entregues no período'),
                     ),
                     Expanded(
                       child: Container(
@@ -180,7 +179,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - Disponibilidade de Peças '),
+                      child: Text('12 - Veículos prontos no prazo combinado'),
                     ),
                     Expanded(
                       child: Container(
@@ -199,7 +198,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('3 - FFVC'),
+                      child: Text('%Veículos entregues no período - (11 ÷ 5)'),
                     ),
                     Expanded(
                       child: Container(
@@ -218,7 +217,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('4 - Prazo de entrega '),
+                      child: Text(
+                          '% Veículos prontos no prazo combinado - (12 ÷ 11)'),
                     ),
                     Expanded(
                       child: Container(
@@ -242,12 +242,7 @@ class _npscsi extends State<npscsi> {
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => agerecep()));
-                            },
+                            onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Próximo')),
                       ),
                     ),

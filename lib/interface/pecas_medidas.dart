@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
@@ -10,11 +9,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class pecasmedidas extends StatefulWidget {
+  _pecasmedidas createState() => _pecasmedidas();
 }
 
-class _npscsi extends State<npscsi> {
+class _pecasmedidas extends State<pecasmedidas> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -109,7 +108,7 @@ class _npscsi extends State<npscsi> {
                     alignment: Alignment.center,
                     height: 60,
                     width: 20,
-                    child: Text('NPS / CSI'),
+                    child: Text('Peças'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -161,7 +160,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS  '),
+                      child: Text(
+                          '9 - Indicador com % de OSs atendidas pela oficina (IAPO)'),
                     ),
                     Expanded(
                       child: Container(
@@ -180,74 +180,12 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - Disponibilidade de Peças '),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 30,
-                        width: 5,
-                        child: TextField(
-                            controller: tc2,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('3 - FFVC'),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 30,
-                        width: 5,
-                        child: TextField(
-                            controller: tc3,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('4 - Prazo de entrega '),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 30,
-                        width: 5,
-                        child: TextField(
-                            controller: tc4,
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center),
-                      ),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
                       child: Container(
                         alignment: Alignment.center,
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => agerecep()));
-                            },
+                            onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Próximo')),
                       ),
                     ),

@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_produtivooap.dart';
+import 'package:rizzi/interface/desempenho_oficina.dart';
 import 'package:rizzi/interface/eficiencia.dart';
+import 'package:rizzi/interface/entrega_veic.dart';
 import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/indicadores_oficina.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/modulo_pecasoap.dart';
 import 'package:rizzi/interface/nps_csi.dart';
+import 'package:rizzi/interface/pecas_medidas.dart';
+import 'package:rizzi/interface/rep_manutencao.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/sistema_medidasoap.dart';
 
 /// Provides a UI to select a authentication type page
 class painelmedidasoap extends StatefulWidget {
@@ -39,7 +46,82 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                                 MaterialPageRoute(
                                     builder: (context) => npscsi()));
                           },
-                          child: Text('NPS / CSI ')),
+                          child: Text('1-NPS / CSI ')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => agerecep()));
+                          },
+                          child: Text('2-AGENDAMENTO / RECEPÇÃO')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => pecasmedidas()));
+                          },
+                          child: Text('3-Peças')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => repmanutencao()));
+                          },
+                          child: Text('4-REPARO E MANUT.')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => entregaveic()));
+                          },
+                          child: Text('5-ENTREGA DO VEÍCULO')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => desempenhooficina()));
+                          },
+                          child: Text('6-DESEMPENHO OFICINA MECÂNICA')),
                     ),
                   ),
                   Expanded(
@@ -53,9 +135,9 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        cadastroprodutivooap()));
+                                        indicadoresoficina()));
                           },
-                          child: Text('Peças')),
+                          child: Text('7-INDICADORES DA OFICINA')),
                     ),
                   ),
                   Expanded(
@@ -68,25 +150,9 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        SeparacaoAntecipada()));
+                                    builder: (context) => sistemamedidasoap()));
                           },
-                          child: Text('Agendamento / Recepção')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
-                          },
-                          child: Text('M.OAP')),
+                          child: Text('Sistema Medidas')),
                     ),
                   ),
                 ],

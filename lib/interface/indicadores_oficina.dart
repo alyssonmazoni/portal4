@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
@@ -10,11 +9,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class indicadoresoficina extends StatefulWidget {
+  _indicadoresoficina createState() => _indicadoresoficina();
 }
 
-class _npscsi extends State<npscsi> {
+class _indicadoresoficina extends State<indicadoresoficina> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -52,40 +51,40 @@ class _npscsi extends State<npscsi> {
   List<Widget> _buildItems1() {
     return elements1
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems2() {
     return elements2
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems3() {
     return elements3
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems4() {
     return elements4
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
   List<Widget> _buildItems5() {
     return elements5
         .map((val) => MySelectionItem(
-              title: val,
-            ))
+      title: val,
+    ))
         .toList();
   }
 
@@ -93,6 +92,9 @@ class _npscsi extends State<npscsi> {
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
+  TextEditingController tc5 = TextEditingController();
+  TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +111,7 @@ class _npscsi extends State<npscsi> {
                     alignment: Alignment.center,
                     height: 60,
                     width: 20,
-                    child: Text('NPS / CSI'),
+                    child: Text('INDICADORES DA OFICINA'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -147,10 +149,10 @@ class _npscsi extends State<npscsi> {
                                     maxTime: DateTime(2025, 6, 7),
                                     currentTime: DateTime.now(),
                                     locale: LocaleType.pt, onConfirm: (date) {
-                                  setState(() {
-                                    dateForm = date;
-                                  });
-                                });
+                                      setState(() {
+                                        dateForm = date;
+                                      });
+                                    });
                               },
                               child: Text(
                                   DateFormat('dd-MM-yyyy').format(dateForm)))),
@@ -161,7 +163,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS  '),
+                      child: Text('% Produtividade  - (14 ÷ 13)'),
                     ),
                     Expanded(
                       child: Container(
@@ -180,7 +182,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - Disponibilidade de Peças '),
+                      child: Text('19 - Ticket Médio'),
                     ),
                     Expanded(
                       child: Container(
@@ -199,7 +201,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('3 - FFVC'),
+                      child:
+                      Text('20 - MO + Peças Vendidas / Produtivo'),
                     ),
                     Expanded(
                       child: Container(
@@ -218,7 +221,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('4 - Prazo de entrega '),
+                      child: Text('21 - Valor de M.O. obtida'),
                     ),
                     Expanded(
                       child: Container(
@@ -237,17 +240,50 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
+                      child: Text('22 - Relação Peças x M.O.'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc5,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('23 - Número de passagens por produtivo '),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc6,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
                       child: Container(
                         alignment: Alignment.center,
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => agerecep()));
-                            },
+                            onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Próximo')),
                       ),
                     ),

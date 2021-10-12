@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
+import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 import 'package:rizzi/interface/sistema_medidasoap.dart';
 import 'my_selection_item.dart';
@@ -10,11 +10,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class agerecep extends StatefulWidget {
+  _agerecep createState() => _agerecep();
 }
 
-class _npscsi extends State<npscsi> {
+class _agerecep extends State<agerecep> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -93,6 +93,9 @@ class _npscsi extends State<npscsi> {
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
+  TextEditingController tc5 = TextEditingController();
+  TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +112,7 @@ class _npscsi extends State<npscsi> {
                     alignment: Alignment.center,
                     height: 60,
                     width: 20,
-                    child: Text('NPS / CSI'),
+                    child: Text('AGENDAMENTO / RECEPÇÃO'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -161,7 +164,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS  '),
+                      child: Text(
+                          '5 - Passagens (C1, Interno, Garantia, Serviço Expresso, Revisões)'),
                     ),
                     Expanded(
                       child: Container(
@@ -180,7 +184,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - Disponibilidade de Peças '),
+                      child:
+                          Text('6 - Veículos Inspecionados no ato da recepção'),
                     ),
                     Expanded(
                       child: Container(
@@ -199,7 +204,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('3 - FFVC'),
+                      child: Text('7 - Total de agendamentos'),
                     ),
                     Expanded(
                       child: Container(
@@ -218,7 +223,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('4 - Prazo de entrega '),
+                      child: Text('8 - Total de agendamento ativo'),
                     ),
                     Expanded(
                       child: Container(
@@ -237,17 +242,71 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
+                      child: Text(
+                          '% Veículos Inspecionados no ato da Recepção - (6 ÷ 5)'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc5,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('% Agendados x Passagens - (7 ÷ 5)'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc6,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                          '% Total de agendamento ativo / Total agendado - (8 ÷ 7)'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc7,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
                       child: Container(
                         alignment: Alignment.center,
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => agerecep()));
-                            },
+                            onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Próximo')),
                       ),
                     ),
@@ -262,7 +321,7 @@ class _npscsi extends State<npscsi> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          painelmedidasoap()));
+                                          npscsi()));
                             },
                             child: Text('Voltar')),
                       ),

@@ -38,7 +38,52 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                                 MaterialPageRoute(
                                     builder: (context) => painelmedidasoap()));
                           },
-                          child: Text('Painel de Medidas')),
+                          child: Text('Coletas')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => painelmedidasoap()));
+                          },
+                          child: Text('Mensal')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => painelmedidasoap()));
+                          },
+                          child: Text('Gestão à Vista')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => painelmedidasoap()));
+                          },
+                          child: Text('Impressão')),
                     ),
                   ),
                 ],

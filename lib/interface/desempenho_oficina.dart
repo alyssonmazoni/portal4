@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
@@ -10,11 +9,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class desempenhooficina extends StatefulWidget {
+  _desempenhooficina createState() => _desempenhooficina();
 }
 
-class _npscsi extends State<npscsi> {
+class _desempenhooficina extends State<desempenhooficina> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -93,6 +92,9 @@ class _npscsi extends State<npscsi> {
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
+  TextEditingController tc5 = TextEditingController();
+  TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +111,7 @@ class _npscsi extends State<npscsi> {
                     alignment: Alignment.center,
                     height: 60,
                     width: 20,
-                    child: Text('NPS / CSI'),
+                    child: Text('DESEMPENHO OFICINA MECÂNICA'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -161,7 +163,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS  '),
+                      child: Text('13 - Horas Disponíveis Reais'),
                     ),
                     Expanded(
                       child: Container(
@@ -180,7 +182,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - Disponibilidade de Peças '),
+                      child: Text('14 - Horas Vendidas (Todos os serviços)'),
                     ),
                     Expanded(
                       child: Container(
@@ -199,7 +201,8 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('3 - FFVC'),
+                      child:
+                          Text('15 - Horas Vendidas (C1 e Serviço Expresso)'),
                     ),
                     Expanded(
                       child: Container(
@@ -218,7 +221,7 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('4 - Prazo de entrega '),
+                      child: Text('16 - Valor de M.O. Vendida'),
                     ),
                     Expanded(
                       child: Container(
@@ -237,17 +240,50 @@ class _npscsi extends State<npscsi> {
               Row(
                   children: [
                     Expanded(
+                      child: Text('17 - Valor de Peças Vendidas '),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc5,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('18 - Número de produtivos do Período'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc6,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
                       child: Container(
                         alignment: Alignment.center,
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => agerecep()));
-                            },
+                            onPressed: () {}, // falta direcionar para tela xpto
                             child: Text('Próximo')),
                       ),
                     ),
