@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
 import 'package:rizzi/interface/tela_menu.dart';
@@ -9,11 +10,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class eficiencia extends StatefulWidget {
-  _eficiencia createState() => _eficiencia();
+class chamadosoap extends StatefulWidget {
+  _chamadosoap createState() => _chamadosoap();
 }
 
-class _eficiencia extends State<eficiencia> {
+class _chamadosoap extends State<chamadosoap> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -92,7 +93,7 @@ class _eficiencia extends State<eficiencia> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Controle de Eficiência')),
+        appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.red)),
@@ -104,7 +105,7 @@ class _eficiencia extends State<eficiencia> {
                   alignment: Alignment.center,
                   height: 60,
                   width: 20,
-                  child: Text('Controle Eficiência'),
+                  child: Text('Abertura de Chamados'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -158,7 +159,7 @@ class _eficiencia extends State<eficiencia> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Pedido:'),
+                    child: Text('Solicitante:'),
                   ),
                   Expanded(
                     child: Container(
@@ -177,7 +178,7 @@ class _eficiencia extends State<eficiencia> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('Placa:'),
+                    child: Text('Função:'),
                   ),
                   Expanded(
                     child: Container(
@@ -196,7 +197,7 @@ class _eficiencia extends State<eficiencia> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('CIT:'),
+                    child: Text('Faça sua pergunta:'),
                   ),
                   Expanded(
                     child: Container(
@@ -205,139 +206,6 @@ class _eficiencia extends State<eficiencia> {
                       width: 5,
                       child: TextField(
                           controller: tc3,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Produtivo:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc4,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('M/O:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc5,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Hora Vendida:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc6,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Hora Aplicada:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc7,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Eficiência:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc8,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Motivo Variação:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc9,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Ação Corretiva:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc10,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -367,7 +235,7 @@ class _eficiencia extends State<eficiencia> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) => moduloOap()));
                           },
                           child: Text('Voltar')),
                     ),

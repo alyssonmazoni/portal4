@@ -17,7 +17,7 @@ class _modulopecasoap extends State<modulopecasoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Mosulo de Pçeas')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),

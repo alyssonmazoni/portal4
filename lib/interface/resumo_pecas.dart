@@ -89,7 +89,7 @@ class _ResumoPecas extends State<ResumoPecas> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Resumo de Peças')),
         body: Container(
           width: double.infinity,
           height: double.infinity,

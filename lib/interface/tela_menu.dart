@@ -21,30 +21,31 @@ class _Telamenu extends State<Telamenu> {
           child: Column(children: [
             Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => posvenda()));
-                          },
-                          child: Text('Pós Vendas')),
-                    ),
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 150,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => posvenda()));
+                        },
+                        child: Text('Pós Vendas')),
                   ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Vendas')),
-                    ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 80,
+                    child: ElevatedButton(
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Vendas')),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/chamados_oap.dart';
 import 'package:rizzi/interface/eficiencia.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
@@ -8,6 +9,7 @@ import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/pecas_oap.dart';
 import 'package:rizzi/interface/recepcao_oap.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
 class moduloOap extends StatefulWidget {
@@ -100,9 +102,24 @@ class _moduloOap extends State<moduloOap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
+                                    builder: (context) => chamadosoap()));
                           },
-                          child: Text('M.OAP')),
+                          child: Text('Chamados')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Telamenu()));
+                          },
+                          child: Text('Menu inicial')),
                     ),
                   ),
                 ],

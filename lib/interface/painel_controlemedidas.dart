@@ -5,6 +5,7 @@ import 'package:rizzi/interface/entrega_veic.dart';
 import 'package:rizzi/interface/indicadores_oficina.dart';
 import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/pecas_medidas.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/rep_manutencao.dart';
 import 'package:rizzi/interface/sistema_medidasoap.dart';
 
@@ -25,134 +26,220 @@ class _painelmedidasoap extends State<painelmedidasoap> {
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-          child: Column(children: [
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => npscsi()));
-                          },
-                          child: Text('1-NPS / CSI ')),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => npscsi()));
+                            },
+                            child: Text('1')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 10,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => agerecep()));
-                          },
-                          child: Text('2-AGENDAMENTO / RECEPÇÃO')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => agerecep()));
+                            },
+                            child: Text('2')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => pecasmedidas()));
-                          },
-                          child: Text('3-Peças')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => pecasmedidas()));
+                            },
+                            child: Text('3')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => repmanutencao()));
-                          },
-                          child: Text('4-REPARO E MANUT.')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => repmanutencao()));
+                            },
+                            child: Text('4')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => entregaveic()));
-                          },
-                          child: Text('5-ENTREGA DO VEÍCULO')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => entregaveic()));
+                            },
+                            child: Text('5')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => desempenhooficina()));
-                          },
-                          child: Text('6-DESEMPENHO OFICINA MECÂNICA')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          desempenhooficina()));
+                            },
+                            child: Text('6')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        indicadoresoficina()));
-                          },
-                          child: Text('7-INDICADORES DA OFICINA')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          indicadoresoficina()));
+                            },
+                            child: Text('7')),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 14,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => sistemamedidasoap()));
-                          },
-                          child: Text('Sistema Medidas')),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          sistemamedidasoap()));
+                            },
+                            child: Text('SM')),
+                      ),
                     ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text('Legendas'),
+                ),
+              ),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('1 - NPS / CSI'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('2 - AGENDAMENTO / RECEPÇÃO'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('3 - PEÇAS'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('4 - REP.E MANUT.'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('5 - ENTREGA DO VEÍCULO'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('6 - DESEMPENHO OFICINA MECÂNICA'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('7 - INDICADORES DA OFICINA'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 15,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => posvenda()));
+                            },
+                            child: Text('Voltar')),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ),
         ));
   }
 }

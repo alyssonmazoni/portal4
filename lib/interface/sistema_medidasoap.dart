@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
 import 'package:rizzi/interface/resumo_pecas.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
@@ -84,6 +85,21 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                                     builder: (context) => painelmedidasoap()));
                           },
                           child: Text('Impressão')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 15,
+                      width: 5,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => posvenda()));
+                          },
+                          child: Text('Voltar')),
                     ),
                   ),
                 ],

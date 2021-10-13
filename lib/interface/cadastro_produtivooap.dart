@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -257,13 +258,19 @@ class _cadastroprodutivooap extends State<cadastroprodutivooap> {
                         height: 15,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {}, // falta direcionar para tela xpto
-                            child: Text('Próximo')),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => posvenda()));
+                            },
+                            child: Text('Voltar')),
                       ),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center),
+
             ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
           ),
         ));

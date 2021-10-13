@@ -96,7 +96,7 @@ class _entregaveic extends State<entregaveic> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Entrega do Veículo')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.red)),

@@ -86,7 +86,7 @@ class _ResumoOss extends State<ResumoOss> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Resumo de OS(s)')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
