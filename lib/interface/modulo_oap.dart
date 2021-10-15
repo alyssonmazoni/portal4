@@ -24,10 +24,12 @@ class _moduloOap extends State<moduloOap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Modulo OAP')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(
                 children: [
@@ -124,8 +126,8 @@ class _moduloOap extends State<moduloOap> {
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                crossAxisAlignment: CrossAxisAlignment.start),
+          ], mainAxisAlignment: MainAxisAlignment.spaceAround),
         ));
   }
 }

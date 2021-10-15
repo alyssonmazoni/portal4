@@ -94,8 +94,10 @@ class _eficiencia extends State<eficiencia> {
     return Scaffold(
         appBar: AppBar(title: Text('Controle de Eficiência')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
               child: Column(children: [
             Row(children: [

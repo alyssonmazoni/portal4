@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/resumo_pecas.dart';
-import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -406,9 +404,9 @@ class _ResumoOss extends State<ResumoOss> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
+          ], mainAxisAlignment: MainAxisAlignment.center)),
         ));
   }
 }

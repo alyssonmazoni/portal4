@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/eficiencia.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
+
 
 /// Provides a UI to select a authentication type page
 class oficinaOap extends StatefulWidget {

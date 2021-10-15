@@ -122,9 +122,9 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                   ),
                 ),
               ],
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center),
-        ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start),
+        ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
       ),
     );
   }

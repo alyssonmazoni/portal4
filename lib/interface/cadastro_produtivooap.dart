@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/pos_venda.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -94,10 +93,12 @@ class _cadastroprodutivooap extends State<cadastroprodutivooap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Cadastro de Produtivo')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
             child: Column(children: [
               Row(children: [
@@ -268,10 +269,9 @@ class _cadastroprodutivooap extends State<cadastroprodutivooap> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
-
-            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+            ], mainAxisAlignment: MainAxisAlignment.center),
           ),
         ));
   }

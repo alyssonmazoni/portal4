@@ -17,12 +17,14 @@ class _TelaLogin extends State<TelaLogin> {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(30),
           alignment: Alignment.center,
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.spaceAround),
+            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
@@ -122,8 +124,8 @@ class _TelaLogin extends State<TelaLogin> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }

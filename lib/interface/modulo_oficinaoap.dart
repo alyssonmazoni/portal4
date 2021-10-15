@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cadastro_produtivooap.dart';
 import 'package:rizzi/interface/eficiencia.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
-import 'package:rizzi/interface/modulo_pecasoap.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
@@ -19,10 +17,12 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Modulo Oficina')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(
                 children: [
@@ -89,9 +89,9 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ], mainAxisAlignment: MainAxisAlignment.center),
         ));
   }
 }

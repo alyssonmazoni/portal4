@@ -22,10 +22,12 @@ class _painelmedidasoap extends State<painelmedidasoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Painel Medidas')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
             child: Column(children: [
               Row(

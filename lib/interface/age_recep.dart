@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/cadastro_simplesoap.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/nps_csi.dart';
-import 'package:rizzi/interface/painel_controlemedidas.dart';
 import 'package:rizzi/interface/sistema_medidasoap.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -100,10 +96,12 @@ class _agerecep extends State<agerecep> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Agendamento e Recepção')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
             child: Column(children: [
               Row(children: [

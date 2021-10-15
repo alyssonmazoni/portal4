@@ -20,8 +20,10 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Sistema de Medidas')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
@@ -103,9 +105,9 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start),
+          ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
         ));
   }
 }

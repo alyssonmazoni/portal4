@@ -14,10 +14,12 @@ class _Telamenu extends State<Telamenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Portal')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.yellow)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: Column(children: [
             Row(
                 children: [
@@ -35,7 +37,7 @@ class _Telamenu extends State<Telamenu> {
                         child: Text('Pós Vendas')),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -48,9 +50,9 @@ class _Telamenu extends State<Telamenu> {
                         child: Text('Vendas')),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start),
+          ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
         ));
   }
 }

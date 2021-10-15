@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -94,8 +90,10 @@ class _cadcit extends State<cadcit> {
     return Scaffold(
         appBar: AppBar(title: Text('Página Inicial')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
               child: Column(children: [
             Row(children: [

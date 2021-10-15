@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/age_recep.dart';
-import 'package:rizzi/interface/cadastro_simplesoap.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 import 'package:rizzi/interface/sistema_medidasoap.dart';
 import 'my_selection_item.dart';
@@ -97,10 +94,12 @@ class _npscsi extends State<npscsi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('NPS CSI ')),
         body: Container(
+          width: double.infinity,
+          height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
             child: Column(children: [
               Row(children: [
