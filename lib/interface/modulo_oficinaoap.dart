@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_produtivooap.dart';
 import 'package:rizzi/interface/eficiencia.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/servico_expresso.dart';
+import 'package:rizzi/interface/servico_externo.dart';
 
 /// Provides a UI to select a authentication type page
 class moduloOficinaoap extends StatefulWidget {
@@ -17,81 +17,86 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Modulo Oficina')),
+        appBar: AppBar(title: Text('modulo_oficinaoap')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: Column(children: [
             Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => eficiencia()));
-                          },
-                          child: Text('Eficiência')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        cadastroprodutivooap()));
-                          },
-                          child: Text('Cad.Produtivo')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        SeparacaoAntecipada()));
-                          },
-                          child: Text('S/A')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
-                          },
-                          child: Text('M.OAP')),
-                    ),
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 150,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => eficiencia()));
+                        },
+                        child: Text('Eficiência')),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 150,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => servicoexpresso()));
+                        },
+                        child: Text('Serviço Expresso')),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 150,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => servicoexterno()));
+                        },
+                        child: Text('Serviço Externo')),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 300,
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SeparacaoAntecipada()));
+                        },
+                        child: Text('Separação Antencipada')),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }
 }

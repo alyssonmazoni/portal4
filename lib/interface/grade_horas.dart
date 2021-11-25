@@ -1,34 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
+import 'package:rizzi/interface/cadastro_simplesoap.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class ResumoOss extends StatefulWidget {
-  _ResumoOss createState() => _ResumoOss();
+class gradehoras extends StatefulWidget {
+  _gradehoras createState() => _gradehoras();
 }
 
-class _ResumoOss extends State<ResumoOss> {
+class _gradehoras extends State<gradehoras> {
   DateTime dateForm = DateTime.now();
 
-  final elements1 = [
-    "",
-    "Balcão",
-    "Oficina",
-    "Funilaria",
-    "Pneu",
-  ];
+  final elements1 = ["", "06:00", "07:00", "08:00"];
 
-  final elements2 = ["", "Orçamento", "Diagnóstico", "Ordem de reparação"];
+  final elements2 = ["", "11:00", "11:15", "11:30", "11:45", "12:00", "ALMOÇO"];
 
-  final elements3 = ["", "C&O", "Vans"];
+  final elements3 = ["", "13:00", "13:15", "13:30", "13:45", "14:00", "ALMOÇO"];
 
-  final elements4 = ["", "Sim", "Não"];
+  final elements4 = ["", "17:00", "17:30", "18:00", "18:30"];
 
-  final elements5 = ["", "Peça faltante", "Nova solicitação"];
+  final elements5 = ["", "00:10", "00:15", "00:30"];
 
   int selectedIndex1 = 0;
   int selectedIndex2 = 0;
@@ -77,14 +71,12 @@ class _ResumoOss extends State<ResumoOss> {
   }
 
   TextEditingController tc1 = TextEditingController();
-  TextEditingController tc2 = TextEditingController();
-  TextEditingController tc3 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Resumo de OS(s)')),
+        appBar: AppBar(title: Text('Grade Horas')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -99,18 +91,7 @@ class _ResumoOss extends State<ResumoOss> {
                   alignment: Alignment.center,
                   height: 40,
                   width: 10,
-                  child: Text('Resumo OSs'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  alignment: Alignment.center,
-                  height: 40,
-                  width: 10,
-                  child: Text('Serviços e Peças Limitadas Brasil S/A.'),
+                  child: Text('Horas'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -159,26 +140,7 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Pedido:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc1,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Classe:'),
+                    child: Text('  H.Inicio Dia:'),
                   ),
                   Expanded(
                     child: Container(
@@ -207,7 +169,7 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  SB:'),
+                    child: Text('  H.Inicio Almoço:'),
                   ),
                   Expanded(
                     child: Container(
@@ -236,7 +198,7 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Tipo:'),
+                    child: Text('  H.Fim Almoço:'),
                   ),
                   Expanded(
                     child: Container(
@@ -265,45 +227,7 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Solicitada:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc2,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Disponível:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
-                      child: TextField(
-                          controller: tc3,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  S/A:'),
+                    child: Text('  H.Fim dia:'),
                   ),
                   Expanded(
                     child: Container(
@@ -332,13 +256,13 @@ class _ResumoOss extends State<ResumoOss> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  TP Solicitação:'),
+                    child: Text('  Intervalo:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
-                      height: 25,
+                      height: 30,
                       width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
@@ -382,7 +306,8 @@ class _ResumoOss extends State<ResumoOss> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ResumoPecas()));
+                                    builder: (context) =>
+                                        cadastrosimplesoap()));
                           },
                           child: Text('Res.Peças')),
                     ),
@@ -398,7 +323,7 @@ class _ResumoOss extends State<ResumoOss> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) => Telamenu()));
                           },
                           child: Text('Voltar')),
                     ),

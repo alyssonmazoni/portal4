@@ -17,7 +17,7 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Página Inicial')),
+      appBar: AppBar(title: Text('Modulo Sistema de Medidas')),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -36,7 +36,7 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => sistemamedidasoap()));
+                                  builder: (context) => Sistemamedidasoap()));
                         },
                         child: Text('Sistema de Medidas')),
                   ),
@@ -76,26 +76,6 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => sistemamedidasoap()));
-                        },
-                        child: Text('Plano de Ação')),
-                  ),
-                ),
-              ],
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center),
-          Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 20,
-                    width: 20,
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
                                   builder: (context) => cadcit()));
                         },
                         child: Text('Cadastro CIT')),
@@ -109,8 +89,8 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    height: 20,
-                    width: 20,
+                    height: 30,
+                    width: 5,
                     child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -122,9 +102,9 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                   ),
                 ),
               ],
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start),
-        ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
+        ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
       ),
     );
   }

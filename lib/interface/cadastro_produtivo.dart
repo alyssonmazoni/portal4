@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
+import 'package:rizzi/interface/cadastro_consultor.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class chamadosoap extends StatefulWidget {
-  _chamadosoap createState() => _chamadosoap();
+class cadastroProdutivo extends StatefulWidget {
+  _cadastroProdutivo createState() => _cadastroProdutivo();
 }
 
-class _chamadosoap extends State<chamadosoap> {
+class _cadastroProdutivo extends State<cadastroProdutivo> {
   DateTime dateForm = DateTime.now();
-
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -28,7 +27,7 @@ class _chamadosoap extends State<chamadosoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Abertura de Chamados')),
+        appBar: AppBar(title: Text('Cadastro Produtivo')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -37,13 +36,14 @@ class _chamadosoap extends State<chamadosoap> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
+                  margin: const EdgeInsets.all(8),
+                  height: 30,
+                  width: 10,
                   alignment: Alignment.center,
-                  child: Text('Chamados'),
+                  child: Text('Produtivos'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -68,7 +68,7 @@ class _chamadosoap extends State<chamadosoap> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {
@@ -97,24 +97,10 @@ class _chamadosoap extends State<chamadosoap> {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 10,
-                      child: TextField(
-                          controller: tc1,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                  Expanded(
-                    child: Text('  Chamado:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc2,
+                          controller: tc1,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -125,7 +111,7 @@ class _chamadosoap extends State<chamadosoap> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Solicitante:'),
+                    child: Text('  Funcionário:'),
                   ),
                   Expanded(
                     child: Container(
@@ -138,27 +124,13 @@ class _chamadosoap extends State<chamadosoap> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                  Expanded(
-                    child: Text('  Cargo:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc4,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Tel:'),
+                    child: Text('  Departamento:'),
                   ),
                   Expanded(
                     child: Container(
@@ -171,27 +143,13 @@ class _chamadosoap extends State<chamadosoap> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                  Expanded(
-                    child: Text('  Email:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc6,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Solicitação:'),
+                    child: Text('  Ausência:'),
                   ),
                   Expanded(
                     child: Container(
@@ -204,23 +162,19 @@ class _chamadosoap extends State<chamadosoap> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                  Expanded(
-                    child: Text('  DMS:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc8,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.white70,
+                  height: 40,
+                  width: 10,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
@@ -230,7 +184,7 @@ class _chamadosoap extends State<chamadosoap> {
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
-                  child: Text('PERGUNTA'),
+                  child: Text('Justificativa Ausência'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -250,39 +204,10 @@ class _chamadosoap extends State<chamadosoap> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.white70)),
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                  child: Text('RESPOSTA'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc10,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Respondente:'),
+                    child: Text('  Gerente:'),
                   ),
                   Expanded(
                     child: Container(
@@ -296,7 +221,7 @@ class _chamadosoap extends State<chamadosoap> {
                     ),
                   ),
                   Expanded(
-                    child: Text('  Dt Resposta:'),
+                    child: Text('  Dt Registro:'),
                   ),
                   Expanded(
                     child: Container(
@@ -356,9 +281,9 @@ class _chamadosoap extends State<chamadosoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
+                                    builder: (context) => cadastroconsultor()));
                           },
-                          child: Text('Voltar')),
+                          child: Text('Seguir')),
                     ),
                   ),
                 ],

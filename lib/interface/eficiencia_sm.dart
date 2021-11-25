@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
-class pecasmedidas extends StatefulWidget {
-  _pecasmedidas createState() => _pecasmedidas();
+class eficienciasm extends StatefulWidget {
+  _eficienciasm createState() => _eficienciasm();
 }
 
-class _pecasmedidas extends State<pecasmedidas> {
+class _eficienciasm extends State<eficienciasm> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
-
+  TextEditingController tc2 = TextEditingController();
+  TextEditingController tc3 = TextEditingController();
+  TextEditingController tc4 = TextEditingController();
+  TextEditingController tc5 = TextEditingController();
+  TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Peças SM')),
+        appBar: AppBar(title: Text('EFICIÊNCIA SM ')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -34,7 +38,7 @@ class _pecasmedidas extends State<pecasmedidas> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 10,
-                  child: Text('Peças SM'),
+                  child: Text('EFICIÊNCIA NOVIDADE'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -83,8 +87,7 @@ class _pecasmedidas extends State<pecasmedidas> {
             Row(
                 children: [
                   Expanded(
-                    child: Text(
-                        '  Indicador com % de OSs atendidas pela oficina (IAPO)'),
+                    child: Text('  Qtd. OSs Aplicadas:'),
                   ),
                   Expanded(
                     child: Container(
@@ -93,6 +96,120 @@ class _pecasmedidas extends State<pecasmedidas> {
                       width: 15,
                       child: TextField(
                           controller: tc1,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Valor MO'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc2,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Qtd H Vendidas:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc3,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Qtd H Aplicadas:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc4,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Qtd H Obtidas: '),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc5,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Resultado Eficiência: 3/4'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc6,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Aproveitamento'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc7,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),

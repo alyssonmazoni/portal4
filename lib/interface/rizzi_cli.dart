@@ -1,24 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
-import 'package:rizzi/interface/painel_controlemedidas.dart';
+import 'package:rizzi/interface/modulo_rizzi.dart';
 
 /// Provides a UI to select a authentication type page
-class pecasmedidas extends StatefulWidget {
-  _pecasmedidas createState() => _pecasmedidas();
+class rizzicl1 extends StatefulWidget {
+  _rizzicl1 createState() => _rizzicl1();
 }
 
-class _pecasmedidas extends State<pecasmedidas> {
+class _rizzicl1 extends State<rizzicl1> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
-
+  TextEditingController tc2 = TextEditingController();
+  TextEditingController tc3 = TextEditingController();
+  TextEditingController tc4 = TextEditingController();
+  TextEditingController tc5 = TextEditingController();
+  TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
+  TextEditingController tc8 = TextEditingController();
+  TextEditingController tc9 = TextEditingController();
+  TextEditingController tc10 = TextEditingController();
+  TextEditingController tc11 = TextEditingController();
+  TextEditingController tc12 = TextEditingController();
+  TextEditingController tc13 = TextEditingController();
+  TextEditingController tc14 = TextEditingController();
+  TextEditingController tc15 = TextEditingController();
+  TextEditingController tc16 = TextEditingController();
+  TextEditingController tc17 = TextEditingController();
+  TextEditingController tc18 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Peças SM')),
+        appBar: AppBar(title: Text('RIZZI CL-1')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -34,7 +49,7 @@ class _pecasmedidas extends State<pecasmedidas> {
                   alignment: Alignment.center,
                   height: 30,
                   width: 10,
-                  child: Text('Peças SM'),
+                  child: Text('PARAMETROS CL-1'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -83,8 +98,7 @@ class _pecasmedidas extends State<pecasmedidas> {
             Row(
                 children: [
                   Expanded(
-                    child: Text(
-                        '  Indicador com % de OSs atendidas pela oficina (IAPO)'),
+                    child: Text('  Sub Etapa:'),
                   ),
                   Expanded(
                     child: Container(
@@ -93,6 +107,63 @@ class _pecasmedidas extends State<pecasmedidas> {
                       width: 15,
                       child: TextField(
                           controller: tc1,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  N.º Pergunta:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc2,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Nome Pergunta:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc3,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Peso:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc4,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -134,7 +205,7 @@ class _pecasmedidas extends State<pecasmedidas> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => modulorizzi()));
                           },
                           child: Text('Voltar')),
                     ),

@@ -1,11 +1,12 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/eficiencia.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
-import 'package:rizzi/interface/modulo_pecasoap.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
+
 class recepcaooap extends StatefulWidget {
   _recepcaooap createState() => _recepcaooap();
 }
@@ -28,8 +29,8 @@ class _recepcaooap extends State<recepcaooap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -43,8 +44,8 @@ class _recepcaooap extends State<recepcaooap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -59,8 +60,8 @@ class _recepcaooap extends State<recepcaooap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -72,8 +73,8 @@ class _recepcaooap extends State<recepcaooap> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }

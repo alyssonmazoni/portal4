@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'my_selection_item.dart';
+import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
@@ -34,46 +33,6 @@ class _cadcit extends State<cadcit> {
   int selectedIndex4 = 0;
   int selectedIndex5 = 0;
 
-  List<Widget> _buildItems1() {
-    return elements1
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems2() {
-    return elements2
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems3() {
-    return elements3
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems4() {
-    return elements4
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems5() {
-    return elements5
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
@@ -84,56 +43,53 @@ class _cadcit extends State<cadcit> {
   TextEditingController tc8 = TextEditingController();
   TextEditingController tc9 = TextEditingController();
   TextEditingController tc10 = TextEditingController();
+  TextEditingController tc11 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Cadastro CIT')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          margin: const EdgeInsets.all(10),
-          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          margin: const EdgeInsets.all(8),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
+            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  height: 60,
-                  width: 20,
-                  child: Text('Cadastro CIT'),
+                  child: Text('CITs'),
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
+            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text('Será uma Query do ID da conta '),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.green[500],
-                  height: 15,
-                  width: 5,
+                  color: Colors.white70,
+                  height: 20,
+                  width: 15,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Data'),
+                    child: Text('  Data:'),
                   ),
                   Expanded(
                     child: Container(
-                        alignment: Alignment.center,
+                        margin: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white)),
+                            border: Border.all(color: Colors.white70)),
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -147,60 +103,50 @@ class _cadcit extends State<cadcit> {
                                 });
                               });
                             },
-                            child: Text(
-                                DateFormat('dd-MM-yyyy').format(dateForm)))),
+                            child:
+                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('CIT:'),
+                    child: Text('  Conta:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: TextField(
                           controller: tc1,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
                   Expanded(
-                    child: Text('Tipo de Serviço:'),
+                    child: Text('Tp Serviço:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: TextField(
                           controller: tc2,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
                   Expanded(
-                    child: Text('Observação:'),
+                    child: Text('Cit:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 30,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: TextField(
                           controller: tc3,
                           textAlign: TextAlign.center,
@@ -210,29 +156,79 @@ class _cadcit extends State<cadcit> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white70)),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                  child: Text('Observação'),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc10,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Salvar')),
+                          onPressed:
+                              () {}, // falta direcionar para databases enviar
+                          child: Text('Enviar')),
                     ),
                   ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed:
+                              () {}, // falta direcionar para databases editar
+                          child: Text('Editar')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) => moduloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

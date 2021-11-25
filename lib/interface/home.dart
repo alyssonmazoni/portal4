@@ -17,29 +17,19 @@ class _SystemHome extends State<SystemHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('Home')),
         body: Center(
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(8),
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => TelaLogin()));
                     },
-                    child: Text('Login')),
+                    child: Text('Acesso ao Portal')),
               ),
-              Padding(
-                  padding: EdgeInsets.all(10),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => TelaLogin()));
-                      },
-                      child: Text('Termos de Uso')))
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),

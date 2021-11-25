@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/recepcao_oap.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
 class modulorecepcaooap extends StatefulWidget {

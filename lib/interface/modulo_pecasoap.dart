@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
 class modulopecasoap extends StatefulWidget {
@@ -17,7 +13,7 @@ class _modulopecasoap extends State<modulopecasoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Mosulo de Pçeas')),
+        appBar: AppBar(title: Text('Modulo Peças')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
@@ -40,8 +36,8 @@ class _modulopecasoap extends State<modulopecasoap> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }

@@ -25,8 +25,8 @@ class _oficinaOap extends State<oficinaOap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
+                      height: 20,
+                      width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(

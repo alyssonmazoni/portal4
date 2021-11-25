@@ -1,13 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cadastro_simplesoap.dart';
+import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/tela_login.dart';
 import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
-class TelaLogin extends StatefulWidget {
-  _TelaLogin createState() => _TelaLogin();
+class gerarsenha extends StatefulWidget {
+  _gerarsenha createState() => _gerarsenha();
 }
 
-class _TelaLogin extends State<TelaLogin> {
+class _gerarsenha extends State<gerarsenha> {
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
@@ -15,7 +18,7 @@ class _TelaLogin extends State<TelaLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('tela_login')),
+        appBar: AppBar(title: Text('Gerar Senha')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -31,7 +34,7 @@ class _TelaLogin extends State<TelaLogin> {
                   alignment: Alignment.center,
                   height: 40,
                   width: 10,
-                  child: Text('Efetuar login'),
+                  child: Text('Criar Login'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -45,6 +48,23 @@ class _TelaLogin extends State<TelaLogin> {
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text(
+                      '   Para ter acesso completo a este site, você primeiro precisa criar uma conta.'),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text('Escolha um email ou uma identificação'),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
@@ -101,7 +121,7 @@ class _TelaLogin extends State<TelaLogin> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Telamenu()));
+                                    builder: (context) => TelaLogin()));
                           },
                           child: Text('ACESSAR')),
                     ),
@@ -123,7 +143,7 @@ class _TelaLogin extends State<TelaLogin> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text('Esta é a sua primeira vez aqui?'),
+                  child: Text('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -132,7 +152,7 @@ class _TelaLogin extends State<TelaLogin> {
                 child: Container(
                   alignment: Alignment.center,
                   child: Text(
-                      '   Para ter acesso completo a este site, você primeiro precisa criar uma conta.'),
+                      '   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -148,7 +168,7 @@ class _TelaLogin extends State<TelaLogin> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Telamenu()));
+                                    builder: (context) => SystemHome()));
                           },
                           child: Text('ACESSO VISITANTE')),
                     ),
@@ -163,10 +183,9 @@ class _TelaLogin extends State<TelaLogin> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        cadastrosimplesoap()));
+                                    builder: (context) => TelaLogin()));
                           },
-                          child: Text('CRIAR CONTA')),
+                          child: Text('Efetivar o Cadastro')),
                     ),
                   ),
                 ],

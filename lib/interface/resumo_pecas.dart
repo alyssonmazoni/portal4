@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/tela_menu.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -46,38 +44,6 @@ class _ResumoPecas extends State<ResumoPecas> {
         .toList();
   }
 
-  List<Widget> _buildItems2() {
-    return elements2
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems3() {
-    return elements3
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems4() {
-    return elements4
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
-  List<Widget> _buildItems5() {
-    return elements5
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
-
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
@@ -89,7 +55,7 @@ class _ResumoPecas extends State<ResumoPecas> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Resumo de Peças')),
+        appBar: AppBar(title: Text('Resumo Peças')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -102,8 +68,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                   child: Container(
                     margin: const EdgeInsets.all(8),
                     alignment: Alignment.center,
-                    height: 20,
-                    width: 5,
+                    height: 40,
+                    width: 10,
                     child: Text('Resumo Peças'),
                   ),
                 ),
@@ -113,7 +79,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                   child: Container(
                     margin: const EdgeInsets.all(8),
                     alignment: Alignment.center,
-                    child: Text('Será uma Query do ID da conta '),
+                    child: Text('Serviços e Peças Limitadas Brasil S/A.'),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -121,25 +87,25 @@ class _ResumoPecas extends State<ResumoPecas> {
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    color: Colors.blue,
-                    height: 20,
-                    width: 5,
+                    color: Colors.white70,
+                    height: 40,
+                    width: 10,
                   ),
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.center),
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Data:'),
+                      child: Text('  Data:'),
                     ),
                     Expanded(
                       child: Container(
                           margin: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white)),
+                              border: Border.all(color: Colors.white70)),
                           alignment: Alignment.center,
-                          height: 30,
-                          width: 5,
+                          height: 40,
+                          width: 10,
                           child: TextButton(
                               onPressed: () {
                                 DatePicker.showDatePicker(context,
@@ -154,15 +120,15 @@ class _ResumoPecas extends State<ResumoPecas> {
                                 });
                               },
                               child: Text(
-                                  DateFormat('dd-MM-yyyy').format(dateForm)))),
+                                  DateFormat('dd-MM-yy').format(dateForm)))),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Pedido:'),
+                      child: Text('  Pedido:'),
                     ),
                     Expanded(
                       child: Container(
@@ -182,7 +148,7 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('Cód:'),
+                      child: Text('  Cód:'),
                     ),
                     Expanded(
                       child: Container(
@@ -197,12 +163,12 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Peça:'),
+                      child: Text('  Peça:'),
                     ),
                     Expanded(
                       child: Container(
@@ -217,12 +183,12 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Qtd:'),
+                      child: Text('  Qtd:'),
                     ),
                     Expanded(
                       child: Container(
@@ -237,12 +203,12 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Curva:'),
+                      child: Text('  Curva:'),
                     ),
                     Expanded(
                       child: Container(
@@ -266,19 +232,28 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white70)),
+                    alignment: Alignment.center,
+                    height: 40,
+                    width: 10,
+                    child: Text('MOTIVO FALTA'),
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Motivo Falta:'),
-                    ),
-                    Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
                         height: 30,
-                        width: 50,
+                        width: 5,
                         child: TextField(
                             controller: tc5,
                             textAlign: TextAlign.center,
@@ -286,19 +261,28 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white70)),
+                    alignment: Alignment.center,
+                    height: 40,
+                    width: 10,
+                    child: Text('AÇÃO CORRETIVA'),
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
-                      child: Text('Ação Corretiva:'),
-                    ),
-                    Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
                         height: 30,
-                        width: 50,
+                        width: 5,
                         child: TextField(
                             controller: tc6,
                             textAlign: TextAlign.center,
@@ -306,14 +290,14 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
                       child: Container(
                         alignment: Alignment.center,
-                        height: 15,
+                        height: 25,
                         width: 5,
                         child: ElevatedButton(
                             onPressed: () {}, // falta direcionar para tela xpto
@@ -323,8 +307,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                     Expanded(
                       child: Container(
                         alignment: Alignment.center,
-                        height: 15,
-                        width: 5,
+                        height: 25,
+                        width: 300,
                         child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
@@ -338,7 +322,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                     Expanded(
                       child: Container(
                         alignment: Alignment.center,
-                        height: 15,
+                        height: 25,
                         width: 5,
                         child: ElevatedButton(
                             onPressed: () {

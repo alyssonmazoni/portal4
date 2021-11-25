@@ -64,29 +64,11 @@ class _cl1oapconta extends State<cl1oapconta> {
         .toList();
   }
 
-  List<Widget> _buildItems3() {
-    return elements3
-        .map((val) => MySelectionItem(
-      title: val,
-    ))
-        .toList();
-  }
 
-  List<Widget> _buildItems4() {
-    return elements4
-        .map((val) => MySelectionItem(
-      title: val,
-    ))
-        .toList();
-  }
 
-  List<Widget> _buildItems5() {
-    return elements5
-        .map((val) => MySelectionItem(
-      title: val,
-    ))
-        .toList();
-  }
+
+
+
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();

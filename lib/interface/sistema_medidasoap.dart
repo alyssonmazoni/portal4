@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/nps_csi.dart';
+import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
+
 
 /// Provides a UI to select a authentication type page
-class sistemamedidasoap extends StatefulWidget {
-  _sistemamedidasoap createState() => _sistemamedidasoap();
+class Sistemamedidasoap extends StatefulWidget {
+  _Sistemamedidasoap createState() => _Sistemamedidasoap();
 }
 
-class _sistemamedidasoap extends State<sistemamedidasoap> {
+class _Sistemamedidasoap extends State<Sistemamedidasoap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -32,7 +28,7 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
+                      height: 20,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {
@@ -47,7 +43,7 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
+                      height: 20,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {
@@ -62,7 +58,7 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
+                      height: 20,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {
@@ -74,40 +70,40 @@ class _sistemamedidasoap extends State<sistemamedidasoap> {
                           child: Text('Gestão à Vista')),
                     ),
                   ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: Text('Impressão')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
                       width: 15,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
-                          },
-                          child: Text('Impressão')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 5,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => posvenda()));
+                                    builder: (context) =>
+                                        modulo_sistemamedidas()));
                           },
                           child: Text('Voltar')),
                     ),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.start),
-          ], mainAxisAlignment: MainAxisAlignment.spaceBetween),
+                crossAxisAlignment: CrossAxisAlignment.center),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
         ));
   }
 }

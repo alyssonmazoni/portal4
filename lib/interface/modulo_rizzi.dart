@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/age_recep.dart';
 import 'package:rizzi/interface/desempenho_oficina.dart';
-import 'package:rizzi/interface/eficiencia_sm.dart';
 import 'package:rizzi/interface/entrega_veic.dart';
+import 'package:rizzi/interface/grade_horas.dart';
 import 'package:rizzi/interface/indicadores_oficina.dart';
-import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/pecas_medidas.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/rep_manutencao.dart';
-
+import 'package:rizzi/interface/rizzi_cli.dart';
+import 'package:rizzi/interface/rizzi_gps.dart';
+import 'package:rizzi/interface/rizzi_pecas.dart';
+import 'package:rizzi/interface/rizzi_rh.dart';
+import 'package:rizzi/interface/rizzi_status.dart';
+import 'package:rizzi/interface/sistema_medidasoap.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
-class painelmedidasoap extends StatefulWidget {
-  _painelmedidasoap createState() => _painelmedidasoap();
+class modulorizzi extends StatefulWidget {
+  _modulorizzi createState() => _modulorizzi();
 }
 
-class _painelmedidasoap extends State<painelmedidasoap> {
+class _modulorizzi extends State<modulorizzi> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -23,7 +29,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Painel Medidas')),
+        appBar: AppBar(title: Text('Modulo Rizzi')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -46,7 +52,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => npscsi()));
+                                      builder: (context) => rizzipecas()));
                             },
                             child: Text('1')),
                       ),
@@ -61,7 +67,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => agerecep()));
+                                      builder: (context) => rizzirh()));
                             },
                             child: Text('2')),
                       ),
@@ -76,7 +82,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => pecasmedidas()));
+                                      builder: (context) => rizzistatus()));
                             },
                             child: Text('3')),
                       ),
@@ -91,7 +97,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => repmanutencao()));
+                                      builder: (context) => rizzigps()));
                             },
                             child: Text('4')),
                       ),
@@ -106,7 +112,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => entregaveic()));
+                                      builder: (context) => gradehoras()));
                             },
                             child: Text('5')),
                       ),
@@ -121,8 +127,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          desempenhooficina()));
+                                      builder: (context) => rizzicl1()));
                             },
                             child: Text('6')),
                       ),
@@ -154,9 +159,9 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          eficienciasm()));
+                                          Sistemamedidasoap()));
                             },
-                            child: Text('8')),
+                            child: Text('SM')),
                       ),
                     ),
                   ],
@@ -173,7 +178,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('1 - NPS / CSI'),
+                      child: Text('1 - PEÇAS'),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -183,7 +188,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('2 - AGENDAMENTO / RECEPÇÃO'),
+                      child: Text('2 - RECURSOS HUMANOS'),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -193,7 +198,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('3 - PEÇAS'),
+                      child: Text('3 - STATUS / SISTEMA'),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -201,37 +206,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('4 - REP.E MANUT.'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('5 - ENTREGA DO VEÍCULO'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('6 - DESEMPENHO OFICINA MECÂNICA'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('7 - INDICADORES DA OFICINA'),
+                      child: Text('4 - PARAMETROS DE LOCALIZAÇÃO.'),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -239,7 +214,15 @@ class _painelmedidasoap extends State<painelmedidasoap> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('8 - INDICADORES DA EFICIÊNCIA'),
+                      child: Text('5 - PARAMETROS DE HORA.'),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('6 - PARAMETROS DE CL-1.'),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -258,7 +241,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => modulo_sistemamedidas()));
+                                      builder: (context) => Telamenu()));
                             },
                             child: Text('Voltar')),
                       ),

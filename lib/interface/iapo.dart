@@ -15,7 +15,7 @@ class _Iapo extends State<Iapo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('iapo')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
@@ -25,8 +25,8 @@ class _Iapo extends State<Iapo> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 15,
+                      height: 20,
+                      width: 150,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -40,8 +40,8 @@ class _Iapo extends State<Iapo> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 15,
+                      height: 20,
+                      width: 150,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -50,17 +50,6 @@ class _Iapo extends State<Iapo> {
                                     builder: (context) => ResumoPecas()));
                           },
                           child: Text('Resumo Peças')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {}, //Falta criar o Dashbord
-
-                          child: Text('Dashbord')),
                     ),
                   ),
                 ],
