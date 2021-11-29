@@ -4,11 +4,11 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/modulo_rizzi.dart';
 
 /// Provides a UI to select a authentication type page
-class rizzipecas extends StatefulWidget {
-  _rizzipecas createState() => _rizzipecas();
+class RizziPecas extends StatefulWidget {
+  _RizziPecas createState() => _RizziPecas();
 }
 
-class _rizzipecas extends State<rizzipecas> {
+class _RizziPecas extends State<RizziPecas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -243,7 +243,7 @@ class _rizzipecas extends State<rizzipecas> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => modulorizzi()));
+                                    builder: (context) => ModuloRizzi()));
                           },
                           child: Text('Voltar')),
                     ),

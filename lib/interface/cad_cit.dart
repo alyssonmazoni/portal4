@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-
 /// Provides a UI to select a authentication type page
-class cadcit extends StatefulWidget {
-  _cadcit createState() => _cadcit();
+class CadCit extends StatefulWidget {
+  _CadCit createState() => _CadCit();
 }
 
-class _cadcit extends State<cadcit> {
+class _CadCit extends State<CadCit> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -228,7 +227,7 @@ class _cadcit extends State<cadcit> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

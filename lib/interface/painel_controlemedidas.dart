@@ -11,11 +11,13 @@ import 'package:rizzi/interface/rep_manutencao.dart';
 
 
 /// Provides a UI to select a authentication type page
-class painelmedidasoap extends StatefulWidget {
-  _painelmedidasoap createState() => _painelmedidasoap();
+class PainelControlemedidas extends StatefulWidget {
+
+
+  _PainelControlemedidas createState() => _PainelControlemedidas();
 }
 
-class _painelmedidasoap extends State<painelmedidasoap> {
+class _PainelControlemedidas extends State<PainelControlemedidas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -46,7 +48,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => npscsi()));
+                                      builder: (context) => NpsCsi()));
                             },
                             child: Text('1')),
                       ),
@@ -61,7 +63,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => agerecep()));
+                                      builder: (context) => AgeRecep()));
                             },
                             child: Text('2')),
                       ),
@@ -76,7 +78,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => pecasmedidas()));
+                                      builder: (context) => PecasMedidas()));
                             },
                             child: Text('3')),
                       ),
@@ -91,7 +93,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => repmanutencao()));
+                                      builder: (context) => RepManutencao()));
                             },
                             child: Text('4')),
                       ),
@@ -106,7 +108,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => entregaveic()));
+                                      builder: (context) => EntregaVeic()));
                             },
                             child: Text('5')),
                       ),
@@ -122,7 +124,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          desempenhooficina()));
+                                          DesempenhoOficina()));
                             },
                             child: Text('6')),
                       ),
@@ -138,7 +140,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          indicadoresoficina()));
+                                          IndicadoresOficina()));
                             },
                             child: Text('7')),
                       ),
@@ -153,8 +155,7 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) =>
-                                          eficienciasm()));
+                                      builder: (context) => EficienciaSm()));
                             },
                             child: Text('8')),
                       ),
@@ -258,7 +259,8 @@ class _painelmedidasoap extends State<painelmedidasoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => modulo_sistemamedidas()));
+                                      builder: (context) =>
+                                          ModuloSistemamedidas()));
                             },
                             child: Text('Voltar')),
                       ),

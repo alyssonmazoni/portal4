@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/modulo_oficinaoap.dart';
 
 /// Provides a UI to select a authentication type page
-class eficiencia extends StatefulWidget {
-  _eficiencia createState() => _eficiencia();
+class Eficiencia extends StatefulWidget {
+  _Eficiencia createState() => _Eficiencia();
 }
 
-class _eficiencia extends State<eficiencia> {
+class _Eficiencia extends State<Eficiencia> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -361,7 +361,7 @@ class _eficiencia extends State<eficiencia> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

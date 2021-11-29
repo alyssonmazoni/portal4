@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
-class repmanutencao extends StatefulWidget {
-  _repmanutencao createState() => _repmanutencao();
+class RepManutencao extends StatefulWidget {
+  _RepManutencao createState() => _RepManutencao();
 }
 
-class _repmanutencao extends State<repmanutencao> {
+class _RepManutencao extends State<RepManutencao> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -170,7 +169,7 @@ class _repmanutencao extends State<repmanutencao> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/gerar_senha.dart';
-import 'package:rizzi/interface/tela_login.dart';
 
 /// Provides a UI to select a authentication type page
-class cadastroconsultor extends StatefulWidget {
-  _cadastroconsultor createState() => _cadastroconsultor();
+class CadastroConsultor extends StatefulWidget {
+  _CadastroConsultor createState() => _CadastroConsultor();
 }
 
-class _cadastroconsultor extends State<cadastroconsultor> {
+class _CadastroConsultor extends State<CadastroConsultor> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -264,7 +263,7 @@ class _cadastroconsultor extends State<cadastroconsultor> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => cadastroconsultor()));
+                                    builder: (context) => CadastroConsultor()));
                           },
                           child: Text('Salvar')),
                     ),
@@ -279,7 +278,7 @@ class _cadastroconsultor extends State<cadastroconsultor> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => gerarsenha()));
+                                    builder: (context) => GerarSenha()));
                           },
                           child: Text('Gerar')),
                     ),

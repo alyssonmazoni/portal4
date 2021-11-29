@@ -280,7 +280,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                       width: 15,
                       child: ElevatedButton(
                           onPressed:
-                              () {}, // falta direcionar para databases editar
+                              () { }, // falta direcionar para databases editar
                           child: Text('Editar')),
                     ),
                   ),
@@ -294,7 +294,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

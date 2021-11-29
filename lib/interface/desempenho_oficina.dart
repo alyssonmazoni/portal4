@@ -4,11 +4,11 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
-class desempenhooficina extends StatefulWidget {
-  _desempenhooficina createState() => _desempenhooficina();
+class DesempenhoOficina extends StatefulWidget {
+  _DesempenhoOficina createState() => _DesempenhoOficina();
 }
 
-class _desempenhooficina extends State<desempenhooficina> {
+class _DesempenhoOficina extends State<DesempenhoOficina> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -17,7 +17,6 @@ class _desempenhooficina extends State<desempenhooficina> {
   TextEditingController tc4 = TextEditingController();
   TextEditingController tc5 = TextEditingController();
   TextEditingController tc6 = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -125,8 +124,7 @@ class _desempenhooficina extends State<desempenhooficina> {
             Row(
                 children: [
                   Expanded(
-                    child:
-                        Text('  Horas Vendidas (C1 e Serviço Expresso)'),
+                    child: Text('  Horas Vendidas (C1 e Serviço Expresso)'),
                   ),
                   Expanded(
                     child: Container(
@@ -233,7 +231,8 @@ class _desempenhooficina extends State<desempenhooficina> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) =>
+                                        PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/modulo_recepcaooap.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/pecas_oap.dart';
 
 /// Provides a UI to select a authentication type page
-class moduloOap extends StatefulWidget {
-  _moduloOap createState() => _moduloOap();
+class ModuloOap extends StatefulWidget {
+  _ModuloOap createState() => _ModuloOap();
 }
 
-class _moduloOap extends State<moduloOap> {
+class _ModuloOap extends State<ModuloOap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -35,7 +36,27 @@ class _moduloOap extends State<moduloOap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloRecepcaooap()));
+                          },
+                          child: Text('Recepção')),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 150,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Oficina')),
                     ),
@@ -55,7 +76,7 @@ class _moduloOap extends State<moduloOap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => pecasOap()));
+                                    builder: (context) => PecasOap()));
                           },
                           child: Text('Peças')),
                     ),
@@ -75,7 +96,8 @@ class _moduloOap extends State<moduloOap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => modulo_sistemamedidas()));
+                                    builder: (context) =>
+                                        ModuloSistemamedidas()));
                           },
                           child: Text('Sistema Medidas')),
                     ),

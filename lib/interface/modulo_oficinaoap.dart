@@ -5,11 +5,11 @@ import 'package:rizzi/interface/servico_expresso.dart';
 import 'package:rizzi/interface/servico_externo.dart';
 
 /// Provides a UI to select a authentication type page
-class moduloOficinaoap extends StatefulWidget {
-  _moduloOficinaoap createState() => _moduloOficinaoap();
+class ModuloOficinaoap extends StatefulWidget {
+  _ModuloOficinaoap createState() => _ModuloOficinaoap();
 }
 
-class _moduloOficinaoap extends State<moduloOficinaoap> {
+class _ModuloOficinaoap extends State<ModuloOficinaoap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -35,7 +35,7 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => eficiencia()));
+                                  builder: (context) => Eficiencia()));
                         },
                         child: Text('Eficiência')),
                   ),
@@ -53,7 +53,7 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => servicoexpresso()));
+                                  builder: (context) => ServicoExpresso()));
                         },
                         child: Text('Serviço Expresso')),
                   ),
@@ -71,7 +71,7 @@ class _moduloOficinaoap extends State<moduloOficinaoap> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => servicoexterno()));
+                                  builder: (context) => ServicoExterno()));
                         },
                         child: Text('Serviço Externo')),
                   ),

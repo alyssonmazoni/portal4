@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/cadastro_simplesoap.dart';
-import 'package:rizzi/interface/tela_menu.dart';
+import 'package:rizzi/interface/modulo_rizzi.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class gradehoras extends StatefulWidget {
-  _gradehoras createState() => _gradehoras();
+class GradeHoras extends StatefulWidget {
+  _GradeHoras createState() => _GradeHoras();
 }
 
-class _gradehoras extends State<gradehoras> {
+class _GradeHoras extends State<GradeHoras> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = ["", "06:00", "07:00", "08:00"];
@@ -307,9 +306,9 @@ class _gradehoras extends State<gradehoras> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        cadastrosimplesoap()));
+                                        ModuloRizzi()));
                           },
-                          child: Text('Res.Peças')),
+                          child: Text('Modulo Rizzi')),
                     ),
                   ),
                   Expanded(
@@ -323,7 +322,7 @@ class _gradehoras extends State<gradehoras> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Telamenu()));
+                                    builder: (context) => ModuloRizzi()));
                           },
                           child: Text('Voltar')),
                     ),

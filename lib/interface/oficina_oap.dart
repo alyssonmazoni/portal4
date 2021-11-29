@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
 
-
 /// Provides a UI to select a authentication type page
-class oficinaOap extends StatefulWidget {
-  _oficinaOap createState() => _oficinaOap();
+class OficinaOap extends StatefulWidget {
+  _OficinaOap createState() => _OficinaOap();
 }
 
-class _oficinaOap extends State<oficinaOap> {
+class _OficinaOap extends State<OficinaOap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -32,7 +31,7 @@ class _oficinaOap extends State<oficinaOap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Oficina')),
                     ),

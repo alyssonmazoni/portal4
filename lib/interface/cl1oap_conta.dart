@@ -5,11 +5,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class cl1oapconta extends StatefulWidget {
-  _cl1oapconta createState() => _cl1oapconta();
+class Cl1oapConta extends StatefulWidget {
+  _Cl1oapConta createState() => _Cl1oapConta();
 }
 
-class _cl1oapconta extends State<cl1oapconta> {
+class _Cl1oapConta extends State<Cl1oapConta> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -63,10 +63,6 @@ class _cl1oapconta extends State<cl1oapconta> {
             ))
         .toList();
   }
-
-
-
-
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();

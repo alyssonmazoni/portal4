@@ -35,7 +35,7 @@ class _posvenda extends State<posvenda> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
+                                    builder: (context) => ModuloOap()));
                           },
                           child: Text('Modulo OAP')),
                     ),
@@ -55,7 +55,7 @@ class _posvenda extends State<posvenda> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => chamadosoap()));
+                                    builder: (context) => ChamadosOap()));
                           },
                           child: Text('Chamados')),
                     ),

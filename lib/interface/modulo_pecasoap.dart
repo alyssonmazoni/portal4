@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 /// Provides a UI to select a authentication type page
-class modulopecasoap extends StatefulWidget {
-  _modulopecasoap createState() => _modulopecasoap();
+class ModuloPecasoap extends StatefulWidget {
+  _ModuloPecasoap createState() => _ModuloPecasoap();
 }
 
-class _modulopecasoap extends State<modulopecasoap> {
+class _ModuloPecasoap extends State<ModuloPecasoap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -30,7 +30,7 @@ class _modulopecasoap extends State<modulopecasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => modulopecasoap()));
+                                    builder: (context) => ModuloPecasoap()));
                           },
                           child: Text('Peças')),
                     ),

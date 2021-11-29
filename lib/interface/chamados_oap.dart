@@ -4,13 +4,12 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class chamadosoap extends StatefulWidget {
-  _chamadosoap createState() => _chamadosoap();
+class ChamadosOap extends StatefulWidget {
+  _ChamadosOap createState() => _ChamadosOap();
 }
 
-class _chamadosoap extends State<chamadosoap> {
+class _ChamadosOap extends State<ChamadosOap> {
   DateTime dateForm = DateTime.now();
-
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -356,7 +355,7 @@ class _chamadosoap extends State<chamadosoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
+                                    builder: (context) => ModuloOap()));
                           },
                           child: Text('Voltar')),
                     ),

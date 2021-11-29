@@ -3,16 +3,13 @@ import 'package:rizzi/interface/cadastro_produtivo.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
-
 /// Provides a UI to select a authentication type page
-class cadastrosimplesoap extends StatefulWidget {
-  _cadastrosimplesoap createState() => _cadastrosimplesoap();
+class CadastroSimplesoap extends StatefulWidget {
+  _CadastroSimplesoap createState() => _CadastroSimplesoap();
 }
 
-class _cadastrosimplesoap extends State<cadastrosimplesoap> {
+class _CadastroSimplesoap extends State<CadastroSimplesoap> {
   DateTime dateForm = DateTime.now();
-
-
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -393,7 +390,7 @@ class _cadastrosimplesoap extends State<cadastrosimplesoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => cadastroProdutivo()));
+                                    builder: (context) => CadastroProdutivo()));
                           },
                           child: Text('Seguir')),
                     ),

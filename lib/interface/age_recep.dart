@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/painel_controlemedidas.dart';
+import 'package:rizzi/interface/painel_Controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
-class agerecep extends StatefulWidget {
-  _agerecep createState() => _agerecep();
+class AgeRecep extends StatefulWidget {
+  _AgeRecep createState() => _AgeRecep();
 }
 
-class _agerecep extends State<agerecep> {
+class _AgeRecep extends State<AgeRecep> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -88,7 +88,7 @@ class _agerecep extends State<agerecep> {
                 children: [
                   Expanded(
                     child: Text(
-                        '  Passagens (C1, Interno, Garantia, Serviço Expresso, Revisões):'),
+                        'Passagens (C1, Interno, Garantia, Serviço Expresso, Revisões):'),
                   ),
                   Expanded(
                     child: Container(
@@ -254,7 +254,7 @@ class _agerecep extends State<agerecep> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

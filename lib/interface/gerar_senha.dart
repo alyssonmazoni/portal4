@@ -1,16 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_simplesoap.dart';
 import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/tela_login.dart';
-import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
-class gerarsenha extends StatefulWidget {
-  _gerarsenha createState() => _gerarsenha();
+class GerarSenha extends StatefulWidget {
+  _Gerarsenha createState() => _Gerarsenha();
 }
 
-class _gerarsenha extends State<gerarsenha> {
+class _Gerarsenha extends State<GerarSenha> {
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
@@ -151,8 +149,7 @@ class _gerarsenha extends State<gerarsenha> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text(
-                      '   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'),
+                  child: Text('   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),

@@ -4,11 +4,11 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
-class cadastroProdutivo extends StatefulWidget {
-  _cadastroProdutivo createState() => _cadastroProdutivo();
+class CadastroProdutivo extends StatefulWidget {
+  _CadastroProdutivo createState() => _CadastroProdutivo();
 }
 
-class _cadastroProdutivo extends State<cadastroProdutivo> {
+class _CadastroProdutivo extends State<CadastroProdutivo> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -281,7 +281,7 @@ class _cadastroProdutivo extends State<cadastroProdutivo> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => cadastroconsultor()));
+                                    builder: (context) => CadastroConsultor()));
                           },
                           child: Text('Seguir')),
                     ),

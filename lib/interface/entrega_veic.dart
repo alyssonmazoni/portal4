@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
+
 /// Provides a UI to select a authentication type page
-class entregaveic extends StatefulWidget {
-  _entregaveic createState() => _entregaveic();
+class EntregaVeic extends StatefulWidget {
+  _EntregaVeic createState() => _EntregaVeic();
 }
 
-class _entregaveic extends State<entregaveic> {
+class _EntregaVeic extends State<EntregaVeic> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -194,7 +194,7 @@ class _entregaveic extends State<entregaveic> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas ()));
                           },
                           child: Text('Voltar')),
                     ),

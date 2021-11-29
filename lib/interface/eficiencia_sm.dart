@@ -3,12 +3,13 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
+
 /// Provides a UI to select a authentication type page
-class eficienciasm extends StatefulWidget {
-  _eficienciasm createState() => _eficienciasm();
+class EficienciaSm extends StatefulWidget {
+  _EficienciaSm createState() => _EficienciaSm();
 }
 
-class _eficienciasm extends State<eficienciasm> {
+class _EficienciaSm extends State<EficienciaSm> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -251,7 +252,7 @@ class _eficienciasm extends State<eficienciasm> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

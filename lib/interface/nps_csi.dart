@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
-class npscsi extends StatefulWidget {
-  _npscsi createState() => _npscsi();
+class NpsCsi extends StatefulWidget {
+  _NpsCsi createState() => _NpsCsi();
 }
 
-class _npscsi extends State<npscsi> {
+class _NpsCsi extends State<NpsCsi> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -192,7 +191,7 @@ class _npscsi extends State<npscsi> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

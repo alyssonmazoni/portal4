@@ -6,8 +6,8 @@ import 'my_selection_item.dart';
 import 'package:direct_select/direct_select.dart';
 
 /// Provides a UI to select a authentication type page
-class servicoexterno extends StatefulWidget {
-  _servicoexterno createState() => _servicoexterno();
+class ServicoExterno extends StatefulWidget {
+  _ServicoExterno createState() => _ServicoExterno();
 }
 
 final elements1 = ["", "S", "F", "P", "C"];
@@ -26,7 +26,7 @@ List<Widget> _buildItems1() {
       .toList();
 }
 
-class _servicoexterno extends State<servicoexterno> {
+class _ServicoExterno extends State<ServicoExterno> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -382,7 +382,7 @@ class _servicoexterno extends State<servicoexterno> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

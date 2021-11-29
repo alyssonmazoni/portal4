@@ -64,7 +64,7 @@ class _Telamenu extends State<Telamenu> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => modulorizzi()));
+                                  builder: (context) => ModuloRizzi()));
                         },
                         child: Text('Modulo RIZZI')),
                   ),

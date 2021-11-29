@@ -3,11 +3,11 @@ import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 
 /// Provides a UI to select a authentication type page
-class pecasOap extends StatefulWidget {
-  _pecasOap createState() => _pecasOap();
+class PecasOap extends StatefulWidget {
+  _PecasOap createState() => _PecasOap ();
 }
 
-class _pecasOap extends State<pecasOap> {
+class _PecasOap extends State<PecasOap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();

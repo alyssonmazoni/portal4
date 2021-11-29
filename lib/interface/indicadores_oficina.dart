@@ -3,12 +3,13 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
+
 /// Provides a UI to select a authentication type page
-class indicadoresoficina extends StatefulWidget {
-  _indicadoresoficina createState() => _indicadoresoficina();
+class IndicadoresOficina extends StatefulWidget {
+  _IndicadoresOficina createState() => _IndicadoresOficina();
 }
 
-class _indicadoresoficina extends State<indicadoresoficina> {
+class _IndicadoresOficina extends State<IndicadoresOficina> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -232,7 +233,7 @@ class _indicadoresoficina extends State<indicadoresoficina> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Voltar')),
                     ),

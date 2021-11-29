@@ -51,24 +51,18 @@ class _cl1oapconta extends State<cl1oapconta> {
   List<Widget> _buildItems1() {
     return elements1
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
 
   List<Widget> _buildItems2() {
     return elements2
         .map((val) => MySelectionItem(
-      title: val,
-    ))
+              title: val,
+            ))
         .toList();
   }
-
-
-
-
-
-
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -103,10 +97,10 @@ class _cl1oapconta extends State<cl1oapconta> {
                                     maxTime: DateTime(2025, 6, 7),
                                     currentTime: DateTime.now(),
                                     locale: LocaleType.pt, onConfirm: (date) {
-                                      setState(() {
-                                        dateForm = date;
-                                      });
-                                    });
+                                  setState(() {
+                                    dateForm = date;
+                                  });
+                                });
                               },
                               child: Text(
                                   DateFormat('dd-MM-yyyy').format(dateForm)))),
@@ -155,25 +149,25 @@ class _cl1oapconta extends State<cl1oapconta> {
                   children: [
                     Expanded(
                         child: Container(
-                          margin: EdgeInsets.all(5),
-                          padding: EdgeInsets.all(10),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                              border: Border.all(
-                                  color: Colors.white, // Set border color
-                                  width: 3.0), // Set border width
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                  10.0)), // Set rounded corner radius
-                              boxShadow: [
-                                BoxShadow(
-                                    blurRadius: 10,
-                                    color: Colors.black,
-                                    offset: Offset(1, 3))
-                              ] // Make rounded corner of border
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          border: Border.all(
+                              color: Colors.white, // Set border color
+                              width: 3.0), // Set border width
+                          borderRadius: BorderRadius.all(Radius.circular(
+                              10.0)), // Set rounded corner radius
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 10,
+                                color: Colors.black,
+                                offset: Offset(1, 3))
+                          ] // Make rounded corner of border
                           ),
-                          child: Text('Recursos'),
-                        )),
+                      child: Text('Recursos'),
+                    )),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
@@ -192,7 +186,7 @@ class _cl1oapconta extends State<cl1oapconta> {
                   child: Container(
                     alignment: Alignment.center,
                     decoration:
-                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                        BoxDecoration(border: Border.all(color: Colors.grey)),
                     padding: EdgeInsets.all(10),
                     child: Text('S.Etapa'),
                   ),
@@ -201,7 +195,7 @@ class _cl1oapconta extends State<cl1oapconta> {
                   child: Container(
                     alignment: Alignment.center,
                     decoration:
-                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                        BoxDecoration(border: Border.all(color: Colors.grey)),
                     margin: EdgeInsets.all(5),
                     padding: EdgeInsets.all(10),
                     child: Text('Questão'),
@@ -211,7 +205,7 @@ class _cl1oapconta extends State<cl1oapconta> {
                   child: Container(
                     alignment: Alignment.center,
                     decoration:
-                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                        BoxDecoration(border: Border.all(color: Colors.grey)),
                     margin: EdgeInsets.all(5),
                     padding: EdgeInsets.all(10),
                     child: Text('Resp'),
@@ -221,7 +215,7 @@ class _cl1oapconta extends State<cl1oapconta> {
                   child: Container(
                     alignment: Alignment.center,
                     decoration:
-                    BoxDecoration(border: Border.all(color: Colors.grey)),
+                        BoxDecoration(border: Border.all(color: Colors.grey)),
                     margin: EdgeInsets.all(5),
                     padding: EdgeInsets.all(10),
                     child: Text('Peso'),
@@ -292,26 +286,26 @@ class _cl1oapconta extends State<cl1oapconta> {
                   children: [
                     Expanded(
                         child: Container(
-                          margin: EdgeInsets.all(5),
-                          padding: EdgeInsets.all(10),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.orangeAccent,
-                              border: Border.all(
-                                  color: Colors.grey, // Set border color
-                                  width: 3.0), // Set border width
-                              borderRadius: BorderRadius.all(Radius.circular(
-                                  10.0)), // Set rounded corner radius
-                              boxShadow: [
-                                BoxShadow(
-                                    blurRadius: 10,
-                                    color: Colors.black,
-                                    offset: Offset(1, 3))
-                              ] // Make rounded corner of border
+                      margin: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(10),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: Colors.orangeAccent,
+                          border: Border.all(
+                              color: Colors.grey, // Set border color
+                              width: 3.0), // Set border width
+                          borderRadius: BorderRadius.all(Radius.circular(
+                              10.0)), // Set rounded corner radius
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 10,
+                                color: Colors.black,
+                                offset: Offset(1, 3))
+                          ] // Make rounded corner of border
                           ),
-                          child: Text(
-                              "Possuir as seguintes funções no concessionário: (Um funcionário poderá exercer uma ou mais função, desde que não prejudique as etapas dos processos.)"),
-                        )),
+                      child: Text(
+                          "Possuir as seguintes funções no concessionário: (Um funcionário poderá exercer uma ou mais função, desde que não prejudique as etapas dos processos.)"),
+                    )),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),

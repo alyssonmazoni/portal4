@@ -5,11 +5,11 @@ import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/sistema_medidasoap.dart';
 
 /// Provides a UI to select a authentication type page
-class modulo_sistemamedidas extends StatefulWidget {
-  _modulo_sistemamedidas createState() => _modulo_sistemamedidas();
+class ModuloSistemamedidas extends StatefulWidget {
+  _ModuloSistemamedidas createState() => _ModuloSistemamedidas();
 }
 
-class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
+class _ModuloSistemamedidas extends State<ModuloSistemamedidas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -56,7 +56,7 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => cl1oapconta()));
+                                  builder: (context) => Cl1oapConta()));
                         },
                         child: Text('CL-1')),
                   ),
@@ -76,7 +76,7 @@ class _modulo_sistemamedidas extends State<modulo_sistemamedidas> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => cadcit()));
+                                  builder: (context) => CadCit()));
                         },
                         child: Text('Cadastro CIT')),
                   ),

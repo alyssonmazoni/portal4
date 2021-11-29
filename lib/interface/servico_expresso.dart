@@ -4,11 +4,11 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
 
 /// Provides a UI to select a authentication type page
-class servicoexpresso extends StatefulWidget {
-  _servicoexpresso createState() => _servicoexpresso();
+class ServicoExpresso extends StatefulWidget {
+  _ServicoExpresso createState() => _ServicoExpresso();
 }
 
-class _servicoexpresso extends State<servicoexpresso> {
+class _ServicoExpresso extends State<ServicoExpresso> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -353,7 +353,7 @@ class _servicoexpresso extends State<servicoexpresso> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOficinaoap()));
+                                    builder: (context) => ModuloOficinaoap()));
                           },
                           child: Text('Voltar')),
                     ),

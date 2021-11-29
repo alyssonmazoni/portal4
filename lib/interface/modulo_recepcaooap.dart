@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/ag1_dart.dart';
 
 /// Provides a UI to select a authentication type page
-class modulorecepcaooap extends StatefulWidget {
-  _modulorecepcaooap createState() => _modulorecepcaooap();
+class ModuloRecepcaooap extends StatefulWidget {
+  _ModuloRecepcaooap createState() => _ModuloRecepcaooap();
 }
 
-class _modulorecepcaooap extends State<modulorecepcaooap> {
+class _ModuloRecepcaooap extends State<ModuloRecepcaooap> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -13,7 +14,7 @@ class _modulorecepcaooap extends State<modulorecepcaooap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Página Inicial')),
+        appBar: AppBar(title: Text('modulo recepção')),
         body: Container(
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
@@ -30,9 +31,9 @@ class _modulorecepcaooap extends State<modulorecepcaooap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => modulorecepcaooap()));
+                                    builder: (context) => Ag1()));
                           },
-                          child: Text('Recepção')),
+                          child: Text('Agendamento')),
                     ),
                   ),
                 ],

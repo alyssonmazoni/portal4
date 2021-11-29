@@ -35,7 +35,7 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Coletas')),
                     ),
@@ -50,7 +50,7 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Mensal')),
                     ),
@@ -65,7 +65,7 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => painelmedidasoap()));
+                                    builder: (context) => PainelControlemedidas()));
                           },
                           child: Text('Gestão à Vista')),
                     ),
@@ -95,7 +95,7 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        modulo_sistemamedidas()));
+                                        ModuloSistemamedidas()));
                           },
                           child: Text('Voltar')),
                     ),

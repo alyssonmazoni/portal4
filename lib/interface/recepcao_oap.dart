@@ -36,7 +36,7 @@ class _recepcaooap extends State<recepcaooap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => eficiencia()));
+                                    builder: (context) => Eficiencia()));
                           },
                           child: Text('Eficiência')),
                     ),
@@ -67,7 +67,7 @@ class _recepcaooap extends State<recepcaooap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moduloOap()));
+                                    builder: (context) => ModuloOap()));
                           },
                           child: Text('M.OAP')),
                     ),

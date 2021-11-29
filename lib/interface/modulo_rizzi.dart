@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/age_recep.dart';
-import 'package:rizzi/interface/desempenho_oficina.dart';
-import 'package:rizzi/interface/entrega_veic.dart';
 import 'package:rizzi/interface/grade_horas.dart';
-import 'package:rizzi/interface/indicadores_oficina.dart';
-import 'package:rizzi/interface/nps_csi.dart';
-import 'package:rizzi/interface/pecas_medidas.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/rep_manutencao.dart';
 import 'package:rizzi/interface/rizzi_cli.dart';
 import 'package:rizzi/interface/rizzi_gps.dart';
 import 'package:rizzi/interface/rizzi_pecas.dart';
 import 'package:rizzi/interface/rizzi_rh.dart';
 import 'package:rizzi/interface/rizzi_status.dart';
-import 'package:rizzi/interface/sistema_medidasoap.dart';
 import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
-class modulorizzi extends StatefulWidget {
-  _modulorizzi createState() => _modulorizzi();
+class ModuloRizzi extends StatefulWidget {
+  _ModuloRizzi createState() => _ModuloRizzi();
 }
 
-class _modulorizzi extends State<modulorizzi> {
+class _ModuloRizzi extends State<ModuloRizzi> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -52,7 +43,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => rizzipecas()));
+                                      builder: (context) => RizziPecas()));
                             },
                             child: Text('1')),
                       ),
@@ -67,7 +58,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => rizzirh()));
+                                      builder: (context) => RizziRh()));
                             },
                             child: Text('2')),
                       ),
@@ -82,7 +73,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => rizzistatus()));
+                                      builder: (context) => RizziStatus()));
                             },
                             child: Text('3')),
                       ),
@@ -97,7 +88,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => rizzigps()));
+                                      builder: (context) => RizziGps()));
                             },
                             child: Text('4')),
                       ),
@@ -112,7 +103,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => gradehoras()));
+                                      builder: (context) => GradeHoras()));
                             },
                             child: Text('5')),
                       ),
@@ -127,7 +118,7 @@ class _modulorizzi extends State<modulorizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => rizzicl1()));
+                                      builder: (context) => RizziCl1()));
                             },
                             child: Text('6')),
                       ),
@@ -139,11 +130,7 @@ class _modulorizzi extends State<modulorizzi> {
                         width: 15,
                         child: ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          indicadoresoficina()));
+                              // Sem função
                             },
                             child: Text('7')),
                       ),
@@ -154,14 +141,8 @@ class _modulorizzi extends State<modulorizzi> {
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          Sistemamedidasoap()));
-                            },
-                            child: Text('SM')),
+                            onPressed: () {}, //Sem função
+                            child: Text('8')),
                       ),
                     ),
                   ],
