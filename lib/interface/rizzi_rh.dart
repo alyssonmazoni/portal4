@@ -281,6 +281,20 @@ class _RizziRh extends State<RizziRh> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
+                  Expanded(
+                    child: Text('  Localização:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc10,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),

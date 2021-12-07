@@ -50,6 +50,10 @@ class _ResumoPecas extends State<ResumoPecas> {
   TextEditingController tc4 = TextEditingController();
   TextEditingController tc5 = TextEditingController();
   TextEditingController tc6 = TextEditingController();
+  TextEditingController tc7 = TextEditingController();
+  TextEditingController tc8 = TextEditingController();
+  TextEditingController tc9 = TextEditingController();
+  TextEditingController tc10 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -285,6 +289,86 @@ class _ResumoPecas extends State<ResumoPecas> {
                         width: 5,
                         child: TextField(
                             controller: tc6,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Venda Cliente:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc7,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Venda Garantia:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc8,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Venda Custo:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc9,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Venda Balcão:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc10,
                             textAlign: TextAlign.center,
                             textAlignVertical: TextAlignVertical.center),
                       ),

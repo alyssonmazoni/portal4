@@ -24,8 +24,8 @@ class _ModuloRecepcaooap extends State<ModuloRecepcaooap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      height: 15,
-                      width: 15,
+                      height: 20,
+                      width: 20,
                       child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(

@@ -89,8 +89,8 @@ class _ModuloSistemamedidas extends State<ModuloSistemamedidas> {
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    height: 30,
-                    width: 5,
+                    height: 20,
+                    width: 20,
                     child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(

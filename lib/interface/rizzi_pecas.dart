@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/modulo_rizzi.dart';
+//import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 
 /// Provides a UI to select a authentication type page
 class RizziPecas extends StatefulWidget {
@@ -29,6 +31,21 @@ class _RizziPecas extends State<RizziPecas> {
   TextEditingController tc16 = TextEditingController();
   TextEditingController tc17 = TextEditingController();
   TextEditingController tc18 = TextEditingController();
+
+  FirebaseFunctions functions = FirebaseFunctions.instance;
+
+  // @override
+  //void initState() {
+  // functions = FirebaseFunctions.instance;
+  // super.initState();
+  //}
+
+  //Future<void> getFruit() async {
+    //HttpsCallable callable = FirebaseFunctions.instance.httpsCallable('listFruit');
+    //final results = await callable();
+   // List fruit = results.data;  // ["Apple", "Banana", "Cherry", "Date", "Fig", "Grapes"]
+  ///}
+
 
   @override
   Widget build(BuildContext context) {

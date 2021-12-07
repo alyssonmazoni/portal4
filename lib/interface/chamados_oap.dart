@@ -23,6 +23,8 @@ class _ChamadosOap extends State<ChamadosOap> {
   TextEditingController tc10 = TextEditingController();
   TextEditingController tc11 = TextEditingController();
   TextEditingController tc12 = TextEditingController();
+  TextEditingController tc13 = TextEditingController();
+  TextEditingController tc14 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -204,7 +206,7 @@ class _ChamadosOap extends State<ChamadosOap> {
                     ),
                   ),
                   Expanded(
-                    child: Text('  DMS:'),
+                    child: Text('  Sub Categoria:'),
                   ),
                   Expanded(
                     child: Container(
@@ -213,6 +215,20 @@ class _ChamadosOap extends State<ChamadosOap> {
                       width: 15,
                       child: TextField(
                           controller: tc8,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text('  DMS:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc9,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -241,7 +257,7 @@ class _ChamadosOap extends State<ChamadosOap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc9,
+                          controller: tc10,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -270,7 +286,7 @@ class _ChamadosOap extends State<ChamadosOap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc10,
+                          controller: tc11,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -289,7 +305,7 @@ class _ChamadosOap extends State<ChamadosOap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc11,
+                          controller: tc12,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -304,7 +320,7 @@ class _ChamadosOap extends State<ChamadosOap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc12,
+                          controller: tc13,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),

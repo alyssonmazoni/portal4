@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cadastro_produtivo.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/gerar_senha.dart';
+import 'package:rizzi/interface/home.dart';
 
 /// Provides a UI to select a authentication type page
 class CadastroSimplesoap extends StatefulWidget {
@@ -366,7 +368,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       child: ElevatedButton(
                           onPressed:
                               () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                          child: Text('Editar')),
                     ),
                   ),
                   Expanded(
@@ -377,7 +379,23 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       child: ElevatedButton(
                           onPressed:
                               () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                          child: Text('Salvar')),
+                    ),
+                  ),
+
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => GerarSenha()));
+                          },
+                          child: Text('Gerar Senha')),
                     ),
                   ),
                   Expanded(
@@ -390,9 +408,9 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => CadastroProdutivo()));
+                                    builder: (context) => SystemHome()));
                           },
-                          child: Text('Seguir')),
+                          child: Text('Sair')),
                     ),
                   ),
                 ],

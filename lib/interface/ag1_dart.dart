@@ -146,9 +146,7 @@ class _Ag1 extends State<Ag1> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text(
-          'Agendamento',
-          textAlign: TextAlign.center,
+            title: Text('Agendamento', textAlign: TextAlign.center,
         )),
         body: Container(
           width: double.infinity,
@@ -715,9 +713,7 @@ class _Ag1 extends State<Ag1> {
                   width: 40,
                   height: 40,
                   color: Colors.yellow,
-                  child: Text(
-                    "P",
-                    style: TextStyle(fontSize: 15, color: Colors.black),
+                  child: Text("P", style: TextStyle(fontSize: 15, color: Colors.black),
                   ),
                 ),
                 Container(

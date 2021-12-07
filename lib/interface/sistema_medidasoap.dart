@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
-
 /// Provides a UI to select a authentication type page
 class Sistemamedidasoap extends StatefulWidget {
   _Sistemamedidasoap createState() => _Sistemamedidasoap();
@@ -35,39 +34,10 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
+                                    builder: (context) =>
+                                        PainelControlemedidas()));
                           },
                           child: Text('Coletas')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
-                          },
-                          child: Text('Mensal')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
-                          },
-                          child: Text('Gestão à Vista')),
                     ),
                   ),
                 ],
@@ -75,15 +45,6 @@ class _Sistemamedidasoap extends State<Sistemamedidasoap> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {}, child: Text('Impressão')),
-                    ),
-                  ),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
