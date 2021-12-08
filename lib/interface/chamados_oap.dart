@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -374,6 +375,21 @@ class _ChamadosOap extends State<ChamadosOap> {
                                     builder: (context) => ModuloOap()));
                           },
                           child: Text('Voltar')),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SystemHome()));
+                          },
+                          child: Text('Sair')),
                     ),
                   ),
                 ],

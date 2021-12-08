@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cadastro_produtivo.dart';
 import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/modulo_recepcaooap.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/pecas_oap.dart';
-import 'package:rizzi/interface/recepcao_oap.dart';
 
 /// Provides a UI to select a authentication type page
 class ModuloOap extends StatefulWidget {
@@ -32,7 +32,7 @@ class _ModuloOap extends State<ModuloOap> {
                       Container(
                         alignment: Alignment.center,
                         height: 20,
-                        width: 500,
+                        width: 200,
                         child: ElevatedButton(
                             onPressed: () {
                               Navigator.push(
@@ -124,7 +124,8 @@ class _ModuloOap extends State<ModuloOap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => recepcaooap()));
+                                      builder: (context) =>
+                                          ModuloRecepcaooap()));
                             },
                             child: Text('Recepção')),
                       ),

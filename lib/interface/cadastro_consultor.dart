@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/gerar_senha.dart';
+import 'package:rizzi/interface/cadastro_produtivo.dart';
+import 'package:rizzi/interface/home.dart';
 
 /// Provides a UI to select a authentication type page
 class CadastroConsultor extends StatefulWidget {
@@ -237,9 +238,13 @@ class _CadastroConsultor extends State<CadastroConsultor> {
                       height: 20,
                       width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CadastroProdutivo()));
+                          }, // falta direcionar para databases enviar
+                          child: Text('Voltar')),
                     ),
                   ),
                   Expanded(
@@ -278,9 +283,9 @@ class _CadastroConsultor extends State<CadastroConsultor> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => GerarSenha()));
+                                    builder: (context) => SystemHome()));
                           },
-                          child: Text('Gerar')),
+                          child: Text('Sair')),
                     ),
                   ),
                 ],

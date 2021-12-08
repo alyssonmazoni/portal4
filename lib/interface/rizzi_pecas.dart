@@ -32,7 +32,7 @@ class _RizziPecas extends State<RizziPecas> {
   TextEditingController tc17 = TextEditingController();
   TextEditingController tc18 = TextEditingController();
 
-  FirebaseFunctions functions = FirebaseFunctions.instance;
+  //FirebaseFunctions functions = FirebaseFunctions.instance;
 
   // @override
   //void initState() {

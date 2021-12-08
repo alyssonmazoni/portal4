@@ -10,7 +10,6 @@ class SystemHome extends StatefulWidget {
 }
 
 class _SystemHome extends State<SystemHome> {
-
   bool _initialized = false;
   bool _error = false;
 
@@ -22,7 +21,7 @@ class _SystemHome extends State<SystemHome> {
       setState(() {
         _initialized = true;
       });
-    } catch(e) {
+    } catch (e) {
       // Set `_error` state to true if Firebase initialization fails
       setState(() {
         _error = true;

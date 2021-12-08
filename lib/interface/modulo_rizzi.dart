@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/grade_horas.dart';
-import 'package:rizzi/interface/rizzi_cli.dart';
+import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/rizzi_gps.dart';
 import 'package:rizzi/interface/rizzi_pecas.dart';
 import 'package:rizzi/interface/rizzi_rh.dart';
 import 'package:rizzi/interface/rizzi_status.dart';
-import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
+
 class ModuloRizzi extends StatefulWidget {
   _ModuloRizzi createState() => _ModuloRizzi();
 }
@@ -28,14 +27,62 @@ class _ModuloRizzi extends State<ModuloRizzi> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
             child: Column(children: [
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                SizedBox(
+                  width: 200,
+                  height: 100,
+                  child: FittedBox(
+                    child: Image.network(
+                        'https://cdn.pixabay.com/photo/2014/06/11/08/26/water-366586__340.jpg'),
+                    fit: BoxFit.fill,
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              const Card(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('Painel de Configurações',
+                      style: TextStyle(fontSize: 12, color: Colors.black)),
+                ),
+              ),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.center,
+                        alignment: Alignment.centerLeft,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -48,9 +95,24 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('1')),
                       ),
                     ),
+                    const Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Text('Peças',
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.black)),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
-                        alignment: Alignment.center,
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -63,9 +125,24 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('2')),
                       ),
                     ),
+                    const Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Text('RH',
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.black)),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
-                        alignment: Alignment.center,
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -78,9 +155,24 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('3')),
                       ),
                     ),
+                    const Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Text('Status Sistema',
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.black)),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
-                        alignment: Alignment.center,
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -93,123 +185,28 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('4')),
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GradeHoras()));
-                            },
-                            child: Text('5')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => RizziCl1()));
-                            },
-                            child: Text('6')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              // Sem função
-                            },
-                            child: Text('7')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {}, //Sem função
-                            child: Text('8')),
+                    const Card(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: Text('Geo.Localização',
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.black)),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              const Card(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text('Legendas'),
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 20,
+                    width: 20,
+                  ),
                 ),
-              ),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('1 - PEÇAS'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('2 - RECURSOS HUMANOS'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('3 - STATUS / SISTEMA'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('4 - PARAMETROS DE LOCALIZAÇÃO.'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('5 - PARAMETROS DE HORA.'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('6 - PARAMETROS DE CL-1.'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              ], mainAxisAlignment: MainAxisAlignment.start),
               Row(
                   children: [
                     Expanded(
@@ -222,15 +219,15 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Telamenu()));
+                                      builder: (context) => SystemHome()));
                             },
                             child: Text('Voltar')),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.start),
           ),
         ));
   }

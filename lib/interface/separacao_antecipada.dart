@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
@@ -294,7 +294,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ModuloOficinaoap()));
+                                    builder: (context) => ModuloOap()));
                           },
                           child: Text('Voltar')),
                     ),

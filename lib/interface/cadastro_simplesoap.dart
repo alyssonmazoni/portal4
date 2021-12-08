@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_produtivo.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/gerar_senha.dart';

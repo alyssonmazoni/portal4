@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -405,6 +406,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                     ),
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 25,
                         width: 5,
@@ -413,9 +415,25 @@ class _ResumoPecas extends State<ResumoPecas> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => posvenda()));
+                                      builder: (context) => Iapo()));
                             },
                             child: Text('Voltar')),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 25,
+                        width: 5,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SystemHome()));
+                            },
+                            child: Text('Sair')),
                       ),
                     ),
                   ],
