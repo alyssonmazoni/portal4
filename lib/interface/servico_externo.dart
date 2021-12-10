@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'my_selection_item.dart';
 import 'package:direct_select/direct_select.dart';
 
@@ -63,21 +65,28 @@ class _ServicoExterno extends State<ServicoExterno> {
             Row(children: [
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  height: 30,
-                  width: 10,
-                  child: Text('Serviço Externo'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Cadastro Serviço Externo',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
+              ),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -289,7 +298,155 @@ class _ServicoExterno extends State<ServicoExterno> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.blue,
+                    child: Text(
+                      "F",
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '  FINALIZADO',
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.green,
+                    child: Text(
+                      "S",
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '  EM SERVIÇO',
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.orange,
+                    child: Text(
+                      "P",
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '  PROGRAMAÇÃO FUTURA',
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 40,
+                    height: 40,
+                    color: Colors.red,
+                    child: Text(
+                      "C",
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '  CANCELADO',
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
                   height: 5,
                   width: 5,
                 ),
@@ -299,92 +456,73 @@ class _ServicoExterno extends State<ServicoExterno> {
                 children: [
                   Expanded(
                     child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blueAccent)),
                       margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 10,
-                      child: Container(
-                        child: Text('F - Finalizado'),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.greenAccent)),
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 10,
-                      child: Container(
-                        child: Text('S - Em Serviço'),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.orangeAccent)),
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 10,
-                      child: Container(
-                        child: Text('P - Programação Futura'),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.redAccent)),
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 10,
-                      child: Container(
-                        child: Text('C - Cancelado'),
-                      ),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOficinaoap()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ModuloOficinaoap()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOap()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => posvenda()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

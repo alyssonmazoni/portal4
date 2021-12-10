@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/modulo_sistemamedidas.dart';
+import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+
 /// Provides a UI to select a authentication type page
-class CadCit extends StatefulWidget {
-  _CadCit createState() => _CadCit();
+class cadcit extends StatefulWidget {
+  _cadcit createState() => _cadcit();
 }
 
-class _CadCit extends State<CadCit> {
+class _cadcit extends State<cadcit> {
   DateTime dateForm = DateTime.now();
 
   final elements1 = [
@@ -32,6 +35,14 @@ class _CadCit extends State<CadCit> {
   int selectedIndex4 = 0;
   int selectedIndex5 = 0;
 
+  List<Widget> _buildItems1() {
+    return elements1
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
@@ -42,200 +53,230 @@ class _CadCit extends State<CadCit> {
   TextEditingController tc8 = TextEditingController();
   TextEditingController tc9 = TextEditingController();
   TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(title: Text('Cadastro CIT')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          margin: const EdgeInsets.all(8),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
+          margin: const EdgeInsets.all(15),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
-              child: Column(children: [
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  child: Text('CITs'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 20,
-                  width: 15,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Data:'),
+            child: Column(children: [
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
                   ),
-                  Expanded(
-                    child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              const Card(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('Cadastro de CIT(s)',
+                      style: TextStyle(fontSize: 10, color: Colors.black)),
+                ),
+              ),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Data:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                          margin: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white70)),
+                          alignment: Alignment.center,
+                          height: 30,
+                          width: 5,
+                          child: TextButton(
+                              onPressed: () {
+                                DatePicker.showDatePicker(context,
+                                    showTitleActions: true,
+                                    minTime: DateTime(2020, 3, 5),
+                                    maxTime: DateTime(2025, 6, 7),
+                                    currentTime: DateTime.now(),
+                                    locale: LocaleType.pt, onConfirm: (date) {
+                                  setState(() {
+                                    dateForm = date;
+                                  });
                                 });
-                              });
-                            },
-                            child:
-                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Conta:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc1,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
+                              },
+                              child: Text(
+                                  DateFormat('dd-MM-yy').format(dateForm)))),
                     ),
-                  ),
-                  Expanded(
-                    child: Text('Tp Serviço:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc2,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Conta:'),
                     ),
-                  ),
-                  Expanded(
-                    child: Text('Cit:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc3,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc1,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
                     ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  Tipo Serviço:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc2,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Text('  CIT:'),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.centerLeft,
+                        height: 30,
+                        width: 5,
+                        child: TextField(
+                            controller: tc3,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white70)),
+                    alignment: Alignment.center,
+                    height: 20,
+                    width: 10,
+                    child: Text('Observação',
+                        style: TextStyle(fontSize: 10, color: Colors.blue)),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.white70)),
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                  child: Text('Observação'),
                 ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc10,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 15,
+                        width: 5,
+                        child: TextField(
+                            controller: tc5,
+                            textAlign: TextAlign.center,
+                            textAlignVertical: TextAlignVertical.center),
+                      ),
                     ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 25,
+                        width: 5,
+                        child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ModuloOficinaoap()));
+                                    builder: (context) =>
+                                        ModulosistemaMedidas()));
                           },
-                          child: Text('Voltar')),
+                          child: Text('Voltar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
+                      ),
                     ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        height: 25,
+                        width: 5,
+                        alignment: Alignment.center,
+                        child: ElevatedButton(
+                          onPressed: () {}, // falta direcionar para tela xpto
+                          child: Text('Salvar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 25,
+                        width: 5,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        ModulosistemaMedidas()));
+                          },
+                          child: Text('Sair',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+          ),
         ));
   }
 }

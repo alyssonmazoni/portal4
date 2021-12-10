@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -71,30 +70,28 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(children: [
                 Expanded(
                   child: Container(
-                    margin: const EdgeInsets.all(8),
                     alignment: Alignment.center,
-                    height: 40,
-                    width: 10,
-                    child: Text('Resumo Peças'),
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [
-                Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    child: Text('Serviços e Peças Limitadas Brasil S/A.'),
-                  ),
+              const Card(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('Resumo de Peças',
+                      style: TextStyle(fontSize: 10, color: Colors.black)),
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.center),
+              ),
               Row(children: [
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    color: Colors.white70,
-                    height: 40,
-                    width: 10,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.spaceAround),
@@ -109,8 +106,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.white70)),
                           alignment: Alignment.center,
-                          height: 40,
-                          width: 10,
+                          height: 30,
+                          width: 5,
                           child: TextButton(
                               onPressed: () {
                                 DatePicker.showDatePicker(context,
@@ -246,9 +243,10 @@ class _ResumoPecas extends State<ResumoPecas> {
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white70)),
                     alignment: Alignment.center,
-                    height: 40,
+                    height: 20,
                     width: 10,
-                    child: Text('MOTIVO FALTA'),
+                    child: Text('MOTIVO FALTA',
+                        style: TextStyle(fontSize: 10, color: Colors.blue)),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -257,7 +255,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        height: 30,
+                        height: 15,
                         width: 5,
                         child: TextField(
                             controller: tc5,
@@ -275,9 +273,10 @@ class _ResumoPecas extends State<ResumoPecas> {
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white70)),
                     alignment: Alignment.center,
-                    height: 40,
+                    height: 20,
                     width: 10,
-                    child: Text('AÇÃO CORRETIVA'),
+                    child: Text('AÇÃO CORRETIVA',
+                        style: TextStyle(fontSize: 10, color: Colors.blue)),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -286,7 +285,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        height: 30,
+                        height: 15,
                         width: 5,
                         child: TextField(
                             controller: tc6,
@@ -314,11 +313,6 @@ class _ResumoPecas extends State<ResumoPecas> {
                             textAlignVertical: TextAlignVertical.center),
                       ),
                     ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
                     Expanded(
                       child: Text('  Venda Garantia:'),
                     ),
@@ -354,11 +348,6 @@ class _ResumoPecas extends State<ResumoPecas> {
                             textAlignVertical: TextAlignVertical.center),
                       ),
                     ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
                     Expanded(
                       child: Text('  Venda Balcão:'),
                     ),
@@ -381,27 +370,35 @@ class _ResumoPecas extends State<ResumoPecas> {
                   children: [
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 25,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {}, // falta direcionar para tela xpto
-                            child: Text('Salvar')),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Iapo()));
+                          },
+                          child: Text('Voltar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
                       ),
                     ),
                     Expanded(
                       child: Container(
-                        alignment: Alignment.center,
+                        margin: const EdgeInsets.all(8),
                         height: 25,
-                        width: 300,
+                        width: 5,
+                        alignment: Alignment.center,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ResumoOss()));
-                            },
-                            child: Text('Resumo OSs')),
+                          onPressed: () {}, // falta direcionar para tela xpto
+                          child: Text('Salvar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
                       ),
                     ),
                     Expanded(
@@ -411,29 +408,16 @@ class _ResumoPecas extends State<ResumoPecas> {
                         height: 25,
                         width: 5,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Iapo()));
-                            },
-                            child: Text('Voltar')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(8),
-                        alignment: Alignment.center,
-                        height: 25,
-                        width: 5,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
-                            },
-                            child: Text('Sair')),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Iapo()));
+                          },
+                          child: Text('Sair',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
                       ),
                     ),
                   ],

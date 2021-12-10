@@ -169,7 +169,8 @@ class _RepManutencao extends State<RepManutencao> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
+                                    builder: (context) =>
+                                        PainelControleMedidas()));
                           },
                           child: Text('Voltar')),
                     ),

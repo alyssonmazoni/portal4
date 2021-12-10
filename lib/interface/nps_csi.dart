@@ -191,7 +191,8 @@ class _NpsCsi extends State<NpsCsi> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
+                                    builder: (context) =>
+                                        PainelControleMedidas()));
                           },
                           child: Text('Voltar')),
                     ),

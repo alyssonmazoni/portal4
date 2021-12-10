@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_consultor.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/cadastro_consultor.dart';
 import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 
 /// Provides a UI to select a authentication type page
 class CadastroProdutivo extends StatefulWidget {
@@ -28,7 +29,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Cadastro Produtivo')),
+        appBar: AppBar(title: Text('Cadastro Produtivos')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -40,21 +41,28 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
             Row(children: [
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(8),
-                  height: 30,
-                  width: 10,
                   alignment: Alignment.center,
-                  child: Text('Produtivos'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Cadastro Oficina',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
+              ),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -70,7 +78,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
                         height: 35,
-                        width: 10,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -147,6 +155,21 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white70)),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                  child: Text(
+                      'Informar abaixo apenas quando o colaborador estiver ausente',
+                      style: TextStyle(fontSize: 10, color: Colors.blue)),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
@@ -170,8 +193,8 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 40,
+                  color: Colors.grey[850],
+                  height: 10,
                   width: 10,
                 ),
               ),
@@ -185,7 +208,8 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
-                  child: Text('Justificativa Ausência'),
+                  child: Text('Justificar Ausência',
+                      style: TextStyle(fontSize: 10, color: Colors.blue)),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -205,6 +229,20 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white70)),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                  child: Text('Autor da Justificativa somente Gerente*',
+                      style: TextStyle(fontSize: 10, color: Colors.red)),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
@@ -239,67 +277,77 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOap()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CadastroConsultor()));
-                          },
-                          child: Text('Seguir')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CadastroConsultor()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SystemHome()));
-                          },
-                          child: Text('Sair')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SystemHome()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

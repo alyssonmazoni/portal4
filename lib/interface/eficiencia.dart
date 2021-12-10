@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 
 /// Provides a UI to select a authentication type page
 class Eficiencia extends StatefulWidget {
@@ -57,23 +59,31 @@ class _Eficiencia extends State<Eficiencia> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text('Eficiência'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Cadastro Eficiência',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
+              ),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 20,
-                  width: 15,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -331,39 +341,73 @@ class _Eficiencia extends State<Eficiencia> {
                 children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOficinaoap()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ModuloOficinaoap()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOap()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => posvenda()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

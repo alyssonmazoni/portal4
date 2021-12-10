@@ -29,7 +29,6 @@ class _TelaLogin extends State<TelaLogin> {
                   bottomRight: Radius.circular(5))),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
@@ -163,7 +162,7 @@ class _TelaLogin extends State<TelaLogin> {
                     child: Text(
                         'Para ter acesso completo a este site, você primeiro precisa criar uma conta.',
                         style: TextStyle(fontSize: 13, color: Colors.black)),
-                    fit:BoxFit.fill,
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -212,7 +211,6 @@ class _TelaLogin extends State<TelaLogin> {
                         child: Text(
                           'CRIAR CONTA',
                           style: TextStyle(fontSize: 12, color: Colors.black),
-
                         ),
                       ),
                     ),
@@ -236,15 +234,13 @@ class _TelaLogin extends State<TelaLogin> {
                   alignment: Alignment.center,
                   child: FittedBox(
                     child: Text(
-                      'Copyright © 2000 - 2021 Desenvolvido por RizziConsulting',
-                      style: TextStyle(fontSize: 11, color: Colors.black)),
+                        'Copyright © 2000 - 2021 Desenvolvido por RizziConsulting',
+                        style: TextStyle(fontSize: 11, color: Colors.black)),
                     fit: BoxFit.fill,
-                ),
+                  ),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-
-
             Row(children: [], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));

@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/age_recep.dart';
-import 'package:rizzi/interface/desempenho_oficina.dart';
-import 'package:rizzi/interface/eficiencia_sm.dart';
-import 'package:rizzi/interface/entrega_veic.dart';
-import 'package:rizzi/interface/indicadores_oficina.dart';
-import 'package:rizzi/interface/modulo_sistemamedidas.dart';
+import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/pecas_medidas.dart';
 import 'package:rizzi/interface/rep_manutencao.dart';
-
+import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
-class PainelControlemedidas extends StatefulWidget {
 
-
-  _PainelControlemedidas createState() => _PainelControlemedidas();
+class PainelControleMedidas extends StatefulWidget {
+  _PainelControleMedidas createState() => _PainelControleMedidas();
 }
 
-class _PainelControlemedidas extends State<PainelControlemedidas> {
+class _PainelControleMedidas extends State<PainelControleMedidas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -33,8 +28,44 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
             child: Column(children: [
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              const Card(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('Preenchimento do Sistema de Medidas',
+                      style: TextStyle(fontSize: 15, color: Colors.black)),
+                ),
+              ),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
@@ -53,8 +84,14 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
                             child: Text('1')),
                       ),
                     ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 20,
                         width: 15,
@@ -68,8 +105,14 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
                             child: Text('2')),
                       ),
                     ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 20,
                         width: 15,
@@ -83,8 +126,14 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
                             child: Text('3')),
                       ),
                     ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
                     Expanded(
                       child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
                         height: 20,
                         width: 15,
@@ -98,155 +147,227 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
                             child: Text('4')),
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => EntregaVeic()));
-                            },
-                            child: Text('5')),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.blue,
+                      child: Text(
+                        "1",
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          DesempenhoOficina()));
-                            },
-                            child: Text('6')),
+                      child: Text(
+                        '  NPS/CSI',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.cyan[600],
+                      child: Text(
+                        "5",
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                     Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          IndicadoresOficina()));
-                            },
-                            child: Text('7')),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => EficienciaSm()));
-                            },
-                            child: Text('8')),
+                      child: Text(
+                        '  DESEMPENHO OFICINA',
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              const Card(
-                child: Padding(
-                  padding: EdgeInsets.all(10),
-                  child: Text('Legendas'),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
                 ),
-              ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.green,
+                      child: Text(
+                        "2",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
                     Expanded(
-                      child: Text('1 - NPS / CSI'),
+                      child: Text(
+                        '  ENTREGA DO VEÍCULO',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.green[800],
+                      child: Text(
+                        "6",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  AGENDAMENTO/RECEPÇÃO',
+                        style: TextStyle(fontSize: 10),
+                      ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.orange,
+                      child: Text(
+                        "3",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
                     Expanded(
-                      child: Text('2 - AGENDAMENTO / RECEPÇÃO'),
+                      child: Text(
+                        '  PEÇAS',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.teal,
+                      child: Text(
+                        "7",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  INDICADORES OFICINA',
+                        style: TextStyle(fontSize: 10),
+                      ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.purple,
+                      child: Text(
+                        "4",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
                     Expanded(
-                      child: Text('3 - PEÇAS'),
+                      child: Text(
+                        '  REP.MANUTENÇÃO',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.indigo,
+                      child: Text(
+                        "8",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  INDICADORES EFICIÊNCIA',
+                        style: TextStyle(fontSize: 10),
+                      ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('4 - REP.E MANUT.'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('5 - ENTREGA DO VEÍCULO'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('6 - DESEMPENHO OFICINA MECÂNICA'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('7 - INDICADORES DA OFICINA'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(
-                  children: [
-                    Expanded(
-                      child: Text('8 - INDICADORES DA EFICIÊNCIA'),
-                    ),
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 20,
+                    width: 20,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
@@ -255,20 +376,40 @@ class _PainelControlemedidas extends State<PainelControlemedidas> {
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          ModuloSistemamedidas()));
-                            },
-                            child: Text('Voltar')),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Telamenu()));
+                          },
+                          child: Text('Voltar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SystemHome()));
+                          },
+                          child: Text('Sair',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
                       ),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
-            ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+            ], mainAxisAlignment: MainAxisAlignment.center),
           ),
         ));
   }

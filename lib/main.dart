@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import './interface/home.dart';
-import 'package:firebase_core/firebase_core.dart';
 
+//import 'firebase_options.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp(
+  // options: DefaultFirebaseOptions.currentPlatform,
+  // );
   runApp(Initial());
 }
 
-
 class Initial extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home:
-        SystemHome()
-    );
+    return MaterialApp(theme: ThemeData.dark(), home: SystemHome());
   }
 }

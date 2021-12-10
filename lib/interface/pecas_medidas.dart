@@ -3,18 +3,15 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
-
-
 /// Provides a UI to select a authentication type page
 class PecasMedidas extends StatefulWidget {
-  _PecasMedidas  createState() => _PecasMedidas ();
+  _PecasMedidas createState() => _PecasMedidas();
 }
 
-class _PecasMedidas  extends State<PecasMedidas > {
+class _PecasMedidas extends State<PecasMedidas> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +132,8 @@ class _PecasMedidas  extends State<PecasMedidas > {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
+                                    builder: (context) =>
+                                        PainelControleMedidas()));
                           },
                           child: Text('Voltar')),
                     ),

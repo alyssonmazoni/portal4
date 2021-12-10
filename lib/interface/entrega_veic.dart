@@ -3,7 +3,6 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
-
 /// Provides a UI to select a authentication type page
 class EntregaVeic extends StatefulWidget {
   _EntregaVeic createState() => _EntregaVeic();
@@ -16,7 +15,6 @@ class _EntregaVeic extends State<EntregaVeic> {
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -194,7 +192,8 @@ class _EntregaVeic extends State<EntregaVeic> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas ()));
+                                    builder: (context) =>
+                                        PainelControleMedidas()));
                           },
                           child: Text('Voltar')),
                     ),

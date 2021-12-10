@@ -4,6 +4,7 @@ import 'package:rizzi/interface/rizzi_gps.dart';
 import 'package:rizzi/interface/rizzi_pecas.dart';
 import 'package:rizzi/interface/rizzi_rh.dart';
 import 'package:rizzi/interface/rizzi_status.dart';
+import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
 
@@ -39,7 +40,7 @@ class _ModuloRizzi extends State<ModuloRizzi> {
               ], mainAxisAlignment: MainAxisAlignment.center),
               Row(children: [
                 SizedBox(
-                  width: 200,
+                  width: 400,
                   height: 100,
                   child: FittedBox(
                     child: Image.network(
@@ -63,8 +64,8 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                 color: Colors.white,
                 child: Padding(
                   padding: EdgeInsets.all(8),
-                  child: Text('Painel de Configurações',
-                      style: TextStyle(fontSize: 12, color: Colors.black)),
+                  child: Text('Painel de Configurações Rizzi',
+                      style: TextStyle(fontSize: 15, color: Colors.black)),
                 ),
               ),
               Row(children: [
@@ -82,7 +83,7 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -95,24 +96,15 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('1')),
                       ),
                     ),
-                    const Card(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text('Peças',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
-                      ),
-                    ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -125,24 +117,15 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('2')),
                       ),
                     ),
-                    const Card(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text('RH',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
-                      ),
-                    ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -155,24 +138,15 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('3')),
                       ),
                     ),
-                    const Card(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text('Status Sistema',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
-                      ),
-                    ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
@@ -185,18 +159,147 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                             child: Text('4')),
                       ),
                     ),
-                    const Card(
-                      color: Colors.white,
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text('Geo.Localização',
-                            style:
-                                TextStyle(fontSize: 12, color: Colors.black)),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.blue,
+                      child: Text(
+                        "1",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  PEÇAS',
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start),
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.green,
+                      child: Text(
+                        "2",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  RH',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.orange,
+                      child: Text(
+                        "3",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  STATUS SISTEMA',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.grey[850],
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.purple,
+                      child: Text(
+                        "4",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  GEO LOCALIZAÇÃO',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center),
               Row(children: [
                 Expanded(
                   child: Container(
@@ -206,7 +309,7 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                     width: 20,
                   ),
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.start),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Expanded(
@@ -215,19 +318,40 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                         height: 20,
                         width: 15,
                         child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
-                            },
-                            child: Text('Voltar')),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Telamenu()));
+                          },
+                          child: Text('Voltar',
+                              style:
+                                  TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SystemHome()));
+                          },
+                          child: Text('Sair',
+                              style:
+                              TextStyle(fontSize: 10, color: Colors.black)),
+                        ),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center),
+            ], mainAxisAlignment: MainAxisAlignment.center),
           ),
         ));
   }

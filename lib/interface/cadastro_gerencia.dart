@@ -1,40 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/modulo_oficinaoap.dart';
-import 'package:rizzi/interface/pos_venda.dart';
+import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 
 /// Provides a UI to select a authentication type page
-class SeparacaoAntecipada extends StatefulWidget {
-  _SeparacaoAntecipada createState() => _SeparacaoAntecipada();
+class CadastroGerencia extends StatefulWidget {
+  _CadastroGerencia createState() => _CadastroGerencia();
 }
 
-class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
+class _CadastroGerencia extends State<CadastroGerencia> {
   DateTime dateForm = DateTime.now();
-
-  final elements1 = [
-    "",
-    "A",
-    "B",
-    "C",
-    "D",
-  ];
-
-  final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
-
-  final elements3 = ["C&O", "Vans"];
-
-  final elements4 = ["Sim", "Não"];
-
-  final elements5 = ["Peça faltante", "Nova solicitação"];
-
-  int selectedIndex1 = 0;
-  int selectedIndex2 = 0;
-  int selectedIndex3 = 0;
-  int selectedIndex4 = 0;
-  int selectedIndex5 = 0;
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -45,10 +21,14 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
   TextEditingController tc7 = TextEditingController();
   TextEditingController tc8 = TextEditingController();
   TextEditingController tc9 = TextEditingController();
+  TextEditingController tc10 = TextEditingController();
+  TextEditingController tc11 = TextEditingController();
+  TextEditingController tc12 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Separação Antecipada')),
+        appBar: AppBar(title: Text('Cadastro Gerencia')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -71,8 +51,8 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.all(8),
-                child: Text('Cadastro Separação Antecipada',
-                    style: TextStyle(fontSize: 15, color: Colors.black)),
+                child: Text('Cadastro Gerencia',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
               ),
             ),
             Row(children: [
@@ -96,8 +76,8 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
+                        height: 35,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -120,7 +100,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Pedido:'),
+                    child: Text('  Conta:'),
                   ),
                   Expanded(
                     child: Container(
@@ -133,8 +113,13 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
                   Expanded(
-                    child: Text('Placa:'),
+                    child: Text('  Funcionário:'),
                   ),
                   Expanded(
                     child: Container(
@@ -142,7 +127,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc2,
+                          controller: tc3,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -153,7 +138,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Classe:'),
+                    child: Text('  Departamento:'),
                   ),
                   Expanded(
                     child: Container(
@@ -161,21 +146,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc4,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                  Expanded(
-                    child: Text('Autor:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc6,
+                          controller: tc5,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -183,10 +154,25 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white70)),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                  child: Text(
+                      'Informar abaixo apenas quando o colaborador estiver ausente',
+                      style: TextStyle(fontSize: 10, color: Colors.blue)),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Veiculo Presente:'),
+                    child: Text('  Ausência:'),
                   ),
                   Expanded(
                     child: Container(
@@ -205,13 +191,24 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
             Row(children: [
               Expanded(
                 child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 10,
+                  width: 10,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
                   margin: const EdgeInsets.all(8),
                   decoration:
                       BoxDecoration(border: Border.all(color: Colors.white70)),
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
-                  child: Text('BAIXA DE PENDÊNCIA'),
+                  child: Text('Justificar Ausência',
+                      style: TextStyle(fontSize: 10, color: Colors.blue)),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
@@ -223,7 +220,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc8,
+                          controller: tc9,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -240,19 +237,38 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
-                  child: Text('OBSERVAÇÃO'),
+                  child: Text('Autor da Justificativa somente Gerente*',
+                      style: TextStyle(fontSize: 10, color: Colors.red)),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.start),
             Row(
                 children: [
                   Expanded(
+                    child: Text('  Gerente:'),
+                  ),
+                  Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc9,
+                          controller: tc11,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text('  Dt Registro:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc12,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -273,7 +289,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ModuloOficinaoap()));
+                                  builder: (context) => ModuloOap()));
                         },
                         child: Text('Voltar',
                             style:
@@ -306,7 +322,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ModuloOap()));
+                                  builder: (context) => SystemHome()));
                         },
                         child: Text('Seguir',
                             style:
@@ -325,7 +341,7 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Iapo()));
+                                  builder: (context) => SystemHome()));
                         },
                         child: Text('Sair',
                             style:

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/iapo.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
@@ -89,42 +88,38 @@ class _ResumoOss extends State<ResumoOss> {
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          margin: const EdgeInsets.all(15),
+          margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
             Row(children: [
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  height: 40,
-                  width: 10,
-                  child: Text('Resumo OSs'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  alignment: Alignment.center,
-                  height: 40,
-                  width: 10,
-                  child: Text('Serviços e Peças Limitadas Brasil S/A.'),
-                ),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Resumo de Ordens de Serviço',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 40,
-                  width: 10,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
@@ -136,8 +131,8 @@ class _ResumoOss extends State<ResumoOss> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
-                        height: 40,
-                        width: 10,
+                        height: 35,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -279,11 +274,6 @@ class _ResumoOss extends State<ResumoOss> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
                   Expanded(
                     child: Text('  Disponível:'),
                   ),
@@ -339,7 +329,7 @@ class _ResumoOss extends State<ResumoOss> {
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       alignment: Alignment.centerLeft,
-                      height: 25,
+                      height: 30,
                       width: 5,
                       child: DirectSelect(
                           itemExtent: 55.0,
@@ -364,44 +354,32 @@ class _ResumoOss extends State<ResumoOss> {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
                       height: 25,
                       width: 5,
-                      alignment: Alignment.center,
                       child: ElevatedButton(
-                          onPressed: () {}, // falta direcionar para tela xpto
-                          child: Text('Salvar')),
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Iapo()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       height: 25,
-                      width: 300,
-                      alignment: Alignment.center,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ResumoPecas()));
-                          },
-                          child: Text('Res.Peças')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      height: 25,
                       width: 5,
+                      alignment: Alignment.center,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Iapo()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
@@ -411,13 +389,16 @@ class _ResumoOss extends State<ResumoOss> {
                       height: 25,
                       width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SystemHome()));
-                          },
-                          child: Text('Sair')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Iapo()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

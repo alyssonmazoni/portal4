@@ -381,7 +381,6 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                           child: Text('Salvar')),
                     ),
                   ),
-
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,

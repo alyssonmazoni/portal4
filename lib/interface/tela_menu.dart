@@ -24,6 +24,16 @@ class _Telamenu extends State<Telamenu> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: Column(
               children: [
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.grey[850],
+                      height: 5,
+                      width: 5,
+                    ),
+                  ),
+                ], mainAxisAlignment: MainAxisAlignment.center),
                 Row(
                     children: [
                       Container(
@@ -103,20 +113,8 @@ class _Telamenu extends State<Telamenu> {
                     child: Container(
                       alignment: Alignment.center,
                       color: Colors.grey[850],
-                      height: 45,
-                      width: 45,
-                    ),
-                  ),
-                ], mainAxisAlignment: MainAxisAlignment.center),
-                Row(children: [
-                  SizedBox(
-                    width: 200,
-                    height: 100,
-                    child: FittedBox(
-                      child: Image.network(
-                          'https://cdn.pixabay.com/photo/2014/06/11/08/26/water-366586__340.jpg'),
-                      fit: BoxFit.fill,
-                      alignment: Alignment.center,
+                      height: 5,
+                      width: 5,
                     ),
                   ),
                 ], mainAxisAlignment: MainAxisAlignment.center),

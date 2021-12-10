@@ -3,7 +3,6 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
-
 /// Provides a UI to select a authentication type page
 class EficienciaSm extends StatefulWidget {
   _EficienciaSm createState() => _EficienciaSm();
@@ -35,21 +34,28 @@ class _EficienciaSm extends State<EficienciaSm> {
             Row(children: [
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  height: 30,
-                  width: 10,
-                  child: Text('EFICIÊNCIA NOVIDADE'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Eficiência Sistema de Medidas',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
+              ),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -202,7 +208,7 @@ class _EficienciaSm extends State<EficienciaSm> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Aproveitamento'),
+                    child: Text('  Aproveitamento:'),
                   ),
                   Expanded(
                     child: Container(
@@ -252,7 +258,8 @@ class _EficienciaSm extends State<EficienciaSm> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => PainelControlemedidas()));
+                                    builder: (context) =>
+                                        PainelControleMedidas()));
                           },
                           child: Text('Voltar')),
                     ),

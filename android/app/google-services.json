@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648510971016",
+    "project_id": "portal40-102c7",
+    "storage_bucket": "portal40-102c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648510971016:android:c1537c833483b3e94f133d",
+        "android_client_info": {
+          "package_name": "com.rizziconsulting.portal40"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648510971016-l2lmi8njnm45mb7qhv04td1n70puh73g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQjiQ2jUzBeAaY7zflhel0b9wei9OKNak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648510971016-l2lmi8njnm45mb7qhv04td1n70puh73g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

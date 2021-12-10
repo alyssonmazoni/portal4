@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/iapo.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 
 
@@ -92,7 +94,7 @@ class _PecasOap extends State<PecasOap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
+                                      builder: (context) => ModuloOap()));
                             },
                             child: Text('Sair')),
                       ),

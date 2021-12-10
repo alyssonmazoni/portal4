@@ -5,6 +5,7 @@ import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/modulo_recepcaooap.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'package:rizzi/interface/pecas_oap.dart';
+import 'package:rizzi/interface/pos_venda.dart';
 
 /// Provides a UI to select a authentication type page
 class ModuloOap extends StatefulWidget {
@@ -154,7 +155,7 @@ class _ModuloOap extends State<ModuloOap> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          ModuloSistemamedidas()));
+                                          ModulosistemaMedidas()));
                             },
                             child: Text('Sistema Medidas')),
                       ),
@@ -182,7 +183,7 @@ class _ModuloOap extends State<ModuloOap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
+                                      builder: (context) => posvenda()));
                             },
                             child: Text('Sair')),
                       ),
