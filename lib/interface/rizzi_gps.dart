@@ -85,7 +85,7 @@ class _RizziGps extends State<RizziGps> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {

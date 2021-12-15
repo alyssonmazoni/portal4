@@ -98,8 +98,8 @@ class _Eficiencia extends State<Eficiencia> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
+                        height: 35,
+                        width: 10,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,

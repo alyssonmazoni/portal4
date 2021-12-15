@@ -1,11 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
+import 'my_selection_item.dart';
 
 /// Provides a UI to select a authentication type page
 class RepManutencao extends StatefulWidget {
   _RepManutencao createState() => _RepManutencao();
+}
+
+final elements1 = ["", "S", "F", "P", "C"];
+
+int selectedIndex1 = 0;
+int selectedIndex2 = 0;
+int selectedIndex3 = 0;
+int selectedIndex4 = 0;
+int selectedIndex5 = 0;
+
+List<Widget> _buildItems1() {
+  return elements1
+      .map((val) => MySelectionItem(
+            title: val,
+          ))
+      .toList();
 }
 
 class _RepManutencao extends State<RepManutencao> {
@@ -13,22 +31,6 @@ class _RepManutencao extends State<RepManutencao> {
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
-  TextEditingController tc3 = TextEditingController();
-  TextEditingController tc4 = TextEditingController();
-  TextEditingController tc5 = TextEditingController();
-  TextEditingController tc6 = TextEditingController();
-  TextEditingController tc7 = TextEditingController();
-  TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
-  TextEditingController tc12 = TextEditingController();
-  TextEditingController tc13 = TextEditingController();
-  TextEditingController tc14 = TextEditingController();
-  TextEditingController tc15 = TextEditingController();
-  TextEditingController tc16 = TextEditingController();
-  TextEditingController tc17 = TextEditingController();
-  TextEditingController tc18 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,28 +47,35 @@ class _RepManutencao extends State<RepManutencao> {
             Row(children: [
               Expanded(
                 child: Container(
-                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  height: 30,
-                  width: 10,
-                  child: Text('REP E MANUT.'),
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('REP & MANUT.',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
+              ),
+            ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Data:'),
+                    child: Text('     Data:'),
                   ),
                   Expanded(
                     child: Container(
@@ -74,7 +83,7 @@ class _RepManutencao extends State<RepManutencao> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {
@@ -97,9 +106,20 @@ class _RepManutencao extends State<RepManutencao> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.blue,
+                  ),
                   Expanded(
-                    child:
-                        Text('  10 - Qtde. de veículos testados e reprovados'),
+                    child: Text('  Qtde.Vcl testados e reprovados:'),
                   ),
                   Expanded(
                     child: Container(
@@ -117,9 +137,20 @@ class _RepManutencao extends State<RepManutencao> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.white,
+                  ),
                   Expanded(
-                    child:
-                        Text('  % Veículos liberados sem retorno - (10 ÷ 11)'),
+                    child: Text('  Vcl liberados sem retorno :'),
                   ),
                   Expanded(
                     child: Container(
@@ -137,42 +168,191 @@ class _RepManutencao extends State<RepManutencao> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Legendas do Sistema de Medidas',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
+              ),
+            ),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.blue,
+                    child: Text(
+                      "10",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '    Qtde. de veículos testados e reprovados',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.white,
+                    child: Text(
+                      "%",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   % Veículos liberados sem retorno - (10 ÷ 11) ',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        PainelControleMedidas()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOap()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

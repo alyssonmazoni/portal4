@@ -96,8 +96,8 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 20,
-                        width: 15,
+                        height: 35,
+                        width: 10,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -322,10 +322,8 @@ class _SeparacaoAntecipada extends State<SeparacaoAntecipada> {
                       width: 5,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Iapo()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Iapo()));
                         },
                         child: Text('Sair',
                             style:

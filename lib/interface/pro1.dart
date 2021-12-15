@@ -112,8 +112,6 @@ class _Pro1 extends State<Pro1> {
                       width: 10,
                       child: Container(
                         child: FittedBox(
-
-
                           child: Text(
                             'MEC-3',
                             textAlign: TextAlign.center,
@@ -519,8 +517,7 @@ class _Pro1 extends State<Pro1> {
                 Container(
                   alignment: Alignment.center,
                   width: 30,
-                  height: 30
-                  ,
+                  height: 30,
                   color: Colors.green,
                   child: Text(
                     "S",

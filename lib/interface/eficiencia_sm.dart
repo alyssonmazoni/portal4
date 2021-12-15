@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 
 /// Provides a UI to select a authentication type page
 class EficienciaSm extends StatefulWidget {
   _EficienciaSm createState() => _EficienciaSm();
 }
+
+final elements1 = ["", "S", "F", "P", "C"];
+
+int selectedIndex1 = 0;
+int selectedIndex2 = 0;
+int selectedIndex3 = 0;
+int selectedIndex4 = 0;
+int selectedIndex5 = 0;
 
 class _EficienciaSm extends State<EficienciaSm> {
   DateTime dateForm = DateTime.now();
@@ -22,7 +31,7 @@ class _EficienciaSm extends State<EficienciaSm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('EFICIÊNCIA SM ')),
+        appBar: AppBar(title: Text('EFICIÊNCIA SM')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -45,8 +54,8 @@ class _EficienciaSm extends State<EficienciaSm> {
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.all(8),
-                child: Text('Eficiência Sistema de Medidas',
-                    style: TextStyle(fontSize: 10, color: Colors.black)),
+                child: Text('EFICIÊNCIA SISTEMA DE MEDIDAS',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
               ),
             ),
             Row(children: [
@@ -62,7 +71,7 @@ class _EficienciaSm extends State<EficienciaSm> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Data:'),
+                    child: Text('     Data:'),
                   ),
                   Expanded(
                     child: Container(
@@ -70,7 +79,7 @@ class _EficienciaSm extends State<EficienciaSm> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {
@@ -93,8 +102,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.brown,
+                  ),
                   Expanded(
-                    child: Text('  Qtd. OSs Aplicadas:'),
+                    child: Text('  Qtd.Oss Aplicadas:'),
                   ),
                   Expanded(
                     child: Container(
@@ -112,8 +133,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.green,
+                  ),
                   Expanded(
-                    child: Text('  Valor MO'),
+                    child: Text('   Valor MO:'),
                   ),
                   Expanded(
                     child: Container(
@@ -131,8 +164,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.orange,
+                  ),
                   Expanded(
-                    child: Text('  Qtd H Vendidas:'),
+                    child: Text('  Qtd.H.Vendidas:'),
                   ),
                   Expanded(
                     child: Container(
@@ -150,8 +195,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.red,
+                  ),
                   Expanded(
-                    child: Text('  Qtd H Aplicadas:'),
+                    child: Text('   Qtd.H.Aplicadas:'),
                   ),
                   Expanded(
                     child: Container(
@@ -169,8 +226,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.blueGrey,
+                  ),
                   Expanded(
-                    child: Text('  Qtd H Obtidas: '),
+                    child: Text('  Qtd.H.Obtidas:'),
                   ),
                   Expanded(
                     child: Container(
@@ -188,8 +257,20 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.white,
+                  ),
                   Expanded(
-                    child: Text('  Resultado Eficiência: 3/4'),
+                    child: Text('  Resultado Eficiência:'),
                   ),
                   Expanded(
                     child: Container(
@@ -207,6 +288,18 @@ class _EficienciaSm extends State<EficienciaSm> {
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.purpleAccent,
+                  ),
                   Expanded(
                     child: Text('  Aproveitamento:'),
                   ),
@@ -224,44 +317,345 @@ class _EficienciaSm extends State<EficienciaSm> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Legendas do Sistema de Medidas',
+                    style: TextStyle(fontSize: 15, color: Colors.black)),
+              ),
+            ),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.brown,
+                    child: Text(
+                      "24",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Qtd.OSs Aplicadas',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.green,
+                    child: Text(
+                      "25",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Valor MO ',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.orange,
+                    child: Text(
+                      "26",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '    Qtd.H.Vendidas',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.red,
+                    child: Text(
+                      "27",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Qtd.H.Aplicadas ',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.blueGrey,
+                    child: Text(
+                      "28",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Qtd.H.Obtidas ',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.white,
+                    child: Text(
+                      "29",
+                      style: TextStyle(fontSize: 10, color: Colors.black)),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Resultado item 26 ÷ 27 ', style: TextStyle(fontSize: 10, color: Colors.white)),
+    ),
+
+
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.grey[850],
+                      height: 5,
+                      width: 5,
+                    ),
+                  ),
+                ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
+                    color: Colors.purple,
+                    child: Text(
+                      "30",
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '   Aproveitamento',
+                      style: TextStyle(fontSize: 10),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        PainelControleMedidas()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ModuloOap()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],

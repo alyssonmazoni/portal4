@@ -83,7 +83,7 @@ class _ServicoExpresso extends State<ServicoExpresso> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {
@@ -297,7 +297,7 @@ class _ServicoExpresso extends State<ServicoExpresso> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Venda PCS SE:'),
+                    child: Text('  V. PCS SE:'),
                   ),
                   Expanded(
                     child: Container(
@@ -311,7 +311,7 @@ class _ServicoExpresso extends State<ServicoExpresso> {
                     ),
                   ),
                   Expanded(
-                    child: Text('  Venda MO SE:'),
+                    child: Text('  V. MO SE:'),
                   ),
                   Expanded(
                     child: Container(

@@ -157,7 +157,7 @@ class _ModuloOap extends State<ModuloOap> {
                                       builder: (context) =>
                                           ModulosistemaMedidas()));
                             },
-                            child: Text('Sistema Medidas')),
+                            child: Text('Gerencial')),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,

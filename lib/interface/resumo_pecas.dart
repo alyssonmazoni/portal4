@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:direct_select/direct_select.dart';
-import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -106,8 +105,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.white70)),
                           alignment: Alignment.center,
-                          height: 30,
-                          width: 5,
+                          height: 35,
+                          width: 10,
                           child: TextButton(
                               onPressed: () {
                                 DatePicker.showDatePicker(context,
@@ -240,8 +239,6 @@ class _ResumoPecas extends State<ResumoPecas> {
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white70)),
                     alignment: Alignment.center,
                     height: 20,
                     width: 10,
@@ -270,8 +267,6 @@ class _ResumoPecas extends State<ResumoPecas> {
                 Expanded(
                   child: Container(
                     margin: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white70)),
                     alignment: Alignment.center,
                     height: 20,
                     width: 10,
@@ -299,8 +294,8 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('  Venda Cliente:'),
-                    ),
+                      child: Text('  Venda Cliente:',style: TextStyle(fontSize:9, color: Colors.blue),
+                      )),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
@@ -314,8 +309,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                     Expanded(
-                      child: Text('  Venda Garantia:'),
-                    ),
+                      child: Text('  Venda Garantia:',style: TextStyle(fontSize:9, color: Colors.blue),
+    )),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
@@ -334,8 +329,8 @@ class _ResumoPecas extends State<ResumoPecas> {
               Row(
                   children: [
                     Expanded(
-                      child: Text('  Venda Custo:'),
-                    ),
+                      child: Text('  Venda Custo:',style: TextStyle(fontSize:9, color: Colors.blue),
+    )),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),
@@ -349,8 +344,8 @@ class _ResumoPecas extends State<ResumoPecas> {
                       ),
                     ),
                     Expanded(
-                      child: Text('  Venda Balcão:'),
-                    ),
+                      child: Text('  Venda Balcão:',style: TextStyle(fontSize:9, color: Colors.blue),
+    )),
                     Expanded(
                       child: Container(
                         margin: const EdgeInsets.all(8),

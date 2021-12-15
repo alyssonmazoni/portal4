@@ -33,14 +33,14 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 40,
-                    width: 40,
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
               Row(children: [
                 SizedBox(
-                  width: 400,
+                  width: 320,
                   height: 100,
                   child: FittedBox(
                     child: Image.network(
@@ -55,8 +55,8 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 40,
-                    width: 40,
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -186,6 +186,22 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                         style: TextStyle(fontSize: 10),
                       ),
                     ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.green,
+                      child: Text(
+                        "2",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  RH',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
@@ -206,22 +222,6 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                       width: 40,
                       height: 40,
                       color: Colors.grey[850],
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 40,
-                      height: 40,
-                      color: Colors.green,
-                      child: Text(
-                        "2",
-                        style: TextStyle(fontSize: 10),
-                      ),
-                    ),
-                    Expanded(
-                      child: Text(
-                        '  RH',
-                        style: TextStyle(fontSize: 10),
-                      ),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -260,6 +260,22 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                         style: TextStyle(fontSize: 10),
                       ),
                     ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 40,
+                      height: 40,
+                      color: Colors.purple,
+                      child: Text(
+                        "4",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '  GEO LOCALIZAÇÃO',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
@@ -280,22 +296,6 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                       width: 40,
                       height: 40,
                       color: Colors.grey[850],
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 40,
-                      height: 40,
-                      color: Colors.purple,
-                      child: Text(
-                        "4",
-                        style: TextStyle(fontSize: 10),
-                      ),
-                    ),
-                    Expanded(
-                      child: Text(
-                        '  GEO LOCALIZAÇÃO',
-                        style: TextStyle(fontSize: 10),
-                      ),
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -344,12 +344,12 @@ class _ModuloRizzi extends State<ModuloRizzi> {
                           },
                           child: Text('Sair',
                               style:
-                              TextStyle(fontSize: 10, color: Colors.black)),
+                                  TextStyle(fontSize: 10, color: Colors.black)),
                         ),
                       ),
                     ),
                   ],
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center),
             ], mainAxisAlignment: MainAxisAlignment.center),
           ),

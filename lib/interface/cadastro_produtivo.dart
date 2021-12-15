@@ -43,8 +43,8 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 child: Container(
                   alignment: Alignment.center,
                   color: Colors.grey[850],
-                  height: 5,
-                  width: 5,
+                  height: 1,
+                  width: 1,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -61,8 +61,8 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 child: Container(
                   alignment: Alignment.center,
                   color: Colors.grey[850],
-                  height: 5,
-                  width: 5,
+                  height: 1,
+                  width: 1,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
@@ -96,7 +96,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                                 Text(DateFormat('dd-MM-yy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -106,7 +106,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 20,
+                      height: 15,
                       width: 15,
                       child: TextField(
                           controller: tc1,
@@ -125,7 +125,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 20,
+                      height: 15,
                       width: 15,
                       child: TextField(
                           controller: tc3,
@@ -144,7 +144,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 20,
+                      height: 15,
                       width: 15,
                       child: TextField(
                           controller: tc5,
@@ -156,22 +156,44 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(children: [
+              Container(
+                alignment: Alignment.center,
+                width: 35,
+                height: 35,
+                color: Colors.grey[850],
+              ),
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.all(8),
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.white70)),
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
                   child: Text(
                       'Informar abaixo apenas quando o colaborador estiver ausente',
-                      style: TextStyle(fontSize: 10, color: Colors.blue)),
+                      style: TextStyle(fontSize: 11, color: Colors.blue)),
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+              Container(
+                alignment: Alignment.center,
+                width: 35,
+                height: 35,
+                color: Colors.grey[850],
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 80,
+                    height: 80,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
                   Expanded(
                     child: Text('  Ausência:'),
                   ),
@@ -186,65 +208,107 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.grey[850],
-                  height: 10,
-                  width: 10,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.white70)),
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                  child: Text('Justificar Ausência',
-                      style: TextStyle(fontSize: 10, color: Colors.blue)),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc9,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 80,
+                    height: 80,
+                    color: Colors.grey[850],
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 50,
+                    height: 50,
+                    color: Colors.grey[850],
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(children: [
+              Container(
+                alignment: Alignment.center,
+                width: 10,
+                height: 10,
+                color: Colors.grey[850],
+              ),
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.all(8),
-                  decoration:
-                      BoxDecoration(border: Border.all(color: Colors.white70)),
+                  alignment: Alignment.center,
+                  height: 10,
+                  width: 10,
+                  child: Text('Justificar Ausência',
+                      style: TextStyle(fontSize: 11, color: Colors.blue)),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: 10,
+                height: 10,
+                color: Colors.grey[850],
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
+            Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 2,
+                    height: 2,
+                    color: Colors.grey[850],
+                  ),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxHeight: 80,
+                      maxWidth: 380,
+                    ),
+                    child: TextField(
+                        maxLines: 3,
+                        decoration:
+                            InputDecoration(border: OutlineInputBorder()),
+                        controller: tc9,
+                        textAlign: TextAlign.center,
+                        textAlignVertical: TextAlignVertical.center),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 5,
+                    height: 5,
+                    color: Colors.grey[850],
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Container(
+                alignment: Alignment.center,
+                width: 80,
+                height: 80,
+                color: Colors.grey[850],
+              ),
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
                   height: 20,
                   width: 15,
                   child: Text('Autor da Justificativa somente Gerente*',
-                      style: TextStyle(fontSize: 10, color: Colors.red)),
+                      style: TextStyle(fontSize: 11, color: Colors.red)),
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
+              Container(
+                alignment: Alignment.center,
+                width: 80,
+                height: 80,
+                color: Colors.grey[850],
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
+                  Container(
+                    alignment: Alignment.center,
+                    width: 1,
+                    height: 1,
+                    color: Colors.grey[850],
+                  ),
                   Expanded(
                     child: Text('  Gerente:'),
                   ),
@@ -258,6 +322,12 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 1,
+                    height: 1,
+                    color: Colors.grey[850],
                   ),
                   Expanded(
                     child: Text('  Dt Registro:'),
@@ -273,6 +343,12 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 10,
+                    height: 10,
+                    color: Colors.grey[850],
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,

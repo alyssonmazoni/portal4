@@ -115,7 +115,7 @@ class _GradeHoras extends State<GradeHoras> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
-                        height: 40,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/age_recep.dart';
+import 'package:rizzi/interface/desempenho_oficina.dart';
+import 'package:rizzi/interface/eficiencia_sm.dart';
+import 'package:rizzi/interface/eficiencia_sm.dart';
+import 'package:rizzi/interface/entrega_veic.dart';
 import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/indicadores_oficina.dart';
 import 'package:rizzi/interface/nps_csi.dart';
 import 'package:rizzi/interface/pecas_medidas.dart';
 import 'package:rizzi/interface/rep_manutencao.dart';
@@ -33,8 +38,8 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 40,
-                    width: 40,
+                    height: 10,
+                    width: 10,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -43,8 +48,8 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 40,
-                    width: 40,
+                    height: 10,
+                    width: 10,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -84,6 +89,30 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                             child: Text('1')),
                       ),
                     ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        color: Colors.grey[850],
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => EntregaVeic()));
+                            },
+                            child: Text('5')),
+                      ),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
@@ -103,6 +132,31 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                                       builder: (context) => AgeRecep()));
                             },
                             child: Text('2')),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        color: Colors.grey[850],
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          DesempenhoOficina()));
+                            },
+                            child: Text('6')),
                       ),
                     ),
                   ],
@@ -126,6 +180,31 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                             child: Text('3')),
                       ),
                     ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        color: Colors.grey[850],
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          IndicadoresOficina()));
+                            },
+                            child: Text('7')),
+                      ),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
@@ -147,9 +226,61 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                             child: Text('4')),
                       ),
                     ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        color: Colors.grey[850],
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 15,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => EficienciaSm()));
+                            },
+                            child: Text('8')),
+                      ),
+                    ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 10,
+                    width: 10,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              const Card(
+                color: Colors.white,
+                child: Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text('Legendas do Sistema de Medidas',
+                      style: TextStyle(fontSize: 15, color: Colors.black)),
+                ),
+              ),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 40,
+                    width: 40,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
               Row(
                   children: [
                     Container(
@@ -178,12 +309,6 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       alignment: Alignment.center,
                       width: 40,
                       height: 40,
-                      color: Colors.grey[850],
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 40,
-                      height: 40,
                       color: Colors.cyan[600],
                       child: Text(
                         "5",
@@ -192,7 +317,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                     ),
                     Expanded(
                       child: Text(
-                        '  DESEMPENHO OFICINA',
+                        '  ENTREGA DO VEÍCULO',
                         style: TextStyle(fontSize: 10),
                       ),
                     ),
@@ -229,7 +354,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                     ),
                     Expanded(
                       child: Text(
-                        '  ENTREGA DO VEÍCULO',
+                        '  AGE / RECEPÇÃO',
                         style: TextStyle(fontSize: 10),
                       ),
                     ),
@@ -245,7 +370,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                     ),
                     Expanded(
                       child: Text(
-                        '  AGENDAMENTO/RECEPÇÃO',
+                        '  DESEMPENHO OFICINA MEC',
                         style: TextStyle(fontSize: 10),
                       ),
                     ),

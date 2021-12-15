@@ -216,7 +216,7 @@ class _TelaLogin extends State<TelaLogin> {
                     ),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(children: [
               Expanded(
@@ -241,7 +241,6 @@ class _TelaLogin extends State<TelaLogin> {
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(children: [], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }

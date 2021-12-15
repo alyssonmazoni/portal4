@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
 import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -105,8 +104,8 @@ class _cadcit extends State<cadcit> {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.white70)),
                           alignment: Alignment.center,
-                          height: 30,
-                          width: 5,
+                          height: 35,
+                          width: 10,
                           child: TextButton(
                               onPressed: () {
                                 DatePicker.showDatePicker(context,
@@ -196,7 +195,7 @@ class _cadcit extends State<cadcit> {
                     height: 20,
                     width: 10,
                     child: Text('Observação',
-                        style: TextStyle(fontSize: 10, color: Colors.blue)),
+                        style: TextStyle(fontSize: 11, color: Colors.blue)),
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),

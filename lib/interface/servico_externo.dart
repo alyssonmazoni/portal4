@@ -101,7 +101,7 @@ class _ServicoExterno extends State<ServicoExterno> {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
-                        height: 30,
+                        height: 35,
                         width: 10,
                         child: TextButton(
                             onPressed: () {
@@ -308,14 +308,14 @@ class _ServicoExterno extends State<ServicoExterno> {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     color: Colors.grey[850],
                   ),
                   Container(
                     alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     color: Colors.blue,
                     child: Text(
                       "F",
@@ -328,68 +328,10 @@ class _ServicoExterno extends State<ServicoExterno> {
                       style: TextStyle(fontSize: 9),
                     ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.grey[850],
-                  height: 5,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
                   Container(
                     alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
-                    color: Colors.grey[850],
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
-                    color: Colors.green,
-                    child: Text(
-                      "S",
-                      style: TextStyle(fontSize: 9),
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      '  EM SERVIÇO',
-                      style: TextStyle(fontSize: 9),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.grey[850],
-                  height: 5,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
-                    color: Colors.grey[850],
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     color: Colors.orange,
                     child: Text(
                       "P",
@@ -419,14 +361,30 @@ class _ServicoExterno extends State<ServicoExterno> {
                 children: [
                   Container(
                     alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
                     color: Colors.grey[850],
                   ),
                   Container(
                     alignment: Alignment.center,
-                    width: 40,
-                    height: 40,
+                    width: 30,
+                    height: 30,
+                    color: Colors.green,
+                    child: Text(
+                      "S",
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '  EM SERVIÇO',
+                      style: TextStyle(fontSize: 9),
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 30,
+                    height: 30,
                     color: Colors.red,
                     child: Text(
                       "C",
@@ -442,16 +400,6 @@ class _ServicoExterno extends State<ServicoExterno> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.grey[850],
-                  height: 5,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
