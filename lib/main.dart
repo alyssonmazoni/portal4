@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import './interface/home.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 
 //import 'firebase_options.dart';
 
@@ -14,6 +17,9 @@ void main() async {
 class Initial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData.dark(), home: SystemHome());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        home: SystemHome());
   }
 }

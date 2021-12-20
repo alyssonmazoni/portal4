@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cad_cit.dart';
 import 'package:rizzi/interface/cl1oap_conta.dart';
+import 'package:rizzi/interface/mensalsm.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
 import 'package:rizzi/interface/pos_venda.dart';
 
@@ -96,6 +97,34 @@ class _ModulosistemaMedidas extends State<ModulosistemaMedidas> {
                                       builder: (context) => Cl1oapConta()));
                             },
                             child: Text('CL-1')),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center),
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.grey[850],
+                      height: 5,
+                      width: 5,
+                    ),
+                  ),
+                ], mainAxisAlignment: MainAxisAlignment.center),
+                Row(
+                    children: [
+                      Container(
+                        alignment: Alignment.center,
+                        height: 20,
+                        width: 150,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => mensalsm()));
+                            },
+                            child: Text('Mensa SM')),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
