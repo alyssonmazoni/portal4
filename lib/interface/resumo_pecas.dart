@@ -135,7 +135,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                       child: Container(
                         margin: const EdgeInsets.all(8),
                         alignment: Alignment.centerLeft,
-                        height: 30,
+                        height: 25,
                         width: 5,
                         child: TextField(
                             controller: tc1,
@@ -155,7 +155,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                       child: Container(
                         margin: const EdgeInsets.all(8),
                         alignment: Alignment.centerLeft,
-                        height: 30,
+                        height: 25,
                         width: 5,
                         child: TextField(
                             controller: tc2,
@@ -175,7 +175,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                       child: Container(
                         margin: const EdgeInsets.all(8),
                         alignment: Alignment.centerLeft,
-                        height: 30,
+                        height: 25,
                         width: 5,
                         child: TextField(
                             controller: tc3,
@@ -195,7 +195,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                       child: Container(
                         margin: const EdgeInsets.all(8),
                         alignment: Alignment.centerLeft,
-                        height: 30,
+                        height: 25,
                         width: 5,
                         child: TextField(
                             controller: tc4,

@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/ag1_dart.dart';

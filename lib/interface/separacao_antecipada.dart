@@ -4,7 +4,7 @@ import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
-import 'package:rizzi/interface/pos_venda.dart';
+
 
 /// Provides a UI to select a authentication type page
 class SeparacaoAntecipada extends StatefulWidget {

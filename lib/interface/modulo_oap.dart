@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/cadastro_produtivo.dart';
-import 'package:rizzi/interface/home.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/modulo_recepcaooap.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';

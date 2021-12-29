@@ -369,7 +369,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                     ),
                     Expanded(
                       child: Text(
-                        '  DESEMPENHO OFICINA MEC',
+                        '  DESEMPENHO OFIC MEC',
                         style: TextStyle(fontSize: 10),
                       ),
                     ),

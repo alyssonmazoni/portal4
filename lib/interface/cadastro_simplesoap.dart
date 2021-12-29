@@ -40,30 +40,9 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
           height: double.infinity,
           margin: const EdgeInsets.all(8),
           alignment: Alignment.center,
-          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
+          decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  alignment: Alignment.center,
-                  height: 30,
-                  width: 10,
-                  child: Text('Conta'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
@@ -71,9 +50,6 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                   ),
                   Expanded(
                     child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
                         height: 35,
                         width: 10,
@@ -92,6 +68,12 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                             },
                             child:
                                 Text(DateFormat('dd-MM-yy').format(dateForm)))),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 80,
+                    height: 80,
+                    color: Colors.grey[850],
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -133,7 +115,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  CNPJ:'),
+                    child: Text('  Modalidade:'),
                   ),
                   Expanded(
                     child: Container(
@@ -152,7 +134,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Razão Social:'),
+                    child: Text('  CNPJ:'),
                   ),
                   Expanded(
                     child: Container(
@@ -171,7 +153,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Denominação:'),
+                    child: Text('  Razão Social:'),
                   ),
                   Expanded(
                     child: Container(
@@ -190,7 +172,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Conta Matriz:'),
+                    child: Text('  Denominação:'),
                   ),
                   Expanded(
                     child: Container(
@@ -199,6 +181,25 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       width: 15,
                       child: TextField(
                           controller: tc6,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Conta Matriz:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 20,
+                      width: 15,
+                      child: TextField(
+                          controller: tc7,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -213,7 +214,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc7,
+                          controller: tc8,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -232,7 +233,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc8,
+                          controller: tc9,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -247,7 +248,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc9,
+                          controller: tc10,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -266,7 +267,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc10,
+                          controller: tc11,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -281,7 +282,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc11,
+                          controller: tc12,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -300,22 +301,26 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc12,
+                          controller: tc13,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
                   Expanded(
                     child: Text('  Cep:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      alignment: Alignment.center,
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc13,
+                          controller: tc14,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -334,22 +339,26 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc14,
+                          controller: tc15,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
                   ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
                   Expanded(
                     child: Text('  Fone:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      alignment: Alignment.center,
                       height: 20,
                       width: 15,
                       child: TextField(
-                          controller: tc15,
+                          controller: tc16,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -393,7 +402,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                                 MaterialPageRoute(
                                     builder: (context) => GerarSenha()));
                           },
-                          child: Text('Gerar Senha')),
+                          child: Text('Avançar')),
                     ),
                   ),
                   Expanded(

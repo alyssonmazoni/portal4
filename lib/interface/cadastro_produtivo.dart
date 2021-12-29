@@ -52,7 +52,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.all(8),
-                child: Text('Cadastro Oficina',
+                child: Text('Cadastro de Produtivos',
                     style: TextStyle(fontSize: 10, color: Colors.black)),
               ),
             ),
@@ -73,9 +73,6 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                   ),
                   Expanded(
                     child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
                         height: 35,
                         width: 5,
