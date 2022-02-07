@@ -19,8 +19,6 @@ class PainelControleMedidas extends StatefulWidget {
 class _PainelControleMedidas extends State<PainelControleMedidas> {
   DateTime dateForm = DateTime.now();
 
-  TextEditingController tc1 = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,37 +34,59 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
-                    color: Colors.grey[850],
-                    height: 10,
-                    width: 10,
+                    color: Colors.white,
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
-              Row(children: [
-                Expanded(
-                  child: Container(
-                    alignment: Alignment.center,
-                    color: Colors.grey[850],
-                    height: 10,
-                    width: 10,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        height: 30,
+                        width: 60,
+                        child: FittedBox(
+                          alignment: Alignment.center,
+                          fit: BoxFit.contain,
+                          child: Image.network(
+                              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ], mainAxisAlignment: MainAxisAlignment.center),
-              const Card(
-                color: Colors.white,
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Text('Preenchimento do Sistema de Medidas',
-                      style: TextStyle(fontSize: 15, color: Colors.black)),
-                ),
+                  Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        margin: const EdgeInsets.all(8),
+                        height: 60,
+                        width: 300,
+                        child: FittedBox(
+                          child: const Card(
+                            color: Colors.white,
+                            child: Padding(
+                              padding: EdgeInsets.all(8),
+                              child: Text('Preenchimento do Sistema de Medidas',
+                                  style: TextStyle(
+                                      fontSize: 15, color: Colors.black)),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               Row(children: [
                 Expanded(
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 20,
-                    width: 20,
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -257,8 +277,8 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 10,
-                    width: 10,
+                    height: 5,
+                    width: 5,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -275,8 +295,8 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   child: Container(
                     alignment: Alignment.center,
                     color: Colors.grey[850],
-                    height: 40,
-                    width: 40,
+                    height: 20,
+                    width: 20,
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
@@ -284,7 +304,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      width: 40,
+                      width: 15,
                       height: 40,
                       color: Colors.grey[850],
                     ),
@@ -299,9 +319,14 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  NPS/CSI',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  NPS CSI',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -315,10 +340,21 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  ENTREGA DO VEÍCULO',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  ENTREGA VEÍCULO',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 15,
+                      height: 40,
+                      color: Colors.grey[850],
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -337,7 +373,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      width: 40,
+                      width: 15,
                       height: 40,
                       color: Colors.grey[850],
                     ),
@@ -352,9 +388,14 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  AGE / RECEPÇÃO',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  AGE RECEPÇÃO',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -368,10 +409,21 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  DESEMPENHO OFIC MEC',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  DESEMPENHO OFIC MEC',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 15,
+                      height: 40,
+                      color: Colors.grey[850],
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -390,7 +442,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      width: 40,
+                      width: 15,
                       height: 40,
                       color: Colors.grey[850],
                     ),
@@ -405,9 +457,14 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  PEÇAS',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  PEÇAS',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -421,10 +478,21 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  INDICADORES OFICINA',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  INDICADORES OFICINA',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 15,
+                      height: 40,
+                      color: Colors.grey[850],
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -443,7 +511,7 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   children: [
                     Container(
                       alignment: Alignment.center,
-                      width: 40,
+                      width: 15,
                       height: 40,
                       color: Colors.grey[850],
                     ),
@@ -458,9 +526,14 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  REP.MANUTENÇÃO',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  REP.MANUTENÇÃO',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -474,10 +547,21 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                       ),
                     ),
                     Expanded(
-                      child: Text(
-                        '  INDICADORES EFICIÊNCIA',
-                        style: TextStyle(fontSize: 10),
+                      child: Container(
+                        alignment: Alignment.centerLeft,
+                        child: Container(
+                          child: Text(
+                            '  INDICADORES EFICIÊNCIA',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ),
+                    ),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 15,
+                      height: 40,
+                      color: Colors.grey[850],
                     ),
                   ],
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -492,6 +576,32 @@ class _PainelControleMedidas extends State<PainelControleMedidas> {
                   ),
                 ),
               ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.white,
+                    height: 10,
+                    width: 10,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.grey[850],
+                    height: 5,
+                    width: 5,
+                  ),
+                ),
+              ], mainAxisAlignment: MainAxisAlignment.center),
+              Container(
+                alignment: Alignment.center,
+                width: 15,
+                height: 40,
+                color: Colors.white,
+              ),
               Row(
                   children: [
                     Expanded(

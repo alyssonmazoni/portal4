@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
-import 'my_selection_item.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 
@@ -12,46 +11,13 @@ class cadcit extends StatefulWidget {
 class _cadcit extends State<cadcit> {
   DateTime dateForm = DateTime.now();
 
-  final elements1 = [
-    "",
-    "A",
-    "B",
-    "C",
-    "D",
-  ];
-
-  final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
-
-  final elements3 = ["C&O", "Vans"];
-
-  final elements4 = ["Sim", "Não"];
-
-  final elements5 = ["Peça faltante", "Nova solicitação"];
-
   int selectedIndex1 = 0;
-  int selectedIndex2 = 0;
-  int selectedIndex3 = 0;
-  int selectedIndex4 = 0;
-  int selectedIndex5 = 0;
-
-  List<Widget> _buildItems1() {
-    return elements1
-        .map((val) => MySelectionItem(
-              title: val,
-            ))
-        .toList();
-  }
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
   TextEditingController tc3 = TextEditingController();
   TextEditingController tc4 = TextEditingController();
   TextEditingController tc5 = TextEditingController();
-  TextEditingController tc6 = TextEditingController();
-  TextEditingController tc7 = TextEditingController();
-  TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -106,7 +106,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -137,7 +137,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -168,7 +168,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -199,7 +199,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -230,7 +230,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -261,7 +261,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -292,7 +292,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -331,7 +331,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -356,7 +356,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -368,7 +368,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -393,7 +393,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -405,7 +405,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -430,7 +430,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -442,7 +442,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -467,7 +467,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -479,7 +479,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -488,7 +488,7 @@ class _AgeRecep extends State<AgeRecep> {
                     color: Colors.white,
                     child: Text(
                       "8",
-                      style: TextStyle(fontSize: 9),
+                      style: TextStyle(fontSize: 9, color: Colors.white),
                     ),
                   ),
                   Expanded(
@@ -504,7 +504,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -516,7 +516,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -525,7 +525,7 @@ class _AgeRecep extends State<AgeRecep> {
                     color: Colors.white,
                     child: Text(
                       "8",
-                      style: TextStyle(fontSize: 9),
+                      style: TextStyle(fontSize: 9, color: Colors.white),
                     ),
                   ),
                   Expanded(
@@ -541,7 +541,7 @@ class _AgeRecep extends State<AgeRecep> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -553,7 +553,7 @@ class _AgeRecep extends State<AgeRecep> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -562,7 +562,7 @@ class _AgeRecep extends State<AgeRecep> {
                     color: Colors.white,
                     child: Text(
                       "8",
-                      style: TextStyle(fontSize: 9),
+                      style: TextStyle(fontSize: 9, color: Colors.white),
                     ),
                   ),
                   Expanded(

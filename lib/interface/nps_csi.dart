@@ -3,27 +3,10 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
 import 'package:rizzi/interface/painel_controlemedidas.dart';
-import 'my_selection_item.dart';
 
 /// Provides a UI to select a authentication type page
 class NpsCsi extends StatefulWidget {
   _NpsCsi createState() => _NpsCsi();
-}
-
-final elements1 = ["", "S", "F", "P", "C"];
-
-int selectedIndex1 = 0;
-int selectedIndex2 = 0;
-int selectedIndex3 = 0;
-int selectedIndex4 = 0;
-int selectedIndex5 = 0;
-
-List<Widget> _buildItems1() {
-  return elements1
-      .map((val) => MySelectionItem(
-            title: val,
-          ))
-      .toList();
 }
 
 class _NpsCsi extends State<NpsCsi> {
@@ -112,7 +95,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -143,7 +126,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -174,7 +157,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -205,7 +188,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -244,7 +227,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -269,7 +252,7 @@ class _NpsCsi extends State<NpsCsi> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -281,7 +264,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -306,7 +289,7 @@ class _NpsCsi extends State<NpsCsi> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -318,7 +301,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -343,7 +326,7 @@ class _NpsCsi extends State<NpsCsi> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
@@ -355,7 +338,7 @@ class _NpsCsi extends State<NpsCsi> {
                     alignment: Alignment.center,
                     width: 30,
                     height: 30,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -380,7 +363,7 @@ class _NpsCsi extends State<NpsCsi> {
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 5,
                   width: 5,
                 ),
