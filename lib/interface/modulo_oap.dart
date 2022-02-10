@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_produtivo.dart';
 import 'package:rizzi/interface/modulo_oficinaoap.dart';
 import 'package:rizzi/interface/modulo_recepcaooap.dart';
 import 'package:rizzi/interface/modulo_sistemamedidas.dart';
@@ -27,25 +26,6 @@ class _ModuloOap extends State<ModuloOap> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: Column(
               children: [
-                Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 200,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          CadastroProdutivo()));
-                            },
-                            child: Text('Cadastro Colaboradores')),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center),
                 Row(children: [
                   Expanded(
                     child: Container(

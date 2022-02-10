@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/painel_controlemedidas.dart';
+import 'package:rizzi/interface/Menu1.dart';
+import 'package:rizzi/interface/ag1_dart.dart';
+import 'package:rizzi/interface/prog1.dart';
+import 'package:rizzi/interface/separacao_antecipada.dart';
 
 // TESTE DE MENU RESPONSIVO
+// verificar novo pacote de botoes
 
+void main() => runApp(MyApp5());
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class MyApp5 extends StatelessWidget {
   @override
   Widget build(context) => MaterialApp(initialRoute: "/login", routes: {
         "/login": (context) => tela_login(),
@@ -44,8 +47,7 @@ class tela_login extends StatelessWidget {
                       TextField(
                           obscureText: true,
                           decoration: InputDecoration(labelText: "password")),
-                      RaisedButton(
-                          color: Colors.blue,
+                      ElevatedButton(
                           child: Text("Log in",
                               style: TextStyle(color: Colors.white)),
                           onPressed: () {
@@ -60,7 +62,7 @@ class tela_login extends StatelessWidget {
 class home extends StatelessWidget {
   @override
   Widget build(context) => Scaffold(
-      appBar: AppBar(title: Text("Minha Lista")),
+      appBar: AppBar(title: Text("Departamento Programação")),
       drawer: MediaQuery.of(context).size.width < 500
           ? Drawer(
               child: Menu(),
@@ -81,80 +83,61 @@ class home extends StatelessWidget {
 class Menu extends StatelessWidget {
   @override
   Widget build(context) => ListView(children: [
-        FlatButton(
+
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Ag1()));
+            },
+            child: ListTile(
+              leading: Icon(Icons.looks_two_sharp),
+              title: Text("Agendamento"),
+            )),
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Prog1()));
+            },
+            child: ListTile(
+              leading: Icon(Icons.looks_two_sharp),
+              title: Text("Programação"),
+            )),
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
             onPressed: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => PainelControleMedidas()));
-
-
+                      builder: (context) => SeparacaoAntecipada()));
             },
             child: ListTile(
-              leading: Icon(Icons.looks_one_sharp),
-              title: Text("Planejamento"),
+              leading: Icon(Icons.looks_two_sharp),
+              title: Text("Separação Antecipada"),
             )),
-        FlatButton(
-            onPressed: () {},
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Menu1()));
+            },
             child: ListTile(
               leading: Icon(Icons.looks_two_sharp),
-              title: Text("Programação Oficina"),
+              title: Text("Voltar"),
             )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_3_sharp),
-              title: Text("Apontamento"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_4_sharp),
-              title: Text("Agendamento"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_5_sharp),
-              title: Text("Recepção"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_6_sharp),
-              title: Text("Serviço Expresso"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_6),
-              title: Text("Encerramento da OS"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_two),
-              title: Text("Entrega do Veículo"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_two),
-              title: Text("Diagnóstico"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_two),
-              title: Text("Reparo e Manutenção"),
-            )),
-        FlatButton(
-            onPressed: () {},
-            child: ListTile(
-              leading: Icon(Icons.looks_two),
-              title: Text("Consulta NPS"),
-            )),
-        FlatButton(
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
             onPressed: () {
               Navigator.pushReplacementNamed(context, "/login");
             },
@@ -167,17 +150,9 @@ class Menu extends StatelessWidget {
 
 class Content extends StatelessWidget {
   final List<String> elements = [
-    "Planejamento",
-    "Programação Oficina",
-    "Apontamento",
     "Agendamento",
-    "Recepção",
-    "Serviço Expresso",
-    "Encerramento da OS",
-    "Entrega do Veículo",
-    "Diagnóstico",
-    "Reparo e Manutenção",
-    "Consulta NPS"
+    "Programação",
+    "Separação Antecipada",
   ];
   @override
   Widget build(context) => GridView.builder(

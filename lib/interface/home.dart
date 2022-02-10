@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/tela_login.dart';
-import 'tela_login.dart';
-import 'package:rizzi/interface/responsive_teste.dart';
 import 'package:rizzi/interface/Menu1.dart';
+import 'package:rizzi/interface/cadastro_simplesoap.dart';
 
 /// Provides a UI to select a authentication type page
 class SystemHome extends StatefulWidget {
@@ -16,16 +13,88 @@ class _SystemHome extends State<SystemHome> {
 
   void pushPageFromHome(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => ResumoOss()));
+        context, MaterialPageRoute(builder: (context) => SystemHome()));
   }
 
   @override
   Widget build(BuildContext context) {
+    final ButtonStyle style =
+        TextButton.styleFrom(primary: Theme.of(context).colorScheme.onPrimary);
     return Scaffold(
-        appBar: AppBar(title: Text('Home')),
+        appBar: AppBar(
+          actions: <Widget>[
+            Flexible(
+              fit: FlexFit.tight,
+              flex: 1,
+              child: Container(
+                height: 1,
+                width: 1,
+                color: Colors.grey[870],
+              ),
+            ),
+            Expanded(
+              flex: 0,
+              child: FittedBox(
+                fit: BoxFit.fill,
+                alignment: Alignment.centerLeft,
+                child: Image.network(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+              ),
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                height: 1,
+                width: 1,
+                color: Colors.grey[870],
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CadastroSimplesoap()));
+              },
+              child: const Text('Primeiro Acesso',
+                  style: TextStyle(fontSize: 15, color: Colors.white)),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                height: 1,
+                width: 1,
+                color: Colors.grey[870],
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Menu1()));
+              },
+              child: const Text('Menu',
+                  style: TextStyle(fontSize: 15, color: Colors.white)),
+            ),
+            Expanded(
+              flex: 0,
+              child: Container(
+                height: 1,
+                width: 1,
+                color: Colors.grey[870],
+              ),
+            ),
+          ],
+        ),
+
+        //appBar: AppBar(
+        // title: Text('Home')),
         body: Container(
-            width: double.infinity,
-            height: double.infinity,
             margin: const EdgeInsets.all(8),
             alignment: Alignment.center,
             child: SingleChildScrollView(
@@ -33,160 +102,134 @@ class _SystemHome extends State<SystemHome> {
                   children: [
                     Row(
                         children: [
-                          Container(
-                            height: 40,
-                            width: 120,
-                            child: FittedBox(
-                              alignment: Alignment.center,
-                              fit: BoxFit.contain,
-                              child: Image.network(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
-                            ),
-                          ),
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center),
-                    Row(
-                        children: [
-                          Container(
-                            height: 15,
-                            width: 20,
-                          ),
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center),
-                    Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 20,
-                              child: ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => TelaLogin()));
-                                  },
-                                  child: Text('Acesso ao Portal',
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.white))),
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 20,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => MyApp()));
-                                },
-                                child: Text(
-                                  'Menu',
-                                  style: TextStyle(
-                                      fontSize: 12, color: Colors.white),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: 20,
-                              width: 20,
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => Menu1()));
-                                },
-                                child: Text(
-                                  'Menu',
-                                  style: TextStyle(
-                                      fontSize: 12, color: Colors.white),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.center),
-                    Row(
-                        children: [
-                          Container(
-                            height: 5,
-                            width: 5,
-                          ),
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 120,
-                              width: 80,
-                              child: FittedBox(
-                                alignment: Alignment.center,
-                                fit: BoxFit.contain,
-                                child: Image.network(
-                                    'https://media.istockphoto.com/photos/trader-at-work-picture-id1143910377?b=1&k=20&m=1143910377&s=170667a&w=0&h=-nOqtyMve2RFXIQe2hzhwDMFzKVIJ-lRJLoGP9s23FA='),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.centerLeft,
-                              margin: const EdgeInsets.all(8),
-                              height: 350,
-                              width: 200,
+                          Center(
                               child: Container(
-                                  child: Text(
-                                'A RIZZI Consulting é uma empresa de consultoria que se estabeleceu em 2000 e iniciou as suas atividades com o desenvolvimento e aplicações de treinamentos comerciais e técnicos, tendo soluções aplicadas para a área automobilí­stica. Ao longo do tempo passamos a desenvolver e aplicar soluções ligadas a  análise, aplicação, e melhoria conti­nua (Kaizen) no que tange as Áreas de Vendas, Pós-Venda (P&S) para montadoras automobilí­sticas, através de assessorias, consultorias e auditorias. Atualmente a RIZZI Consulting, além das atividades mencionadas anteriormente, também desenvolve e aplicada ferramentas informáticas focada em Gestão Estratégica ',
-                                style: TextStyle(
-                                    fontSize: 12, color: Colors.white),
-                              )),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Row(
-                        children: [
-                          Container(
-                            height: 5,
-                            width: 5,
-                          ),
+                                  width: 390,
+                                  height: 1,
+                                  color: Colors.grey[870])),
                         ],
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          children: <Widget>[
-                            Icon(Icons.call),
-                            Text('+55(19)3465-2318')
-                          ],
-                        ),
-                        Column(
-                          children: <Widget>[
-                            Icon(Icons.email),
-                            Text('contato@rizziconsulting.com.br')
-                          ],
-                        ),
-                      ],
-                    )
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 1,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          SizedBox(
+                            height: 300,
+                            width: 300,
+                            child: FittedBox(
+                                fit: BoxFit.fill,
+                                child: Image.network(
+                                    'https://www.istoedinheiro.com.br/wp-content/uploads/sites/17/2019/10/imagemn-escolhida-artigo-e1571255765939-1280x720.jpg',
+                                    colorBlendMode: BlendMode.modulate)),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 1,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 1,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 40,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 150,
+                                  height: 5,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Flexible(
+                              child: Container(
+                            color: Colors.grey[870],
+                            child: Text(
+                                'Com a telemetria Rizzi tenha um controle total da sua frota através de dispositivos móveis que monitoram todas as informações relevantes para ter uma gestão completa e mais eficiente de seus veículos. Seja no controle de combustíveis, no controle de itens de desgastes, no tempo de viagem, na velocidade do veículo, tempo total de entrega/rota ou trecho, acelerações bruscas, infrações fique no controle total a qualquer momento.'),
+                          )),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 2,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 300,
+                                  height: 1,
+                                  color: Colors.grey[870]))
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          Center(
+                              child: Container(
+                                  width: 390,
+                                  height: 20,
+                                  color: Colors.grey[870])),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center),
+                    Row(
+                        children: [
+                          ConstrainedBox(
+                              constraints: BoxConstraints(minHeight: 1),
+                              child: Text(
+                                'Rizzi Consulting ® 2000│2022 - Todos Direitos Reservados.',
+                                style: TextStyle(
+                                    fontSize: 10, color: Colors.grey[870]),
+                                textAlign: TextAlign.center,
+                              )),
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end),
+
+
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),

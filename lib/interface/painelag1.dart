@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_produtivo.dart';
 
 /// Provides a UI to select a authentication type page
 class PainelAg1 extends StatefulWidget {
@@ -290,7 +289,7 @@ class _PainelAg1 extends State<PainelAg1> {
                     ),
                   ),
                   Expanded(
-                    flex:1,
+                    flex: 1,
                     child: Container(
                       margin: const EdgeInsets.all(8),
                       height: 20,
@@ -550,21 +549,6 @@ class _PainelAg1 extends State<PainelAg1> {
                           onPressed:
                               () {}, // falta direcionar para databases editar
                           child: Text('Editar')),
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CadastroProdutivo()));
-                          },
-                          child: Text('Seguir')),
                     ),
                   ),
                 ],

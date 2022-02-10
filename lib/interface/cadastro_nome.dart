@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/cadastro_consultor.dart';
+import 'package:rizzi/interface/cadastro_simplesoap.dart';
+import 'package:rizzi/interface/gerar_senha.dart';
 import 'package:rizzi/interface/home.dart';
-import 'package:rizzi/interface/modulo_oap.dart';
 
 /// Provides a UI to select a authentication type page
-class CadastroProdutivo extends StatefulWidget {
-  _CadastroProdutivo createState() => _CadastroProdutivo();
+class CadastroNome extends StatefulWidget {
+  _CadastroNome createState() => _CadastroNome();
 }
 
-class _CadastroProdutivo extends State<CadastroProdutivo> {
+class _CadastroNome extends State<CadastroNome> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -21,46 +21,73 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
   TextEditingController tc6 = TextEditingController();
   TextEditingController tc7 = TextEditingController();
   TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
-  TextEditingController tc12 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Cadastro Produtivos')),
+        appBar: AppBar(title: Text('Cadastro Nome')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.all(8),
           alignment: Alignment.center,
-          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 1,
                   width: 1,
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-            const Card(
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('Cadastro de Produtivos',
-                    style: TextStyle(fontSize: 10, color: Colors.black)),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 30,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.center,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      margin: const EdgeInsets.all(8),
+                      height: 60,
+                      width: 300,
+                      child: FittedBox(
+                        child: const Card(
+                          color: Colors.white,
+                          child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Text('Cadastro Nome',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.black)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Row(children: [
               Expanded(
                 child: Container(
                   alignment: Alignment.center,
-                  color: Colors.grey[850],
+                  color: Colors.white,
                   height: 1,
                   width: 1,
                 ),
@@ -117,7 +144,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Funcionário:'),
+                    child: Text('  Nome:'),
                   ),
                   Expanded(
                     child: Container(
@@ -125,7 +152,47 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                       height: 15,
                       width: 15,
                       child: TextField(
-                          controller: tc3,
+                          controller: tc2,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
+                Row(
+                    children: [
+                      Expanded(
+                        child: Text('  SobreNome:'),
+                      ),
+                      Expanded(
+                        child: Container(
+                          margin: const EdgeInsets.all(8),
+                          height: 15,
+                          width: 15,
+                          child: TextField(
+                              controller: tc3,
+                              textAlign: TextAlign.center,
+                              textAlignVertical: TextAlignVertical.center),
+                        ),
+                      ),
+
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Departamento:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 15,
+                      width: 15,
+                      child: TextField(
+                          controller: tc4,
                           textAlign: TextAlign.center,
                           textAlignVertical: TextAlignVertical.center),
                     ),
@@ -136,7 +203,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Departamento:'),
+                    child: Text('  Telefone:'),
                   ),
                   Expanded(
                     child: Container(
@@ -152,12 +219,31 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+                children: [
+                  Expanded(
+                    child: Text('  Email:'),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 15,
+                      width: 15,
+                      child: TextField(
+                          controller: tc6,
+                          textAlign: TextAlign.center,
+                          textAlignVertical: TextAlignVertical.center),
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center),
             Row(children: [
               Container(
                 alignment: Alignment.center,
                 width: 35,
                 height: 35,
-                color: Colors.grey[850],
+                color: Colors.white,
               ),
               Expanded(
                 child: Container(
@@ -174,7 +260,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 alignment: Alignment.center,
                 width: 35,
                 height: 35,
-                color: Colors.grey[850],
+                color: Colors.white,
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
@@ -183,13 +269,13 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                     alignment: Alignment.center,
                     width: 80,
                     height: 80,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Expanded(
                     child: Text('  Ausência:'),
@@ -209,13 +295,13 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                     alignment: Alignment.center,
                     width: 80,
                     height: 80,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   Container(
                     alignment: Alignment.center,
                     width: 50,
                     height: 50,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -225,7 +311,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 alignment: Alignment.center,
                 width: 10,
                 height: 10,
-                color: Colors.grey[850],
+                color: Colors.white,
               ),
               Expanded(
                 child: Container(
@@ -241,7 +327,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 alignment: Alignment.center,
                 width: 10,
                 height: 10,
-                color: Colors.grey[850],
+                color: Colors.white,
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
@@ -250,7 +336,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                     alignment: Alignment.center,
                     width: 2,
                     height: 2,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                   ConstrainedBox(
                     constraints: BoxConstraints(
@@ -261,7 +347,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                         maxLines: 3,
                         decoration:
                             InputDecoration(border: OutlineInputBorder()),
-                        controller: tc9,
+                        controller: tc8,
                         textAlign: TextAlign.center,
                         textAlignVertical: TextAlignVertical.center),
                   ),
@@ -269,7 +355,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                     alignment: Alignment.center,
                     width: 5,
                     height: 5,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -279,23 +365,13 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                 alignment: Alignment.center,
                 width: 80,
                 height: 80,
-                color: Colors.grey[850],
-              ),
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  alignment: Alignment.center,
-                  height: 20,
-                  width: 15,
-                  child: Text('Autor da Justificativa somente Gerente*',
-                      style: TextStyle(fontSize: 11, color: Colors.red)),
-                ),
+                color: Colors.white,
               ),
               Container(
                 alignment: Alignment.center,
                 width: 80,
                 height: 80,
-                color: Colors.grey[850],
+                color: Colors.white,
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
@@ -304,48 +380,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                     alignment: Alignment.center,
                     width: 1,
                     height: 1,
-                    color: Colors.grey[850],
-                  ),
-                  Expanded(
-                    child: Text('  Gerente:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc11,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 1,
-                    height: 1,
-                    color: Colors.grey[850],
-                  ),
-                  Expanded(
-                    child: Text('  Dt Registro:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc12,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 10,
-                    height: 10,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -363,7 +398,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ModuloOap()));
+                                  builder: (context) => CadastroSimplesoap()));
                         },
                         child: Text('Voltar',
                             style:
@@ -396,7 +431,7 @@ class _CadastroProdutivo extends State<CadastroProdutivo> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => CadastroConsultor()));
+                                  builder: (context) => GerarSenha()));
                         },
                         child: Text('Seguir',
                             style:

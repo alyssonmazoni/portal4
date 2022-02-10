@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/Menu1.dart';
 import 'package:rizzi/interface/eficiencia.dart';
 import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/responsive2.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
 import 'package:rizzi/interface/servico_expresso.dart';
 import 'package:rizzi/interface/servico_externo.dart';
@@ -48,7 +50,7 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -76,7 +78,7 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -104,7 +106,7 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -121,7 +123,8 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SeparacaoAntecipada()));
+                                      builder: (context) =>
+                                          SeparacaoAntecipada()));
                             },
                             child: Text('Separação Antecipada')),
                       ),
@@ -132,7 +135,7 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -149,7 +152,7 @@ class _ModuloOficinaoap extends State<ModuloOficinaoap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
+                                      builder: (context) => Menu1()));
                             },
                             child: Text('Sair')),
                       ),

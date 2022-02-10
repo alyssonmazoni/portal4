@@ -12,6 +12,9 @@ import 'package:rizzi/interface/tela_menu.dart';
 
 /// Provides a UI to select a authentication type page
 
+
+//menu01 tem todos os acessos
+
 class PainelControleMedidas extends StatefulWidget {
   _PainelControleMedidas createState() => _PainelControleMedidas();
 }

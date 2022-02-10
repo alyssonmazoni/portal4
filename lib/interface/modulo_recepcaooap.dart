@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/ag1_dart.dart';
-import 'package:rizzi/interface/calender.dart';
+
 
 /// Provides a UI to select a authentication type page
 class ModuloRecepcaooap extends StatefulWidget {
@@ -33,26 +33,6 @@ class _ModuloRecepcaooap extends State<ModuloRecepcaooap> {
                                 MaterialPageRoute(builder: (context) => Ag1()));
                           },
                           child: Text('Agendamento')),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 20,
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Calender()));
-                          },
-                          child: Text('Calender')),
                     ),
                   ),
                 ],

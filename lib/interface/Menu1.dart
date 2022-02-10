@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/chamados_oap.dart';
-import 'package:rizzi/interface/modulo_rizzi.dart';
-import 'package:rizzi/interface/pos_venda.dart';
-import 'package:rizzi/interface/cadastro_simplesoap.dart';
+import 'package:rizzi/interface/responsive1.dart';
+import 'package:rizzi/interface/responsive2.dart';
+import 'package:rizzi/interface/responsive3.dart';
+import 'package:rizzi/interface/responsive4.dart';
+import 'package:rizzi/interface/responsive5.dart';
+import 'package:rizzi/interface/responsive6.dart';
+import 'package:rizzi/interface/responsive7.dart';
 
 /// Provides a UI to select a authentication type page
+/// Nao esquecer de arrumar a imagem
+
 class Menu1 extends StatefulWidget {
   _Menu1 createState() => _Menu1();
 }
@@ -30,62 +35,70 @@ class _Menu1 extends State<Menu1> {
               title: Text("Minha conta"),
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CadastroSimplesoap()));
+                    context, MaterialPageRoute(builder: (context) => MyApp1()));
 
-                //Navegar para outra página
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.shopping_basket),
-              title: Text("Abertura de Chamados"),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ChamadosOap()));
-
-                //Navegar para outra página
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("Admin"),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ModuloRizzi()));
-
-                //Navigator.pop(context);
                 //Navegar para outra página
               },
             ),
             ListTile(
               leading: Icon(Icons.power),
-              title: Text("Pós Vendas"),
+              title: Text("Planejamento"),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => posvenda()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MyApp2()));
 
                 // Navigator.pop(context);
                 //Navegar para outra página
               },
             ),
             ListTile(
-              leading: Icon(Icons.workspaces),
-              title: Text("Vendas"),
+              leading: Icon(Icons.access_alarm),
+              title: Text("Oficina"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp3()));
+
                 //Navegar para outra página
               },
             ),
-
             ListTile(
               leading: Icon(Icons.person),
-              title: Text("Dashboard"),
+              title: Text("Recepção"),
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CadastroSimplesoap()));
+                    context, MaterialPageRoute(builder: (context) => MyApp4()));
+
+                //Navegar para outra página
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Programação"),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp5()));
+
+                //Navegar para outra página
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Peças"),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp6()));
+
+                //Navegar para outra página
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.shopping_basket),
+              title: Text("Chamados"),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyApp7()));
 
                 //Navegar para outra página
               },

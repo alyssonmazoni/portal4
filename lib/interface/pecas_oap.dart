@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:rizzi/interface/Menu1.dart';
 import 'package:rizzi/interface/iapo.dart';
 import 'package:rizzi/interface/modulo_oap.dart';
+import 'package:rizzi/interface/responsive2.dart';
 import 'package:rizzi/interface/separacao_antecipada.dart';
-
 
 /// Provides a UI to select a authentication type page
 class PecasOap extends StatefulWidget {
-  _PecasOap createState() => _PecasOap ();
+  _PecasOap createState() => _PecasOap();
 }
 
 class _PecasOap extends State<PecasOap> {
@@ -47,35 +48,17 @@ class _PecasOap extends State<PecasOap> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
                   ),
                 ], mainAxisAlignment: MainAxisAlignment.center),
-                Row(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        height: 20,
-                        width: 300,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SeparacaoAntecipada()));
-                            },
-                            child: Text('Separação Antecipada')),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center),
                 Row(children: [
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -92,9 +75,9 @@ class _PecasOap extends State<PecasOap> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ModuloOap()));
+                                      builder: (context) => Menu1()));
                             },
-                            child: Text('Sair')),
+                            child: Text('Voltar')),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,

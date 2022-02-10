@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/home.dart';
+import 'package:rizzi/interface/responsive2.dart';
 import 'package:rizzi/interface/resumo_oss.dart';
 import 'package:rizzi/interface/resumo_pecas.dart';
-
 
 /// Provides a UI to select a authentication type page
 class Iapo extends StatefulWidget {
@@ -45,7 +45,7 @@ class _Iapo extends State<Iapo> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -73,7 +73,7 @@ class _Iapo extends State<Iapo> {
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
-                      color: Colors.grey[850],
+                      color: Colors.white,
                       height: 5,
                       width: 5,
                     ),
@@ -90,7 +90,7 @@ class _Iapo extends State<Iapo> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
+                                      builder: (context) => MyApp2()));
                             },
                             child: Text('Sair')),
                       ),

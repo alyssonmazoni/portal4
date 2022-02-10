@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/gerar_senha.dart';
+import 'package:rizzi/interface/cadastro_nome.dart';
 import 'package:rizzi/interface/home.dart';
 
 /// Provides a UI to select a authentication type page
@@ -40,9 +40,48 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
           height: double.infinity,
           margin: const EdgeInsets.all(8),
           alignment: Alignment.center,
-          decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
           child: SingleChildScrollView(
               child: Column(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.center,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      margin: const EdgeInsets.all(8),
+                      height: 40,
+                      width: 250,
+                      child: FittedBox(
+                        child: const Card(
+                          color: Colors.white,
+                          child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Text('Cadastro inicial da Conta',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.black)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
             Row(
                 children: [
                   Expanded(
@@ -73,7 +112,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                     alignment: Alignment.center,
                     width: 80,
                     height: 80,
-                    color: Colors.grey[850],
+                    color: Colors.white,
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -379,17 +418,7 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                           child: Text('Editar')),
                     ),
                   ),
-                  Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
-                      child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Salvar')),
-                    ),
-                  ),
+
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
@@ -400,11 +429,12 @@ class _CadastroSimplesoap extends State<CadastroSimplesoap> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => GerarSenha()));
+                                    builder: (context) => CadastroNome()));
                           },
                           child: Text('Avançar')),
                     ),
                   ),
+
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,

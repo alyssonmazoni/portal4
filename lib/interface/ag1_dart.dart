@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:rizzi/interface/painelag1.dart';
-import 'package:rizzi/interface/pro1.dart';
+import 'package:rizzi/interface/prog1.dart';
 import 'my_selection_item.dart';
 import 'package:direct_select/direct_select.dart';
 
@@ -820,7 +820,7 @@ class _Ag1 extends State<Ag1> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Pro1()));
+                                    builder: (context) => Prog1()));
                           },
                           child: Text('Programar')),
                     ),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/cadastro_produtivo.dart';
+import 'package:rizzi/interface/cadastro_nome.dart';
+
 
 /// Provides a UI to select a authentication type page
-class Pro1 extends StatefulWidget {
-  _Pro1 createState() => _Pro1();
+class Prog1 extends StatefulWidget {
+  _Prog1 createState() => _Prog1();
 }
 
-class _Pro1 extends State<Pro1> {
+class _Prog1 extends State<Prog1> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -660,7 +661,7 @@ class _Pro1 extends State<Pro1> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => CadastroProdutivo()));
+                                    builder: (context) => CadastroNome()));
                           },
                           child: Text('Seguir')),
                     ),
