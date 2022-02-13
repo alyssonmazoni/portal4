@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/Menu1.dart';
-import 'package:rizzi/interface/cad_cit.dart';
+import 'package:rizzi/interface/Cad_cit.dart';
 import 'package:rizzi/interface/cl1_teste.dart';
-import 'package:rizzi/interface/painel_controlemedidas.dart';
-
+import 'package:rizzi/interface/Painel_Controlemedidas.dart';
 
 // TESTE DE MENU RESPONSIVO
 // verificar novo pacote de botoes
@@ -90,7 +89,9 @@ class Menu extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => PainelControleMedidas()));
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => PainelControleMedidas()));
             },
             child: ListTile(
               leading: Icon(Icons.looks_one_sharp),
@@ -101,45 +102,37 @@ class Menu extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
             ),
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => cl1oapconta()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => cl1oapconta()));
             },
             child: ListTile(
               leading: Icon(Icons.looks_two_sharp),
               title: Text("CL-1"),
             )),
-    ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-        ),
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => cadcit()));
-        },
-        child: ListTile(
-          leading: Icon(Icons.looks_two_sharp),
-          title: Text("CIT"),
-        )),
-    ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-        ),
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => Menu1()));
-        },
-        child: ListTile(
-          leading: Icon(Icons.looks_two_sharp),
-          title: Text("Voltar"),
-        )),
-
-
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => cadcit()));
+            },
+            child: ListTile(
+              leading: Icon(Icons.looks_two_sharp),
+              title: Text("CIT"),
+            )),
+        ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Menu1()));
+            },
+            child: ListTile(
+              leading: Icon(Icons.looks_two_sharp),
+              title: Text("Voltar"),
+            )),
         ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(Colors.white),

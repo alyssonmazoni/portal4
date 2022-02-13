@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rizzi/interface/Modulo_Rizzi.dart';
+import 'package:rizzi/interface/Gerar_Senha.dart';
+import 'package:rizzi/interface/Home.dart';
+import 'package:rizzi/interface/responsive1.dart';
 
-/// Provides a UI to select a authentication type page
-class RizziRh extends StatefulWidget {
-  _RizziRh createState() => _RizziRh();
+class CadastroPessoal extends StatefulWidget {
+  _CadastroPessoal createState() => _CadastroPessoal();
 }
 
-class _RizziRh extends State<RizziRh> {
+class _CadastroPessoal extends State<CadastroPessoal> {
   DateTime dateForm = DateTime.now();
 
   TextEditingController tc1 = TextEditingController();
@@ -19,63 +20,54 @@ class _RizziRh extends State<RizziRh> {
   TextEditingController tc6 = TextEditingController();
   TextEditingController tc7 = TextEditingController();
   TextEditingController tc8 = TextEditingController();
-  TextEditingController tc9 = TextEditingController();
-  TextEditingController tc10 = TextEditingController();
-  TextEditingController tc11 = TextEditingController();
-  TextEditingController tc12 = TextEditingController();
-  TextEditingController tc13 = TextEditingController();
-  TextEditingController tc14 = TextEditingController();
-  TextEditingController tc15 = TextEditingController();
-  TextEditingController tc16 = TextEditingController();
-  TextEditingController tc17 = TextEditingController();
-  TextEditingController tc18 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('RIZZI RH')),
+        appBar: AppBar(title: Text('Cadastro_Pessoal')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.all(8),
           alignment: Alignment.center,
-          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(children: [
-              Expanded(
-                child: Container(
-                  margin: const EdgeInsets.all(8),
-                  alignment: Alignment.center,
-                  height: 30,
-                  width: 10,
-                  child: Text('CARGO'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      margin: const EdgeInsets.all(8),
+                      height: 40,
+                      width: 250,
+                      child: FittedBox(
+                        child: const Card(
+                          color: Colors.white,
+                          child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Text('Cadastro Nome',
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.black)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 30,
-                  width: 10,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
+              ],
+            ),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  Data:'),
+                    child: Text('Data:'),
                   ),
                   Expanded(
                     child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
                         alignment: Alignment.center,
                         height: 35,
-                        width: 10,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -98,7 +90,7 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  CARGO:'),
+                    child: Text('Conta:'),
                   ),
                   Expanded(
                     child: Container(
@@ -117,13 +109,13 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  CBO:'),
+                    child: Text('Nome:'),
                   ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
+                      height: 15,
+                      width: 20,
                       child: TextField(
                           controller: tc2,
                           textAlign: TextAlign.center,
@@ -136,7 +128,7 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  CARGA HORARIA:'),
+                    child: Text('SobreNome:'),
                   ),
                   Expanded(
                     child: Container(
@@ -155,7 +147,7 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  PISO SALARIAL:'),
+                    child: Text('Departamento:'),
                   ),
                   Expanded(
                     child: Container(
@@ -174,7 +166,7 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  MEDIA SALARIAL:'),
+                    child: Text('Telefone:'),
                   ),
                   Expanded(
                     child: Container(
@@ -193,7 +185,7 @@ class _RizziRh extends State<RizziRh> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('  SALARIO MEDIANA:'),
+                    child: Text('Email:'),
                   ),
                   Expanded(
                     child: Container(
@@ -209,10 +201,23 @@ class _RizziRh extends State<RizziRh> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  alignment: Alignment.center,
+                  height: 20,
+                  width: 15,
+                  child: Text(
+                      'Informar abaixo apenas quando o colaborador estiver ausente',
+                      style: TextStyle(fontSize: 14, color: Colors.redAccent)),
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('  TETO SALARIAL:'),
+                    child: Text('Ausente: (Sim ou Não)'),
                   ),
                   Expanded(
                     child: Container(
@@ -228,72 +233,32 @@ class _RizziRh extends State<RizziRh> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  TETO HORA:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc8,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center),
             Row(children: [
               Expanded(
                 child: Container(
+                  margin: const EdgeInsets.all(8),
                   alignment: Alignment.center,
-                  child: Text('DEPARTAMENTO'),
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.start),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white70,
-                  height: 40,
-                  width: 10,
+                  height: 20,
+                  width: 15,
+                  child: Text('Justificar Ausência',
+                      style: TextStyle(fontSize: 14, color: Colors.redAccent)),
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
-                  Expanded(
-                    child: Text('  DEPARTAMENTO/NOME:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc9,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
+                  ConstrainedBox(
+                    constraints: BoxConstraints(
+                      maxHeight: 50,
+                      maxWidth: 380,
                     ),
-                  ),
-                  Expanded(
-                    child: Text('  Localização:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(8),
-                      height: 20,
-                      width: 15,
-                      child: TextField(
-                          controller: tc10,
-                          textAlign: TextAlign.center,
-                          textAlignVertical: TextAlignVertical.center),
-                    ),
+                    child: TextField(
+                        maxLines: 3,
+                        decoration:
+                            InputDecoration(border: OutlineInputBorder()),
+                        controller: tc8,
+                        textAlign: TextAlign.center,
+                        textAlignVertical: TextAlignVertical.center),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -302,44 +267,97 @@ class _RizziRh extends State<RizziRh> {
                 children: [
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases enviar
-                          child: Text('Enviar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyApp1()));
+                        },
+                        child: Text('Voltar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
                       child: ElevatedButton(
-                          onPressed:
-                              () {}, // falta direcionar para databases editar
-                          child: Text('Editar')),
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                   Expanded(
                     child: Container(
+                      margin: const EdgeInsets.all(8),
                       alignment: Alignment.center,
-                      height: 20,
-                      width: 15,
+                      height: 25,
+                      width: 5,
                       child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ModuloRizzi()));
-                          },
-                          child: Text('Voltar')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GerarSenha()));
+                        },
+                        child: Text('Seguir',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SystemHome()));
+                        },
+                        child: Text('Sair',
+                            style:
+                                TextStyle(fontSize: 10, color: Colors.black)),
+                      ),
                     ),
                   ),
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.bottomLeft,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }

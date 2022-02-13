@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/Menu1.dart';
-import 'package:rizzi/interface/eficiencia.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
-import 'package:rizzi/interface/servico_expresso.dart';
-import 'package:rizzi/interface/servico_externo.dart';
+import 'package:rizzi/interface/Eficiencia.dart';
+import 'package:rizzi/interface/Separacao_Antecipada.dart';
+import 'package:rizzi/interface/Servico_Expresso.dart';
+import 'package:rizzi/interface/Servico_Externo.dart';
 
 // TESTE DE MENU RESPONSIVO
 // verificar novo pacote de botoes

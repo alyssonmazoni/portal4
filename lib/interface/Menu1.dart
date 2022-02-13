@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/responsive1.dart';
+import 'package:rizzi/interface/Create_Download.dart';
+import 'package:rizzi/interface/Responsive1.dart';
 import 'package:rizzi/interface/responsive2.dart';
 import 'package:rizzi/interface/responsive3.dart';
 import 'package:rizzi/interface/responsive4.dart';
@@ -9,6 +10,7 @@ import 'package:rizzi/interface/responsive7.dart';
 
 /// Provides a UI to select a authentication type page
 /// Nao esquecer de arrumar a imagem
+///
 
 class Menu1 extends StatefulWidget {
   _Menu1 createState() => _Menu1();
@@ -41,20 +43,18 @@ class _Menu1 extends State<Menu1> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.power),
+              leading: Icon(Icons.local_atm),
               title: Text("Planejamento"),
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MyApp2()));
+                    context, MaterialPageRoute(builder: (context) => MyApp2()));
 
                 // Navigator.pop(context);
                 //Navegar para outra página
               },
             ),
             ListTile(
-              leading: Icon(Icons.access_alarm),
+              leading: Icon(Icons.bus_alert),
               title: Text("Oficina"),
               onTap: () {
                 Navigator.push(
@@ -64,7 +64,7 @@ class _Menu1 extends State<Menu1> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(Icons.contacts),
               title: Text("Recepção"),
               onTap: () {
                 Navigator.push(
@@ -74,7 +74,7 @@ class _Menu1 extends State<Menu1> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(Icons.construction),
               title: Text("Programação"),
               onTap: () {
                 Navigator.push(
@@ -84,7 +84,7 @@ class _Menu1 extends State<Menu1> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.person),
+              leading: Icon(Icons.engineering),
               title: Text("Peças"),
               onTap: () {
                 Navigator.push(
@@ -94,11 +94,21 @@ class _Menu1 extends State<Menu1> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.shopping_basket),
-              title: Text("Chamados"),
+              leading: Icon(Icons.arrow_drop_down),
+              title: Text("Downloads"),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MyApp7()));
+                    MaterialPageRoute(builder: (context) => Creat_Download()));
+
+                //Navegar para outra página
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text("Chamados"),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp7()));
 
                 //Navegar para outra página
               },

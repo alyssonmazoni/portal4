@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rizzi/interface/ag1_dart.dart';
+import 'package:rizzi/interface/Ag1_dart.dart';
 
 
 /// Provides a UI to select a authentication type page

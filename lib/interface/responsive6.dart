@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/Menu1.dart';
-import 'package:rizzi/interface/resumo_oss.dart';
-import 'package:rizzi/interface/resumo_pecas.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/Resumo_Oss.dart';
+import 'package:rizzi/interface/Resumo_Pecas.dart';
+import 'package:rizzi/interface/Separacao_Antecipada.dart';
 
 
 // TESTE DE MENU RESPONSIVO

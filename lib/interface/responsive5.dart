@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rizzi/interface/Menu1.dart';
-import 'package:rizzi/interface/ag1_dart.dart';
-import 'package:rizzi/interface/prog1.dart';
-import 'package:rizzi/interface/separacao_antecipada.dart';
+import 'package:rizzi/interface/Ag1_dart.dart';
+import 'package:rizzi/interface/Programacao_Tv.dart';
+import 'package:rizzi/interface/Separacao_Antecipada.dart';
 
 // TESTE DE MENU RESPONSIVO
 // verificar novo pacote de botoes
@@ -102,7 +102,7 @@ class Menu extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Prog1()));
+                  MaterialPageRoute(builder: (context) => ProgramacaoTv()));
             },
             child: ListTile(
               leading: Icon(Icons.looks_two_sharp),
