@@ -5,9 +5,6 @@ import 'package:rizzi/interface/Home.dart';
 import 'package:rizzi/interface/Menu1.dart';
 import 'package:rizzi/interface/Painel_Controlemedidas.dart';
 
-
-
-
 /// Provides a UI to select a authentication type page
 class EficienciaSm extends StatefulWidget {
   _EficienciaSm createState() => _EficienciaSm();
@@ -574,101 +571,101 @@ class _EficienciaSm extends State<EficienciaSm> {
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-                Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Menu1()));
-                            },
-                            child: Text('Voltar',
-                                style:
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Menu1()));
+                        },
+                        child: Text('Voltar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          height: 25,
-                          width: 5,
-                          alignment: Alignment.center,
-                          child: ElevatedButton(
-                            onPressed: () {}, // falta direcionar para tela xpto
-                            child: Text('Salvar',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
+                      alignment: Alignment.center,
+                      child: ElevatedButton(
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          PainelControleMedidas()));
-                            },
-                            child: Text('Seguir',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Seguir',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
-                            },
-                            child: Text('Sair',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SystemHome()));
+                        },
+                        child: Text('Sair',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 60,
-                          child: FittedBox(
-                            alignment: Alignment.bottomLeft,
-                            fit: BoxFit.contain,
-                            child: Image.network(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
-                          ),
-                        ),
-                      ],
+                    Container(
+                      height: 40,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.bottomLeft,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
                     ),
                   ],
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
+              ],
+            ),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }
 }

@@ -68,7 +68,8 @@ class _EntregaVeic extends State<EntregaVeic> {
             Row(
                 children: [
                   Expanded(
-                    child: Text('     Data:'),
+                    child: Text('     Data'
+                        ':'),
                   ),
                   Expanded(
                     child: Container(

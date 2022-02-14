@@ -356,8 +356,6 @@ class _Cl1oapConta extends State<Cl1oapConta> {
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center),
-
-
             ], mainAxisAlignment: MainAxisAlignment.center),
           ),
         ));

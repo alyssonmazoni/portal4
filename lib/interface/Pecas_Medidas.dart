@@ -4,27 +4,10 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/Home.dart';
 import 'package:rizzi/interface/Menu1.dart';
 import 'package:rizzi/interface/Painel_Controlemedidas.dart';
-import 'my_selection_item.dart';
 
 /// Provides a UI to select a authentication type page
 class PecasMedidas extends StatefulWidget {
   _PecasMedidas createState() => _PecasMedidas();
-}
-
-final elements1 = ["", "S", "F", "P", "C"];
-
-int selectedIndex1 = 0;
-int selectedIndex2 = 0;
-int selectedIndex3 = 0;
-int selectedIndex4 = 0;
-int selectedIndex5 = 0;
-
-List<Widget> _buildItems1() {
-  return elements1
-      .map((val) => MySelectionItem(
-            title: val,
-          ))
-      .toList();
 }
 
 class _PecasMedidas extends State<PecasMedidas> {
@@ -32,10 +15,12 @@ class _PecasMedidas extends State<PecasMedidas> {
 
   TextEditingController tc1 = TextEditingController();
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('PEÇAS SISTEMA MEDIDAS')),
+        appBar: AppBar(title: Text('PEÇAS SIISTEME MEDIDAS')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -44,56 +29,67 @@ class _PecasMedidas extends State<PecasMedidas> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            const Card(
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('PEÇAS IAPO',
-                    style: TextStyle(fontSize: 15, color: Colors.black)),
-              ),
-            ),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white,
-                  height: 5,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('     Data:'),
-                  ),
+                Row(children: [
                   Expanded(
                     child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
-                        height: 35,
-                        width: 10,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
-                                });
-                              });
-                            },
-                            child:
-                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
+                      alignment: Alignment.center,
+                      color: Colors.white,
+                      height: 5,
+                      width: 5,
+                    ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
+                ], mainAxisAlignment: MainAxisAlignment.center),
+                const Card(
+                  color: Colors.white,
+                  child: Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Text('NPS CSI',
+                        style: TextStyle(fontSize: 15, color: Colors.black)),
+                  ),
+                ),
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.white,
+                      height: 5,
+                      width: 5,
+                    ),
+                  ),
+                ], mainAxisAlignment: MainAxisAlignment.center),
+                Row(
+                    children: [
+                      Expanded(
+                        child: Text('     Data:'),
+                      ),
+                      Expanded(
+                        child: Container(
+                            margin: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white70)),
+                            alignment: Alignment.center,
+                            height: 35,
+                            width: 10,
+                            child: TextButton(
+                                onPressed: () {
+                                  DatePicker.showDatePicker(context,
+                                      showTitleActions: true,
+                                      minTime: DateTime(2020, 3, 5),
+                                      maxTime: DateTime(2025, 6, 7),
+                                      currentTime: DateTime.now(),
+                                      locale: LocaleType.pt, onConfirm: (date) {
+                                        setState(() {
+                                          dateForm = date;
+                                        });
+                                      });
+                                },
+                                child:
+                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center),
+
             Row(
                 children: [
                   Container(
@@ -170,101 +166,101 @@ class _PecasMedidas extends State<PecasMedidas> {
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-                Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Menu1()));
-                            },
-                            child: Text('Voltar',
-                                style:
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Menu1()));
+                        },
+                        child: Text('Voltar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          height: 25,
-                          width: 5,
-                          alignment: Alignment.center,
-                          child: ElevatedButton(
-                            onPressed: () {}, // falta direcionar para tela xpto
-                            child: Text('Salvar',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
+                      alignment: Alignment.center,
+                      child: ElevatedButton(
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          PainelControleMedidas()));
-                            },
-                            child: Text('Seguir',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      PainelControleMedidas()));
+                        },
+                        child: Text('Seguir',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
-                            },
-                            child: Text('Sair',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SystemHome()));
+                        },
+                        child: Text('Sair',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 60,
-                          child: FittedBox(
-                            alignment: Alignment.bottomLeft,
-                            fit: BoxFit.contain,
-                            child: Image.network(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
-                          ),
-                        ),
-                      ],
+                    Container(
+                      height: 40,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.bottomLeft,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
                     ),
                   ],
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
+              ],
+            ),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }
 }

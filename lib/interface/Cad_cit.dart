@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/Home.dart';
 import 'package:rizzi/interface/Menu1.dart';
 
+
 /// Provides a UI to select a authentication type page
 class cadcit extends StatefulWidget {
   _cadcit createState() => _cadcit();
@@ -32,7 +33,6 @@ class _cadcit extends State<cadcit> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white)),
           child: SingleChildScrollView(
               child: Column(children: [
-
             const Card(
               color: Colors.white,
               child: Padding(

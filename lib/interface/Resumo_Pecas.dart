@@ -16,19 +16,19 @@ class _ResumoPecas extends State<ResumoPecas> {
 
   final elements1 = [
     "",
-    "A",
-    "B",
-    "C",
-    "D",
+    "Balcão",
+    "Oficina",
+    "Funilaria",
+    "Pneu",
   ];
 
-  final elements2 = ["Orçamento", "Diagnóstico", "Ordem de reparação"];
+  final elements2 = ["", "Orçamento", "Diagnóstico", "Ordem de reparação"];
 
-  final elements3 = ["C&O", "Vans"];
+  final elements3 = ["", "C&O", "Vans"];
 
-  final elements4 = ["Sim", "Não"];
+  final elements4 = ["", "Sim", "Não"];
 
-  final elements5 = ["Peça faltante", "Nova solicitação"];
+  final elements5 = ["", "Peça faltante", "Nova solicitação"];
 
   int selectedIndex1 = 0;
   int selectedIndex2 = 0;
@@ -38,6 +38,38 @@ class _ResumoPecas extends State<ResumoPecas> {
 
   List<Widget> _buildItems1() {
     return elements1
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems2() {
+    return elements2
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems3() {
+    return elements3
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems4() {
+    return elements4
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems5() {
+    return elements5
         .map((val) => MySelectionItem(
               title: val,
             ))
@@ -55,23 +87,25 @@ class _ResumoPecas extends State<ResumoPecas> {
   TextEditingController tc9 = TextEditingController();
   TextEditingController tc10 = TextEditingController();
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Resumo Peças')),
+        appBar: AppBar(title: Text('Resumo de Peças')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          margin: const EdgeInsets.all(15),
-          decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          margin: const EdgeInsets.all(8),
+          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
             const Card(
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.all(8),
-                child: Text('Resumo de Peças',
+                child: Text('Resumo de Ordens de Serviço',
                     style: TextStyle(fontSize: 10, color: Colors.black)),
               ),
             ),
@@ -84,7 +118,7 @@ class _ResumoPecas extends State<ResumoPecas> {
                   width: 5,
                 ),
               ),
-            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
@@ -93,11 +127,11 @@ class _ResumoPecas extends State<ResumoPecas> {
                   Expanded(
                     child: Container(
                         margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
                         height: 35,
-                        width: 10,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -117,6 +151,16 @@ class _ResumoPecas extends State<ResumoPecas> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.white,
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.spaceAround),
             Row(
                 children: [
                   Expanded(

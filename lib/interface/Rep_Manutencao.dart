@@ -4,27 +4,10 @@ import 'package:intl/intl.dart';
 import 'package:rizzi/interface/Home.dart';
 import 'package:rizzi/interface/Menu1.dart';
 import 'package:rizzi/interface/Painel_Controlemedidas.dart';
-import 'my_selection_item.dart';
 
 /// Provides a UI to select a authentication type page
 class RepManutencao extends StatefulWidget {
   _RepManutencao createState() => _RepManutencao();
-}
-
-final elements1 = ["", "S", "F", "P", "C"];
-
-int selectedIndex1 = 0;
-int selectedIndex2 = 0;
-int selectedIndex3 = 0;
-int selectedIndex4 = 0;
-int selectedIndex5 = 0;
-
-List<Widget> _buildItems1() {
-  return elements1
-      .map((val) => MySelectionItem(
-            title: val,
-          ))
-      .toList();
 }
 
 class _RepManutencao extends State<RepManutencao> {
@@ -33,10 +16,12 @@ class _RepManutencao extends State<RepManutencao> {
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('REP E MANUT.')),
+        appBar: AppBar(title: Text('REP.MANUTEÇÃO')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
@@ -45,57 +30,68 @@ class _RepManutencao extends State<RepManutencao> {
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            const Card(
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.all(8),
-                child: Text('REP & MANUT.',
-                    style: TextStyle(fontSize: 15, color: Colors.black)),
-              ),
-            ),
-            Row(children: [
-              Expanded(
-                child: Container(
-                  alignment: Alignment.center,
-                  color: Colors.white,
-                  height: 5,
-                  width: 5,
-                ),
-              ),
-            ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('     Data:'),
-                  ),
+                Row(children: [
                   Expanded(
                     child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
-                        height: 35,
-                        width: 10,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
-                                });
-                              });
-                            },
-                            child:
-                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
+                      alignment: Alignment.center,
+                      color: Colors.white,
+                      height: 5,
+                      width: 5,
+                    ),
                   ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
-            Row(
+                ], mainAxisAlignment: MainAxisAlignment.center),
+                const Card(
+                  color: Colors.white,
+                  child: Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Text('REP & MANUT.',
+                        style: TextStyle(fontSize: 15, color: Colors.black)),
+                  ),
+                ),
+                Row(children: [
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      color: Colors.white,
+                      height: 5,
+                      width: 5,
+                    ),
+                  ),
+                ], mainAxisAlignment: MainAxisAlignment.center),
+                Row(
+                    children: [
+                      Expanded(
+                        child: Text('     Data:'),
+                      ),
+                      Expanded(
+                        child: Container(
+                            margin: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.white70)),
+                            alignment: Alignment.center,
+                            height: 35,
+                            width: 10,
+                            child: TextButton(
+                                onPressed: () {
+                                  DatePicker.showDatePicker(context,
+                                      showTitleActions: true,
+                                      minTime: DateTime(2020, 3, 5),
+                                      maxTime: DateTime(2025, 6, 7),
+                                      currentTime: DateTime.now(),
+                                      locale: LocaleType.pt, onConfirm: (date) {
+                                        setState(() {
+                                          dateForm = date;
+                                        });
+                                      });
+                                },
+                                child:
+                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center),
+
+                Row(
                 children: [
                   Container(
                     alignment: Alignment.center,

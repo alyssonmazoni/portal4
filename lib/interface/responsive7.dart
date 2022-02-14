@@ -137,9 +137,9 @@ class Menu extends StatelessWidget {
 
 class Content extends StatelessWidget {
   final List<String> elements = [
-    "Resumo de OS(s)",
-    "Resumo de Peças",
-    "Separação Antecipada",
+    "Abertos",
+    "Em tratativa",
+    "Respondidos",
   ];
   @override
   Widget build(context) => GridView.builder(

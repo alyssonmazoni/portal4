@@ -4,16 +4,13 @@ import 'package:rizzi/interface/Create_Download.dart';
 import 'package:rizzi/interface/Modulo_Rizzi.dart';
 import 'package:rizzi/interface/Painel_Controlemedidas.dart';
 
-// TESTE DE MENU RESPONSIVO
-// verificar novo pacote de botoes
-
 void main() => runApp(MyApp1());
 
 class MyApp1 extends StatelessWidget {
   @override
   Widget build(context) => MaterialApp(initialRoute: "/Meu login", routes: {
         "/Meu login": (context) => Login1(),
-        "/home": (context) => home()
+        "/home": (context) => home2()
       });
 }
 
@@ -59,7 +56,7 @@ class Login1 extends StatelessWidget {
       }));
 }
 
-class home extends StatelessWidget {
+class home2 extends StatelessWidget {
   @override
   Widget build(context) => Scaffold(
       appBar: AppBar(title: Text("Minha Lista Full")),
@@ -94,7 +91,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.book_online),
               title: Text("Cad.Inicial",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -109,7 +106,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: const Icon(Icons.local_atm),
               title: Text("Planejamento",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -119,7 +116,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.bus_alert),
               title: Text("Prog.Oficina",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -129,7 +126,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.watch),
               title: Text("Apontamento",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -139,7 +136,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.date_range_sharp),
               title: Text("Agendamento",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -149,7 +146,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.edit_location_outlined),
               title: Text("Recepção",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -159,7 +156,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.lock_clock),
               title: Text("Ser.Expresso",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -169,7 +166,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.pending_actions_sharp),
               title: Text("Enc.da OS",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -179,7 +176,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.delivery_dining_rounded),
               title: Text("Ent.Veículo",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -189,7 +186,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.medication_sharp),
               title: Text("Diagnóstico",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -199,7 +196,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.car_repair_rounded),
               title: Text("Rep.Manutenção",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -212,7 +209,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.admin_panel_settings_outlined),
               title: Text("Modulo Rizzi ",
-                  style: TextStyle(fontSize: 9, color: Colors.black)),
+                  style: TextStyle(fontSize: 14, color: Colors.black)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -225,7 +222,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.arrow_drop_down),
               title: Text("Downloads",
-                  style: TextStyle(fontSize: 9, color: Colors.green)),
+                  style: TextStyle(fontSize: 14, color: Colors.green)),
             )),
         ElevatedButton(
             style: ButtonStyle(
@@ -237,7 +234,7 @@ class Menu extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text("Log Out",
-                  style: TextStyle(fontSize: 9, color: Colors.redAccent)),
+                  style: TextStyle(fontSize: 14, color: Colors.redAccent)),
             ))
       ]);
 }

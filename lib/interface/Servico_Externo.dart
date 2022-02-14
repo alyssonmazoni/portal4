@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'package:intl/intl.dart';
+import 'package:direct_select/direct_select.dart';
 import 'package:rizzi/interface/Home.dart';
 import 'package:rizzi/interface/Menu1.dart';
 import 'my_selection_item.dart';
-import 'package:direct_select/direct_select.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
 class ServicoExterno extends StatefulWidget {
@@ -13,24 +13,22 @@ class ServicoExterno extends StatefulWidget {
 
 final elements1 = ["", "S", "F", "P", "C"];
 
-int selectedIndex1 = 0;
-int selectedIndex2 = 0;
-int selectedIndex3 = 0;
-int selectedIndex4 = 0;
-int selectedIndex5 = 0;
-
-
-
-List<Widget> _buildItems1() {
-  return elements1
-      .map((val) => MySelectionItem(
-            title: val,
-          ))
-      .toList();
-}
-
 class _ServicoExterno extends State<ServicoExterno> {
   DateTime dateForm = DateTime.now();
+
+  int selectedIndex1 = 0;
+  int selectedIndex2 = 0;
+  int selectedIndex3 = 0;
+  int selectedIndex4 = 0;
+  int selectedIndex5 = 0;
+
+  List<Widget> _buildItems1() {
+    return elements1
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -54,22 +52,21 @@ class _ServicoExterno extends State<ServicoExterno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Serviço Externo')),
+        resizeToAvoidBottomInset: false,
+        appBar: AppBar(title: Text('Resumo de OS(s)')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.all(8),
-          alignment: Alignment.center,
           decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-
             const Card(
               color: Colors.white,
               child: Padding(
                 padding: EdgeInsets.all(8),
-                child: Text('Cadastro Serviço Externo',
-                    style: TextStyle(fontSize: 15, color: Colors.black)),
+                child: Text('Resumo de Ordens de Serviço',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
               ),
             ),
             Row(children: [
@@ -90,11 +87,11 @@ class _ServicoExterno extends State<ServicoExterno> {
                   Expanded(
                     child: Container(
                         margin: const EdgeInsets.all(8),
+                        alignment: Alignment.center,
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
                         height: 35,
-                        width: 10,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -112,7 +109,7 @@ class _ServicoExterno extends State<ServicoExterno> {
                                 Text(DateFormat('dd-MM-yy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
@@ -392,101 +389,98 @@ class _ServicoExterno extends State<ServicoExterno> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center),
-                Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => Menu1()));
-                            },
-                            child: Text('Voltar',
-                                style:
+            Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Menu1()));
+                        },
+                        child: Text('Voltar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          height: 25,
-                          width: 5,
-                          alignment: Alignment.center,
-                          child: ElevatedButton(
-                            onPressed: () {}, // falta direcionar para tela xpto
-                            child: Text('Salvar',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      height: 25,
+                      width: 5,
+                      alignment: Alignment.center,
+                      child: ElevatedButton(
+                        onPressed: () {}, // falta direcionar para tela xpto
+                        child: Text('Salvar',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          Menu1()));
-                            },
-                            child: Text('Seguir',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Menu1()));
+                        },
+                        child: Text('Seguir',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(8),
-                          alignment: Alignment.center,
-                          height: 25,
-                          width: 5,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SystemHome()));
-                            },
-                            child: Text('Sair',
-                                style:
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 25,
+                      width: 5,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SystemHome()));
+                        },
+                        child: Text('Sair',
+                            style:
                                 TextStyle(fontSize: 10, color: Colors.black)),
-                          ),
-                        ),
                       ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    ),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 60,
-                          child: FittedBox(
-                            alignment: Alignment.bottomLeft,
-                            fit: BoxFit.contain,
-                            child: Image.network(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
-                          ),
-                        ),
-                      ],
+                    Container(
+                      height: 40,
+                      width: 60,
+                      child: FittedBox(
+                        alignment: Alignment.bottomLeft,
+                        fit: BoxFit.contain,
+                        child: Image.network(
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-1mIKnEWkQM6jFbVPitHANTOlzSNquTvo1AXqfMgF4K7tfbCH5QkCgqBiN-wF9bx75w&usqp=CAU'),
+                      ),
                     ),
                   ],
                 ),
-              ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
+              ],
+            ),
+          ], mainAxisAlignment: MainAxisAlignment.spaceEvenly)),
         ));
   }
 }

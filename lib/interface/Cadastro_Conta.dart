@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'package:intl/intl.dart';
 import 'package:rizzi/interface/Cadastro_Pessoal.dart';
 import 'package:rizzi/interface/Home.dart';
+import 'my_selection_item.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:intl/intl.dart';
 
 /// Provides a UI to select a authentication type page
 class CadastroConta extends StatefulWidget {
@@ -11,6 +12,68 @@ class CadastroConta extends StatefulWidget {
 
 class _CadastroConta extends State<CadastroConta> {
   DateTime dateForm = DateTime.now();
+
+  final elements1 = [
+    "",
+    "Balcão",
+    "Oficina",
+    "Funilaria",
+    "Pneu",
+  ];
+
+  final elements2 = ["", "Orçamento", "Diagnóstico", "Ordem de reparação"];
+
+  final elements3 = ["", "C&O", "Vans"];
+
+  final elements4 = ["", "Sim", "Não"];
+
+  final elements5 = ["", "Peça faltante", "Nova solicitação"];
+
+  int selectedIndex1 = 0;
+  int selectedIndex2 = 0;
+  int selectedIndex3 = 0;
+  int selectedIndex4 = 0;
+  int selectedIndex5 = 0;
+
+  List<Widget> _buildItems1() {
+    return elements1
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems2() {
+    return elements2
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems3() {
+    return elements3
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems4() {
+    return elements4
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
+
+  List<Widget> _buildItems5() {
+    return elements5
+        .map((val) => MySelectionItem(
+              title: val,
+            ))
+        .toList();
+  }
 
   TextEditingController tc1 = TextEditingController();
   TextEditingController tc2 = TextEditingController();
@@ -34,50 +97,46 @@ class _CadastroConta extends State<CadastroConta> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(title: Text('Cadastro_Conta')),
         body: Container(
           width: double.infinity,
           height: double.infinity,
           margin: const EdgeInsets.all(8),
-          alignment: Alignment.center,
+          decoration: BoxDecoration(border: Border.all(color: Colors.white70)),
           child: SingleChildScrollView(
               child: Column(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      alignment: Alignment.centerLeft,
-                      margin: const EdgeInsets.all(8),
-                      height: 40,
-                      width: 250,
-                      child: FittedBox(
-                        child: const Card(
-                          color: Colors.white,
-                          child: Padding(
-                            padding: EdgeInsets.all(8),
-                            child: Text('Cadastro inicial da Conta',
-                                style: TextStyle(
-                                    fontSize: 15, color: Colors.black)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+            const Card(
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Text('Cadastro_Conta',
+                    style: TextStyle(fontSize: 10, color: Colors.black)),
+              ),
             ),
+            Row(children: [
+              Expanded(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.grey[850],
+                  height: 5,
+                  width: 5,
+                ),
+              ),
+            ], mainAxisAlignment: MainAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
-                    child: Text('Data:'),
+                    child: Text('  Data:'),
                   ),
                   Expanded(
                     child: Container(
+                        margin: const EdgeInsets.all(8),
                         alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white70)),
                         height: 35,
-                        width: 10,
+                        width: 5,
                         child: TextButton(
                             onPressed: () {
                               DatePicker.showDatePicker(context,
@@ -95,7 +154,7 @@ class _CadastroConta extends State<CadastroConta> {
                                 Text(DateFormat('dd-MM-yy').format(dateForm)))),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'package:intl/intl.dart';
+import 'package:rizzi/interface/Cadastro_Conta.dart';
 import 'package:rizzi/interface/Gerar_Senha.dart';
 import 'package:rizzi/interface/Home.dart';
-import 'package:rizzi/interface/responsive1.dart';
 
 class CadastroPessoal extends StatefulWidget {
   _CadastroPessoal createState() => _CadastroPessoal();
@@ -58,35 +56,6 @@ class _CadastroPessoal extends State<CadastroPessoal> {
                 ),
               ],
             ),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('Data:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                        alignment: Alignment.center,
-                        height: 35,
-                        width: 5,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
-                                });
-                              });
-                            },
-                            child:
-                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
             Row(
                 children: [
                   Expanded(
@@ -276,7 +245,7 @@ class _CadastroPessoal extends State<CadastroPessoal> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MyApp1()));
+                                  builder: (context) => CadastroConta()));
                         },
                         child: Text('Voltar',
                             style:

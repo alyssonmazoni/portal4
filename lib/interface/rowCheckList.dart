@@ -57,7 +57,7 @@ class _RowCheckList extends State<RowCheckList> {
             child: Container(
               alignment: Alignment.center,
               decoration:
-                  BoxDecoration(border: Border.all(color: Colors.white)),
+              BoxDecoration(border: Border.all(color: Colors.white)),
               margin: EdgeInsets.all(5),
               padding: EdgeInsets.all(10),
               child: Text(etapas[select]),
@@ -89,7 +89,7 @@ class _RowCheckList extends State<RowCheckList> {
             child: Container(
               alignment: Alignment.center,
               decoration:
-                  BoxDecoration(border: Border.all(color: Colors.white)),
+              BoxDecoration(border: Border.all(color: Colors.white)),
               margin: EdgeInsets.all(5),
               padding: EdgeInsets.all(10),
               child: Text('$peso'),

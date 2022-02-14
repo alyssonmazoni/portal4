@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-import 'package:intl/intl.dart';
 import 'package:rizzi/interface/Modulo_Rizzi.dart';
 
 /// Provides a UI to select a authentication type page
@@ -66,38 +64,7 @@ class _RizziPecas extends State<RizziPecas> {
                 ),
               ),
             ], mainAxisAlignment: MainAxisAlignment.center),
-            Row(
-                children: [
-                  Expanded(
-                    child: Text('  Data:'),
-                  ),
-                  Expanded(
-                    child: Container(
-                        margin: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white70)),
-                        alignment: Alignment.center,
-                        height: 35,
-                        width: 10,
-                        child: TextButton(
-                            onPressed: () {
-                              DatePicker.showDatePicker(context,
-                                  showTitleActions: true,
-                                  minTime: DateTime(2020, 3, 5),
-                                  maxTime: DateTime(2025, 6, 7),
-                                  currentTime: DateTime.now(),
-                                  locale: LocaleType.pt, onConfirm: (date) {
-                                setState(() {
-                                  dateForm = date;
-                                });
-                              });
-                            },
-                            child:
-                                Text(DateFormat('dd-MM-yy').format(dateForm)))),
-                  ),
-                ],
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center),
+
             Row(
                 children: [
                   Expanded(

@@ -305,8 +305,7 @@ class _GradeHoras extends State<GradeHoras> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        ModuloRizzi()));
+                                    builder: (context) => ModuloRizzi()));
                           },
                           child: Text('Modulo Rizzi')),
                     ),

@@ -8,7 +8,8 @@ import 'package:rizzi/interface/Programacao_Tv.dart';
 import 'my_selection_item.dart';
 import 'package:direct_select/direct_select.dart';
 
-/// Provides a UI to select a authentication type page
+/// Provides a UI to select a authentication
+
 class Ag1 extends StatefulWidget {
   _Ag1 createState() => _Ag1();
 }
